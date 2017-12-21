@@ -1,0 +1,116 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/lib/Calendar/stylesheets/stylesheet.css" media="screen">
+    <!-- <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen"> -->
+    <link rel="stylesheet" type="text/css" href="/lib/Calendar/stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="/lib/Calendar/stylesheets/simple-calendar.css">
+    <script src="~/lib/jquery/1.9.1/jquery.js"></script>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Simple-calendar by Lixucheng</title>
+    <style>
+        #calendar {
+            width: 100%;
+        }
+
+        .clearfix {
+            margin-bottom: 50px !important;
+        }
+    </style>
+</head>
+
+<body>
+   
+
+    <div id="content-wrapper">
+        <div class="inner clearfix">
+            <div id='calendar'>
+
+            </div>
+        </div>
+
+     
+    </div>
+
+    <script type="text/javascript" src="/lib/Calendar/javascripts/simple-calendar.js"></script>
+ 
+    <script>
+       
+        $.post("/api/ApiM_HitchInfo/GetYuji", {"factorysation":'@Request.QueryString["factorysation"]',"signal":'@Request.QueryString["signal"]',"createtime":'@Request.QueryString["createtime"]'}, function (data)
+        {
+            
+            var dataobj = {};
+            var date = new Date('@Request.QueryString["createtime"]');
+         
+            var month = date.getMonth() + 1;
+            var year=date.getFullYear();
+            var day=date.getDate();
+            var dataobj = {};
+            for (var i =0; i < data.shijilist.length; i++) {
+                var name = year + "-" + month + "-" + (i + 1);
+               // dataobj += name+":"
+                dataobj[name] = data.shijilist[i] + "," + data.yujilist[i];
+            }
+          //  var agc = JSON.stringify(dataobj);
+          
+            //yujilist
+            var options = {
+                width: '700px',
+                height: '550px',
+                language: 'CH', //语言
+                showLunarCalendar: false, //阴历
+                showHoliday: false, //休假
+                showFestival: false, //节日
+                showLunarFestival: false, //农历节日
+                showSolarTerm: false, //节气
+                showMark: true, //标记
+                timeRange: {
+                    startYear: 1900,
+                    endYear: 2049
+                },
+                year: year,
+                month:month,
+                day:day,
+                mark: dataobj,
+                theme: {
+                    changeAble: false,
+                    weeks: {
+                        backgroundColor: '#FBEC9C',
+                        fontColor: '#4A4A4A',
+                        fontSize: '20px',
+                    },
+                    days: {
+                        backgroundColor: '#ffffff',
+                        fontColor: '#565555',
+                        fontSize: '24px'
+                    },
+                    todaycolor: 'orange',
+                    activeSelectColor: 'orange',
+                }
+            }
+            var myCalendar = new SimpleCalendar('#calendar', options);
+            myCalendar.abc = "";
+
+        },"json"
+          
+        );
+       
+       
+    </script>
+
+
+</body>
+</html>

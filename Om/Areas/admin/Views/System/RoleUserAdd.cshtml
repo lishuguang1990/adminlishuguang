@@ -1,0 +1,203 @@
+﻿<!--_meta 作为公共模版分离出去-->
+
+@{
+    Layout = null;
+}
+@model Model.BaseUser
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="Bookmark" href="favicon.ico">
+    <link rel="Shortcut Icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="lib/html5.js"></script>
+    <script type="text/javascript" src="lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/style.css" />
+
+    <link rel="stylesheet" href="/lib/zTree/v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script><![endif]-->
+    <!--/meta 作为公共模版分离出去-->
+
+    <title>添加管理员 - 管理员管理</title>
+</head>
+<body>
+    <article class="cl pd-20">
+        <form action="" method="post" class="form form-horizontal" id="form-admin-role-add">
+            <div class="row cl">
+                <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                    <button type="button" class="btn btn-success radius" id="admin-role-save" name="admin-role-save" onclick="useradd()"><i class="icon-ok"></i> 确定</button>
+                </div>
+            </div>
+            <div class="row cl">
+               
+                <label class="form-label col-xs-4 col-sm-3">人员列表：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    <dl class="permission-list" id="dllist">
+                              
+                            </dl>
+                     
+                  
+                </div>
+            </div>
+          
+        </form>
+    </article>
+
+    <!--_footer 作为公共模版分离出去-->
+    <script type="text/javascript" src="/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/lib/layer/2.4/layer.js"></script>
+    <script type="text/javascript" src="/static/h-ui/js/H-ui.js"></script>
+    <script type="text/javascript" src="/static/h-ui.admin/js/H-ui.admin.page.js"></script>
+
+    <!--/_footer /作为公共模版分离出去-->
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript" src="/lib/zTree/v3/js/jquery.ztree.all-3.5.min.js"></script>
+    <script type="text/javascript">
+        var operatemodule = {};
+
+function checkall(moduleid)
+{
+    if ($("#AllCheck_" + moduleid).prop("checked")) {
+
+        $("#dd").find("input:checkbox").prop("checked", true);
+    }
+    else {
+        $("#dd").find("input:checkbox").prop("checked", false);
+    }
+
+    var obj = {};
+    obj.moduleid = moduleid;
+    obj.checklist = [];
+    $("#dd").find(":checkbox").each(function(index)
+    {
+
+        if ($(this).prop("checked") && index > 0)
+        {
+            obj.checklist.push($(this).attr("data-id"));
+        }
+    });
+
+}
+
+var code;
+
+
+function showCode(str) {
+    if (!code) code = $("#code");
+    code.empty();
+    code.append("<li>"+str+"</li>");
+}
+function sumit()
+{
+    //alert(operatemodule);
+    //var obj = {"abc":1,b:"2"}
+    $.post("/api/ApiModuleOperate/CreateModuleOperate", { "operate":JSON.stringify(operatemodule.module),"roleid":"@Request.QueryString["roleid"]"}, function (data)
+    {
+        if (data.code)
+        {
+            alert("提交成功")
+            var index = parent.layer.getFrameIndex(window.name);
+            parent.location.reload();
+            parent.layer.close(index);
+        }
+
+    },"json"
+    );
+}
+    $(document).ready(function () {
+        $.post("/api/ApiUser/RoleUserList", { "roleid": "@Request.QueryString["roleid"]" }, function (data) {
+ 
+            var strhtml = "";
+            var count=8;
+            var listlength = Math.ceil(data.list.length / count);
+       
+            var index=0;
+            for (var i = 0; i <listlength; i++) {
+                strhtml+="<dd>"
+                for (var j = 0; j < count; j++) {
+                    if (index < data.list.length)
+                    {
+                        if (data.list[index].IsChecked) {
+                            strhtml += " <label class=\"\"><input type=\"checkbox\" checked=\"true\"  value=\"" + data.list[index].UserId + "\" name=\"user-Character-0-0-0\" id=\"user_id" + data.list[index].UserId + "\"> " + data.list[index].UserName + " </label>"
+
+                        }
+                        else {
+                            strhtml += " <label class=\"\"><input type=\"checkbox\" value=\"" + data.list[index].UserId + "\" name=\"user-Character-0-0-0\" id=\"user_id" + data.list[index].UserId + "\"> " + data.list[index].UserName + " </label>"
+                        }
+                        index++;
+                    }
+                }
+                strhtml+="</dd>"
+            }
+            $("#dllist").html(strhtml);
+              
+        },"json"
+        );
+    $(".permission-list2 dd input:checkbox").click(function () {
+        var l = $(this).parent().parent().find("input:checked").length;
+        var l2 = $(this).parents(".permission-list").find(".permission-list2 dd").find("input:checked").length;
+        if ($(this).prop("checked")) {
+            $(this).closest("dl").find("dt input:checkbox").prop("checked", true);
+            $(this).parents(".permission-list").find("dt").first().find("input:checkbox").prop("checked", true);
+        }
+        else {
+            if (l == 0) {
+                $(this).closest("dl").find("dt input:checkbox").prop("checked", false);
+            }
+            if (l2 == 0) {
+                $(this).parents(".permission-list").find("dt").first().find("input:checkbox").prop("checked", false);
+            }
+        }
+    });
+   
+    });
+
+        function useradd()
+        {
+            var userid = "";
+            $("#dllist").find("input:checkbox").each(function()
+            {
+                if ($(this).prop("checked"))
+                {
+                    if (userid == "") {
+                        userid = $(this).val();
+                    }
+                    else {
+                        userid += "," + $(this).val();
+                    }
+                }
+            
+               
+            }
+          )
+        
+            $.post("/api/ApiUser/UserRoleAdd", {"roleid":'@Request.QueryString["roleid"]',"userid":userid},function(data)
+            {
+                var index = parent.layer.getFrameIndex(window.name);
+                parent.location.reload();
+                parent.layer.close(index);
+            },"json"
+            );
+           
+            
+        }
+
+    </script>
+    <!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

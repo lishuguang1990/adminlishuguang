@@ -1,0 +1,126 @@
+﻿@{
+    ViewBag.Title = "故障列表";
+}
+@using Utilities.Base.Common;
+@model Model.ModelView.SettingModel
+
+<nav class="breadcrumb" id="daohang"></nav>
+<div class="Hui-article">
+    <article class="cl pd-20">
+        <form action="/api/ApiM_HitchInfo/AddSetting" method="post" class="form form-horizontal" id="form-admin-add">
+             <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>预警查询当月/日发生信号的超过次数下拉框配置：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.selecttimes, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+                       <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>周末工作日比例(请用英文的冒号分隔如 2:1 周末在前 工作日在后)</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a=>a.weekendbili, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>每月的总次数</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.mothtimes, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>饼状图显示的数量</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.showcount, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>自动执行时刻设定<br />0 0 2 * * ? 表示每天两点执行</label>
+              
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.daorutime, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>下次执行时间</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                  @Model.NextDoTime
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>导入文件天数选项<br />0为当日 -1为前一日</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.daorunowdate, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>文件夹路径</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.daorudir, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+            @*<div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>自动导入数据的执行时间</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.mothtimes, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>*@
+            <div class="row cl">
+                <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
+                    <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+                </div>
+            </div>
+            </form>
+        </article>
+
+</div>
+
+
+
+
+
+@section  scripts{
+
+
+<!--/_footer /作为公共模版分离出去-->
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+<script src="~/lib/operate.js"></script>
+<script type="text/javascript">
+    $(function () {
+        operateButton();
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
+        });
+
+        $("#form-admin-add").validate({
+            rules: {
+                weekendbili: {
+                    required: true,
+
+                },
+                mothtimes: {
+                    required: true,
+                },
+
+            },
+            onkeyup: false,
+            focusCleanup: true,
+            success: "valid",
+            submitHandler: function (form) {
+                $(form).ajaxSubmit(function (data) {
+                    if (data.code) {
+                        location.href = location.href;
+
+                    }
+
+
+                });
+            }
+        });
+    });
+
+</script>
+    }

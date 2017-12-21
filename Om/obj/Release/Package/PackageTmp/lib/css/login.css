@@ -1,0 +1,23 @@
+﻿#LoginDiv { position: fixed; width:100%; height:550px; top:50%; margin-top: -275px; background-image:url(../images/skin1/login_bg_1.jpg); background-repeat:no-repeat; background-position:center 80px;}
+*html #LoginDiv { position:absolute; width:100%; height:550px; top:50%; margin-top: -275px; background-image:url(../images/skin1/login_bg_1.jpg); background-repeat:no-repeat; background-position:center 80px;}
+
+#LoginDiv .d1 { width:800px; height:80px; margin:0 auto;}
+#LoginDiv .d1 .t1 { width:100%; border:0px;}
+#LoginDiv .d1 .t1 td { padding:0px;}
+#LoginDiv .d1 .t1 .tdl { width:300px; vertical-align :top}
+#LoginDiv .d1 .t1 .tdr { text-align:right; color:#999; vertical-align:top; padding-top:30px;}
+#LoginDiv .d1 .t1 .tdr a.chrome { padding:3px 0 0 23px; background:url(../images/chrome.gif) no-repeat left center}
+
+#LoginDiv .d2 { width:220px; height:400px; padding:40px 0 0 540px; margin:0 auto;}
+#LoginDiv .d2 .k1 { width:100%; height:300px; color:#fff; box-shadow: 2px 2px 2px rgba(1,1,1,.2);}
+#LoginDiv .d2 .k1 .bg { width:100%; height:300px; background:#000; filter:alpha(opacity=50); -moz-opacity: 0.5; opacity: 0.5; position:relative;}
+#LoginDiv .d2 .k1 .nr { width:100%; height:300px; margin-top:-300px; position:relative;}
+#LoginDiv .d2 .k1 .nr .title { height:40px; line-height:40px; padding-left:15px; font-size:14px; font-weight:bold; color:#fff; background:#333; filter:alpha(opacity=70); -moz-opacity: 0.7; opacity: 0.7; position:relative;}
+#LoginDiv .d2 .k1 .nr .cont { padding:15px; color:#fff;}
+#LoginDiv .d2 .k1 .nr .cont .formtext { width:180px; border:#ccc solid 1px; background:#eee; padding:4px; font:normal 12px Arial;}
+#LoginDiv .d2 .k1 .nr .cont .loginBtn { width:190px; height:33px; border:0px; cursor:pointer; background:url(../images/skin1/login_btn.png) no-repeat;}
+#LoginDiv .d2 .k1 .nr .cont .loginBtn:hover { background:url(../images/skin1/login_btn_hover.png) no-repeat;}
+#LoginDiv .d2 .k1 .nr .cont .loginBtn:active { background:url(../images/skin1/login_btn.png) no-repeat;}
+
+#LoginDiv .d3 { height:40px; background:#f7f7f7; position:relative; overflow:hidden;}
+#LoginDiv .d3 .t3 { width:800px; margin:0 auto; line-height:40px; text-align:right; color:#848585}

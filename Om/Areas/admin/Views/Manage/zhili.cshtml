@@ -1,0 +1,248 @@
+﻿<!--_meta 作为公共模版分离出去-->
+
+@{
+    Layout = null;
+}
+@using Utilities.Base.Common;
+@model List<Model.ModelView.M_SolutionView>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="Bookmark" href="favicon.ico">
+    <link rel="Shortcut Icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="lib/html5.js"></script>
+    <script type="text/javascript" src="lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/style.css" />
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script><![endif]-->
+    <!--/meta 作为公共模版分离出去-->
+
+    <title>治理</title>
+    <style>
+        select {
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+     <article class="cl pd-20">
+        <form action="/api/ApiCause/CauseAdd" method="post" class="form form-horizontal" id="form-admin-add">
+                    <div class="formControls col-xs-8 col-sm-9" style="width:90%">
+                        <div class="row cl">
+                            <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>日期：</label>
+                            <div class="formControls col-xs-8 col-sm-9">
+                                <input type="text" onclick="WdatePicker()" id="datemin" class="input-text Wdate" style="width:120px;" value="@DateTime.Now.ToString("yyyy-MM-dd")">
+                                <input type="button" value="查看当月详情" class="btn btn-primary radius" onclick="gomonthddetial()" />
+                            </div>
+                        </div>
+                        <div class="row cl" style="color:orangered;font-size:larger">
+                        </div>
+                            @if (Model.Count > 0)
+                            {
+                                int rowspan = 0;
+                                rowspan = Model.Count;
+                                <table class="table table-border table-bordered table-bg" style="width:100%" id="table1">
+                                    <thead>
+                                        <tr class="text-c">
+                                            <th width="10%">匹配信号</th>
+                                            <th width="10%">次数</th>
+                                            <th width="10%">事件</th>
+                                            <th width="10%">原因</th>
+                                            <th width="10%">原因详情</th>
+                                            <th width="10%">原因备注</th>
+                                            <th width="10%">当前站发生次数</th>
+                                            <th width="10%">全站发生次数</th>
+                                            <th width="10%">当前站事件次数</th>
+                                            <th width="10%">全站事件次数</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tbody1">
+                                        @for (int i = 0; i < Model.Count; i++)
+                                        {
+                                            if (i == 0)
+                                            {
+                                                <tr tid="@Model[i].CauseId">
+                                                    <td  rowspan="@rowspan">@ViewBag.CauseContent</td>
+                                                    <td ><input type="text" name="happen" class="input-text" value="0" /></td>
+                                                    <td><input type="text" name="event" class="input-text" value="0" /></td>
+                                                    <td >@Model[i].CauseContent</td>
+                                                    <td >@Model[i].SuggestionContent</td>
+                                                    <td >@Model[i].RelatedContent</td>
+                                                  
+                                                    @if (Model[i].ThisHappensTimesMax > 0 && Model[0].ThisHappensTimesMax == @Model[i].ThisHappensTimes)
+                                                    {
+                                                        <td  style="color:red">@Model[i].ThisHappensTimes</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td >@Model[i].ThisHappensTimes</td>
+                                                    }
+                                                    @if (Model[i].AllHappenSTimesMax > 0 && Model[0].AllHappenSTimesMax == @Model[i].AllHappenSTimes)
+                                                    {
+                                                        <td  style="color:red">@Model[i].AllHappenSTimes</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td >@Model[i].AllHappenSTimes</td>
+                                                                       
+                                                    }
+
+                                                    @if (Model[i].ThisEventTimesMax > 0 && Model[0].ThisEventTimesMax == @Model[i].ThisEventTimes)
+                                                    {
+                                                        <td style="color:red">@Model[i].ThisEventTimes</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td>@Model[i].ThisEventTimes</td>
+                                                    }
+                                                    @if (Model[i].AllEventTimesMax > 0 && Model[0].AllEventTimesMax == @Model[i].AllEventTimes)
+                                                    {
+                                                        <td style="color:red">@Model[i].AllEventTimes</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td >@Model[i].AllEventTimes</td>
+
+                                                    }
+                                               
+                                                    
+                                                </tr>
+                                            }
+                                            else
+                                            {
+                                                <tr tid="@Model[i].CauseId">
+                                                    <td width="10%"><input type="text" name="happen" class="input-text" value="0" /></td>
+                                                    <td width="10%"><input type="text" name="event" class="input-text" value="0" /></td>
+                                                    <td width="10%">@Model[i].CauseContent</td>
+                                                    <td width="10%">@Model[i].SuggestionContent</td>
+                                                    <td width="10%">@Model[i].RelatedContent</td>
+                                                  
+                                                    @if (Model[i].ThisHappensTimesMax > 0 && Model[0].ThisHappensTimesMax == @Model[i].ThisHappensTimes)
+                                                    {
+                                                        <td width="10%" style="color:red">@Model[i].ThisHappensTimes</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td width="10%">@Model[i].ThisHappensTimes</td>
+                                                    }
+                                                    @if (Model[i].AllHappenSTimesMax > 0 && Model[0].AllHappenSTimesMax == @Model[i].AllHappenSTimes)
+                                                    {
+                                                        <td width="10%" style="color:red">@Model[i].AllHappenSTimes</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td width="10%">@Model[i].AllHappenSTimes</td>
+
+                                                    }
+
+                                                    @if (Model[i].ThisEventTimesMax > 0 && Model[0].ThisEventTimesMax == @Model[i].ThisEventTimes)
+                                                    {
+                                                        <td width="10%" style="color:red">@Model[i].ThisEventTimes</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td width="10%">@Model[i].ThisEventTimes</td>
+                                                    }
+                                                    @if (Model[i].AllEventTimesMax > 0 && Model[0].AllEventTimesMax == @Model[i].AllEventTimes)
+                                                    {
+                                                        <td width="10%" style="color:red">@Model[i].AllEventTimes</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td width="10%">@Model[i].AllEventTimes</td>
+
+                                                    }
+                                                </tr>
+                                            }
+                                        }
+                                    </tbody>
+                                </table>
+                            }
+                            else
+                            {
+                                <div>没有此信息的匹配数据</div>
+                            }
+
+
+                        </div>
+              
+          
+            <div class="row cl" >
+                <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3" style="margin-top:10px">
+                    <input class="btn btn-primary radius" type="button" value="&nbsp;&nbsp;提交&nbsp;&nbsp;" onclick="sub()">
+                </div>
+            </div>
+        </form>
+    </article>
+
+    <!--_footer 作为公共模版分离出去-->
+    <script type="text/javascript" src="/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/lib/layer/2.4/layer.js"></script>
+    <script type="text/javascript" src="/static/h-ui/js/H-ui.js"></script>
+    <script type="text/javascript" src="/static/h-ui.admin/js/H-ui.admin.page.js"></script>
+    <!--/_footer /作为公共模版分离出去-->
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript" src="/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+    <script type="text/javascript">
+        function selectMonth() {
+            WdatePicker({ dateFmt: 'yyyy-MM-dd', isShowToday: false, isShowClear: false });
+        }
+        function sub()
+        {
+            var  CauseId="";
+            var HappenTimes = "";
+            var eventtimes = "";
+            $("#tbody1").children().each(function()
+            {
+                if(CauseId!=="")
+                {
+                    CauseId+=","+$(this).attr("tid");
+                }
+                else
+                {
+                    CauseId=$(this).attr("tid");
+                }
+               
+                HappenTimes += $(this).children().find("input[name='happen']").val() + ",";
+                eventtimes += $(this).children().find("input[name='event']").val() + ",";
+              
+
+
+            }
+            );
+       
+
+            $.post("/api/ApiM_Solution/CreateM_Solution", { "FactorySation": "@Request.QueryString["factorysation"]", "Signal": "@Request.QueryString["signal"]", "HappenDate": $("#datemin").val(), "CauseId": CauseId, "HappenTimes": HappenTimes, "EventTimes": eventtimes }, function (data) {
+                if (data.code == "1")
+                {
+                    alert("提交成功");
+                    location.href = location.href;
+                }
+            },"json");
+        }
+        function gomonthddetial()
+        {
+            window.open("/Manage/DailyDetial?factorysation=@Request.QueryString["factorysation"]&signal=@Request.QueryString["signal"]&createtime=" + $("#datemin").val(), "", "width=800,height=600")
+        }
+  
+    </script>
+    <!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>

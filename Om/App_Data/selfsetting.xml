@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <selecttimes value="10,20,30,50,70,80,100,300,400,500">
+  </selecttimes>
+  <yujingtype value="1">
+  </yujingtype>
+  <weekendbili value="2:1">
+  </weekendbili>
+  <mothtimes value="500">
+  </mothtimes>
+  <showcount value="5">
+  </showcount>
+  <daorutime value="0 0 2 * * ?">
+  </daorutime>
+  <daorudir value="D:\01">
+  </daorudir>
+  <daorunowdate value="-1">
+  </daorunowdate>
+</root>
