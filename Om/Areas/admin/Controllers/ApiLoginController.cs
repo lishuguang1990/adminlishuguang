@@ -14,6 +14,7 @@ namespace Om.Areas.admin.Controllers
 {
     public class ApiLoginController : ApiController
     {
+
         UserBll UserBll = new UserBll();
         SysLogBll SysLogBll = new SysLogBll();
         public Dictionary<string, object> Login(BaseUser model)
