@@ -16,6 +16,9 @@ using System.Web.Http;
 
 namespace Om.Areas.admin.Controllers
 {
+
+    [RoutePrefix("api/ApiUser")]
+    [Route("{action}")]
     public class ApiUserController : ApiController
     {
         UserBll UserBll = new UserBll();
@@ -36,23 +39,31 @@ namespace Om.Areas.admin.Controllers
         [HttpPost]
         public Dictionary<string, object> CreateUser(BaseUser model)
         {
-            model.CreateUserId = ManageProvider.Provider.Current().UserId;
-            model.CreateUserName = ManageProvider.Provider.Current().Account;
-        
+           
+           
+
             if (model.UserId == 0)
             {
+                model.CreateUserId = ManageProvider.Provider.Current().UserId;
+                model.CreateUserName = ManageProvider.Provider.Current().Account;
                 model.Enabled = 1;
                 model.CreateTime = DateTime.Now;
+                model.UserPassword = "123456";
                 model.UserPassword = Md5Helper.MD5(DESEncrypt.Encrypt(model.UserPassword.ToLower(), "qwertyui"));
 
                 return UserBll.AddUser(model);
             }
             else
             {
-                model.ModifyUserId = ManageProvider.Provider.Current().UserId;
-                model.ModifyUserName = ManageProvider.Provider.Current().Account;
+                var model1 = UserBll.GetModel(model.UserId);
+                model1.ModifyUserId = ManageProvider.Provider.Current().UserId;
+                model1.ModifyUserName = ManageProvider.Provider.Current().Account;
+                model1.Account = model.Account;
+                model1.Telephone = model1.Telephone;
+                model1.Email = model.Email;
+                model1.Remark = model.Remark;
                 model.ModifyDate = DateTime.Now;
-                return UserBll.EditUser(model);
+                return UserBll.EditUser(model1);
             }
           
            

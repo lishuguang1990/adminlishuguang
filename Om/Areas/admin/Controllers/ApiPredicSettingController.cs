@@ -12,9 +12,10 @@ using System.Web.Http;
 
 namespace Om.Areas.admin.Controllers
 {
+    [RoutePrefix("api/ApiPredicSetting")]
+    [Route("{action}")]
     public class ApiPredicSettingController : ApiController
     {
-
         PredicSettingBll bll = new PredicSettingBll();
         public Dictionary<string, object> PredicSettingAdd(PredicSetting model)
         {

@@ -14,12 +14,11 @@ using System.Web.Http;
 
 namespace Om.Controllers
 {
+    [RoutePrefix("api/ApiCause")]
+    [Route("{action}")]
     public class ApiCauseController : ApiController
-
     {
-
-  
-         [HttpPost]
+        [HttpPost]
         public Dictionary<string, object> CauseAdd(Sys_CauseSuggestion model)
 
         {

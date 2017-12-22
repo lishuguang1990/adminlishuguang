@@ -14,6 +14,9 @@ using System.Collections.Generic;
 
 namespace Om.Areas.admin.Controllers
 {
+    [RouteArea("admin")]
+    [RoutePrefix("Manage")]
+    [Route("{action}")]
     [LoginAuthorize]
 
     public class ManageController : Controller

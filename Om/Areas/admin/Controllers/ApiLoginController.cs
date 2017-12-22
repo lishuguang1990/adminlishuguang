@@ -7,11 +7,12 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using System.Web.Mvc;
 using Utilities;
 
 namespace Om.Areas.admin.Controllers
 {
+    [RoutePrefix("api/ApiLogin")]
+    [Route("{action}")]
     public class ApiLoginController : ApiController
     {
         UserBll UserBll = new UserBll();

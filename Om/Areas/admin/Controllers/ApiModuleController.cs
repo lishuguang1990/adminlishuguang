@@ -12,6 +12,8 @@ using System.Web.Http;
 
 namespace Om.Areas.admin.Controllers
 {
+    [RoutePrefix("api/ApiModule")]
+    [Route("{action}")]
     public class ApiModuleController : ApiController
     {
         ModuleBll mduleBll = new ModuleBll();

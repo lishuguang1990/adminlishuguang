@@ -16,6 +16,8 @@ using Quartz;
 
 namespace Om.Areas.admin.Controllers
 {
+    [RoutePrefix("api/ApiM_HitchInfo")]
+    [Route("{action}")]
     public class ApiM_HitchInfoController : ApiController
     {
         M_HitchInfoBll M_HitchInfoBll = new M_HitchInfoBll();

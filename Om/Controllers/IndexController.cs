@@ -4,11 +4,11 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace Om.Areas.admin.Controllers
+namespace Om.Controllers
 {
-    public class ModuleController : Controller
+    public class IndexController : Controller
     {
-        // GET: Module
+        // GET: Index
         public ActionResult Index()
         {
             return View();

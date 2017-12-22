@@ -705,6 +705,7 @@ D:\李曙光\Git\admin\Om\bin\Microsoft.AI.Web.xml
 D:\李曙光\Git\admin\Om\bin\Microsoft.AI.WindowsServer.xml
 D:\李曙光\Git\admin\Om\bin\Microsoft.ApplicationInsights.xml
 D:\李曙光\Git\admin\Om\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\李曙光\Git\admin\Om\bin\Newtonsoft.Json.pdb
 D:\李曙光\Git\admin\Om\bin\Newtonsoft.Json.xml
 D:\李曙光\Git\admin\Om\bin\Quartz.pdb
 D:\李曙光\Git\admin\Om\bin\Quartz.xml
@@ -756,6 +757,6 @@ D:\李曙光\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.Facebook.resources
 D:\李曙光\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
 D:\李曙光\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
 D:\李曙光\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-D:\李曙光\Git\admin\Om\obj\Debug\OperationManager.csprojResolveAssemblyReference.cache
 D:\李曙光\Git\admin\Om\obj\Debug\Om.dll
 D:\李曙光\Git\admin\Om\obj\Debug\Om.pdb
+D:\李曙光\Git\admin\Om\obj\Debug\OperationManager.csprojResolveAssemblyReference.cache

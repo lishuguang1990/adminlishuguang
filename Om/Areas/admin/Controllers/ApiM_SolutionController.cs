@@ -10,6 +10,8 @@ using System.Web.Http;
 
 namespace Om.Areas.admin.Controllers
 {
+    [RoutePrefix("api/ApiM_Solution")]
+    [Route("{action}")]
     public class ApiM_SolutionController : ApiController
     {
         [HttpPost]

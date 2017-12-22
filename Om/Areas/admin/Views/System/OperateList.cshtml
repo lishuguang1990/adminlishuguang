@@ -119,7 +119,7 @@
 
             function btn_add()
             {
-                admin_add('添加', '/System/OperateAdd?moduleid=@Request.QueryString["moduleid"]', '800', '500');
+                admin_add('添加', '/admin/System/OperateAdd?moduleid=@Request.QueryString["moduleid"]', '800', '500');
             }
 
             function admin_add(title, url, w, h) {
@@ -129,7 +129,7 @@
             {
                 if ($("#view1").find(":checkbox:checked").length == 1) {
                     var operateid = $("#view1").find(":checkbox:checked").val();
-                    admin_add('修改', '/System/OperateAdd?operateid=' + operateid, '800', '500')
+                    admin_add('修改', '/admin/System/OperateAdd?operateid=' + operateid, '800', '500')
                 }
                 else {
                     $.Huimodalalert('请选择一个需要修改的数据', 1000)

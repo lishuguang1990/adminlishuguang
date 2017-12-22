@@ -14,6 +14,7 @@ namespace Om
     {
         protected void Application_Start()
         {
+            RouteTable.Routes.MapMvcAttributeRoutes();
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);

@@ -10,6 +10,9 @@ using System.Web.Mvc;
 
 namespace Om.Areas.admin.Controllers
 {
+    [RouteArea("admin")]
+    [RoutePrefix("System")]
+    [Route("{action}")]
     [LoginAuthorize]
     public class SystemController : Controller
     {
@@ -29,6 +32,7 @@ namespace Om.Areas.admin.Controllers
             var modellist = Bll.GetRoleList();
             return View(modellist);
         }
+   
         [ModuleAuthorize]
         public ActionResult UserManage()
         {

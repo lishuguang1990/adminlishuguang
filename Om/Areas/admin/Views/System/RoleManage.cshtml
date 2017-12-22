@@ -87,20 +87,20 @@
         {
             if ($("#view1").find(":checkbox:checked").length == 1) {
                 var roleid = $("#view1").find(":checkbox:checked").val();
-                admin_add('赋权', '/System/RoleModuleOperate?roleid='+roleid, '800', '500')
+                admin_add('赋权', '/admin/System/RoleModuleOperate?roleid='+roleid, '800', '500')
             }
             else {
                 $.Huimodalalert('请选择一个需要修改的数据', 1000)
             }
         }
         function btn_add() {
-            admin_add('添加', '/System/RoleAdd', '800', '500')
+            admin_add('添加', '/admin/System/RoleAdd', '800', '500')
         }
         function btn_adduser()
         {
             if ($("#view1").find(":checkbox:checked").length == 1) {
                 var roleid = $("#view1").find(":checkbox:checked").val();
-                admin_add('添加角色人员', '/System/RoleUserAdd?roleid=' + roleid, '800', '500')
+                admin_add('添加角色人员', '/admin/System/RoleUserAdd?roleid=' + roleid, '800', '500')
             }
             else {
                 $.Huimodalalert('请选择一个需要修改的数据', 1000)
@@ -142,7 +142,7 @@
         function btn_edit() {
             if ($("#view1").find(":checkbox:checked").length == 1) {
                 var roleid=$("#view1").find(":checkbox:checked").val();
-                admin_add('修改', '/System/RoleAdd?RoleId=' + roleid, '800', '500')
+                admin_add('修改', '/admin/System/RoleAdd?RoleId=' + roleid, '800', '500')
             }
             else {
                 $.Huimodalalert('请选择一个需要修改的数据',1000)

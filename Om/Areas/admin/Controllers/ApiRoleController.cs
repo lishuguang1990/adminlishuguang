@@ -13,6 +13,8 @@ using System.Web.Http;
 
 namespace Om.Areas.admin.Controllers
 {
+    [RoutePrefix("api/ApiRole")]
+    [Route("{action}")]
     public class ApiRoleController : ApiController
     {
         RoleBll bll = new RoleBll();

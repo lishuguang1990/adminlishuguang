@@ -15,7 +15,7 @@
     <script type="text/javascript" src="lib/html5.js"></script>
     <script type="text/javascript" src="lib/respond.min.js"></script>
     <![endif]-->
-    <link href="/static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
     <link href="/static/h-ui/css/H-ui.login.css" rel="stylesheet" type="text/css" />
     <link href="/static/h-ui.admin/css/style.css" rel="stylesheet" type="text/css" />
     <link href="/lib/Hui-iconfont/1.0.8/iconfont.css" rel="stylesheet" type="text/css" />
@@ -82,7 +82,7 @@
                 submitHandler: function (form) {
                     $(form).ajaxSubmit(function (data) {
                         if (data.code == 1) {
-                            location.href = "/System/UserManage";
+                            location.href = "/admin/System/UserManage";
                         }
                         else {
                             $("#tips").html(data.msg);

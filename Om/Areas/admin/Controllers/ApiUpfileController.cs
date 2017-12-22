@@ -10,6 +10,8 @@ using Utilities;
 
 namespace Om.Areas.admin.Controllers
 {
+    [RoutePrefix("api/ApiUpfile")]
+    [Route("{action}")]
     public class ApiUpfileController : ApiController
     {
 

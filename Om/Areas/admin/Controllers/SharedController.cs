@@ -8,6 +8,9 @@ using System.Web.Mvc;
 
 namespace Om.Areas.admin.Controllers
 {
+    [RouteArea("admin")]
+    [RoutePrefix("Shared")]
+    [Route("{action}")]
     public class SharedController : Controller
     {
         // GET: Share

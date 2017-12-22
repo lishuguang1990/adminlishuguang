@@ -8,7 +8,8 @@ using System.Web.Mvc;
 namespace Om.Areas.admin.Controllers
 {
     [RouteArea("admin")]
-    [Route("login/{action}")]
+    [RoutePrefix("login")]
+    [Route("{action}")]
     public class LoginController : Controller
     {
         public ActionResult index()

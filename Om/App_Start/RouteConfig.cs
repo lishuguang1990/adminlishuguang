@@ -16,7 +16,7 @@ namespace Om
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Login", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "index", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

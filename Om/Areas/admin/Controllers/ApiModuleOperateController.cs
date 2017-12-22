@@ -17,6 +17,8 @@ using Utilities;
 
 namespace Om.Areas.admin.Controllers
 {
+    [RoutePrefix("api/ApiModuleOperate")]
+    [Route("{action}")]
     public class ApiModuleOperateController : ApiController
     {
         SysLogBll sysLogBll = new SysLogBll();
