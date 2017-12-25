@@ -8,17 +8,23 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Utilities;
 
 namespace BLL
 {
    public  class UserBll
     {
+        log4net.ILog log = log4net.LogManager.GetLogger(typeof(UserBll));
+
         public DataTable GetPageList(ref JqGridParam jqgridparam)
         {
             return UserDal.GetInstance().GetPageList(ref jqgridparam);
         }
         public BaseUser UserLogin(string Account, string Password, out int result)
         {
+            log.Error("123");
+
+
             return UserDal.GetInstance().UserLogin(Account, Password, out result);
         }
                 //添加用户

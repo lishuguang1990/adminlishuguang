@@ -760,3 +760,5 @@ D:\李曙光\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.r
 D:\李曙光\Git\admin\Om\obj\Debug\Om.dll
 D:\李曙光\Git\admin\Om\obj\Debug\Om.pdb
 D:\李曙光\Git\admin\Om\obj\Debug\OperationManager.csprojResolveAssemblyReference.cache
+D:\李曙光\Git\admin\Om\bin\log4net.dll
+D:\李曙光\Git\admin\Om\bin\log4net.xml

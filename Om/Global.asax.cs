@@ -22,6 +22,8 @@ namespace Om
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             GlobalConfiguration.Configuration.Formatters.XmlFormatter.SupportedMediaTypes.Clear();
             AutoMapperConfig.Configure();
+            log4net.Config.XmlConfigurator.Configure();
+
         }
     }
 }
