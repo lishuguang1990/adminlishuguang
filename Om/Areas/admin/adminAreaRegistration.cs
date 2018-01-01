@@ -14,11 +14,12 @@ namespace Om.Areas.admin
 
         public override void RegisterArea(AreaRegistrationContext context) 
         {
-            //context.MapRoute(
-            //    "admin_default",
-            //    "admin/{controller}/{action}/{id}",
-            //    new { action = "Index", id = UrlParameter.Optional }
-            //);
+            context.MapRoute(
+                "adminDefault",
+                "admin/{controller}/{action}/{id}",
+                new { controller = "Login", action = "Index", id = UrlParameter.Optional },
+                  namespaces: new string[] { "Om.Areas.admin.Controllers" }
+            );
         }
     }
 }

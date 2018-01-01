@@ -238,6 +238,7 @@
     <Compile Include="Areas\admin\Controllers\ApiUserController.cs" />
     <Compile Include="Areas\admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\admin\Controllers\ManageController.cs" />
+    <Compile Include="Areas\admin\Controllers\SaleActivityController.cs" />
     <Compile Include="Areas\admin\Controllers\SharedController.cs" />
     <Compile Include="Areas\admin\Controllers\SystemController.cs" />
     <Compile Include="AutoMapper\Profiles\ModuleProfile.cs" />
@@ -1460,6 +1461,7 @@
     <Content Include="lib\webuploader\0.1.5\server\fileupload.php" />
     <Content Include="lib\webuploader\0.1.5\server\fileupload2.php" />
     <Content Include="lib\webuploader\0.1.5\server\preview.php" />
+    <Content Include="Areas\admin\Views\SaleActivity\List.cshtml" />
     <None Include="Properties\PublishProfiles\132.pubxml" />
     <None Include="Properties\PublishProfiles\OM.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

@@ -13,11 +13,17 @@ namespace Om
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapRoute(
+            //    name: "Default",
+            //    url: "{controller}/{action}/{id}",
+            //    defaults: new { controller = "index", action = "Index", id = UrlParameter.Optional }
+            //);
             routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "index", action = "Index", id = UrlParameter.Optional }
-            );
+               name: "Default",
+               url: "{controller}/{action}/{id}",
+               defaults: new { controller = "Login", action = "Index", id = UrlParameter.Optional },
+               namespaces:new string [] { "Om.Areas.admin.Controllers" }
+           ).DataTokens.Add("area","admin");
         }
     }
 }
