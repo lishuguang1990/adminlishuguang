@@ -149,7 +149,6 @@ D:\李曙光\Git\admin\BLL\bin\Debug\BLL.pdb
 D:\李曙光\Git\admin\BLL\bin\Debug\Common.Logging.Core.dll
 D:\李曙光\Git\admin\BLL\bin\Debug\Common.Logging.dll
 D:\李曙光\Git\admin\BLL\bin\Debug\DBHelper.dll
-D:\李曙光\Git\admin\BLL\bin\Debug\DLL.dll
 D:\李曙光\Git\admin\BLL\bin\Debug\log4net.dll
 D:\李曙光\Git\admin\BLL\bin\Debug\Model.dll
 D:\李曙光\Git\admin\BLL\bin\Debug\Quartz.dll
@@ -161,7 +160,6 @@ D:\李曙光\Git\admin\BLL\bin\Debug\SharpZipLib.dll
 D:\李曙光\Git\admin\BLL\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\李曙光\Git\admin\BLL\bin\Debug\System.Web.WebPages.Deployment.dll
 D:\李曙光\Git\admin\BLL\bin\Debug\DBHelper.pdb
-D:\李曙光\Git\admin\BLL\bin\Debug\DLL.pdb
 D:\李曙光\Git\admin\BLL\bin\Debug\Model.pdb
 D:\李曙光\Git\admin\BLL\bin\Debug\Utilities.pdb
 D:\李曙光\Git\admin\BLL\bin\Debug\Common.Logging.pdb
@@ -216,3 +214,5 @@ D:\Git\admin\BLL\bin\Debug\System.Web.WebPages.Deployment.xml
 D:\Git\admin\BLL\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
 D:\Git\admin\BLL\bin\Debug\zh-Hans\System.Web.WebPages.resources.dll
 D:\Git\admin\BLL\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+D:\李曙光\Git\admin\BLL\bin\Debug\DAl.dll
+D:\李曙光\Git\admin\BLL\bin\Debug\DAl.pdb

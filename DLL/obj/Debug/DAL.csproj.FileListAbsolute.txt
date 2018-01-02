@@ -109,8 +109,6 @@ D:\李曙光\Git\Manage\DLL\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.res
 D:\李曙光\Git\Manage\DLL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 D:\李曙光\Git\Manage\DLL\obj\Debug\DLL.dll
 D:\李曙光\Git\Manage\DLL\obj\Debug\DLL.pdb
-D:\李曙光\Git\admin\DLL\bin\Debug\DLL.dll
-D:\李曙光\Git\admin\DLL\bin\Debug\DLL.pdb
 D:\李曙光\Git\admin\DLL\bin\Debug\DBHelper.dll
 D:\李曙光\Git\admin\DLL\bin\Debug\Model.dll
 D:\李曙光\Git\admin\DLL\bin\Debug\Utilities.dll
@@ -132,8 +130,6 @@ D:\李曙光\Git\admin\DLL\bin\Debug\zh-Hans\System.Web.Mvc.resources.dll
 D:\李曙光\Git\admin\DLL\bin\Debug\zh-Hans\System.Web.WebPages.resources.dll
 D:\李曙光\Git\admin\DLL\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 D:\李曙光\Git\admin\DLL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
-D:\李曙光\Git\admin\DLL\obj\Debug\DLL.dll
-D:\李曙光\Git\admin\DLL\obj\Debug\DLL.pdb
 D:\Git\admin\DLL\bin\Debug\DLL.dll
 D:\Git\admin\DLL\bin\Debug\DLL.pdb
 D:\Git\admin\DLL\bin\Debug\DBHelper.dll
@@ -159,3 +155,7 @@ D:\Git\admin\DLL\obj\Debug\DLL.dll
 D:\Git\admin\DLL\obj\Debug\DLL.pdb
 D:\Git\admin\DLL\bin\Debug\Microsoft.Web.Infrastructure.dll
 D:\Git\admin\DLL\bin\Debug\Microsoft.Web.Infrastructure.xml
+D:\李曙光\Git\admin\DLL\bin\Debug\DAl.dll
+D:\李曙光\Git\admin\DLL\bin\Debug\DAl.pdb
+D:\李曙光\Git\admin\DLL\obj\Debug\DAl.dll
+D:\李曙光\Git\admin\DLL\obj\Debug\DAl.pdb

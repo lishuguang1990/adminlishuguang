@@ -7,8 +7,8 @@
     <ProjectGuid>{1AF3BDCF-0CEC-417F-AD29-5F71E355419F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DLL</RootNamespace>
-    <AssemblyName>DLL</AssemblyName>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAl</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -50,6 +50,7 @@
     <Compile Include="RoleDal.cs" />
     <Compile Include="SysLogDal.cs" />
     <Compile Include="M_CauseSuggestion.cs" />
+    <Compile Include="T_ActivityAreaDal.cs" />
     <Compile Include="UserDal.cs" />
   </ItemGroup>
   <ItemGroup>

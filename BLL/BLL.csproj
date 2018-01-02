@@ -70,6 +70,7 @@
     <Compile Include="RoleBll.cs" />
     <Compile Include="SysLogBll.cs" />
     <Compile Include="Sys_CauseSuggestionBll.cs" />
+    <Compile Include="T_ActivityAreaBll.cs" />
     <Compile Include="UserBll.cs" />
   </ItemGroup>
   <ItemGroup>

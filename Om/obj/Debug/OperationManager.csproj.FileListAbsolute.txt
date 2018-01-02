@@ -688,7 +688,6 @@ D:\李曙光\Git\admin\Om\bin\System.Web.WebPages.dll
 D:\李曙光\Git\admin\Om\bin\System.Web.WebPages.Razor.dll
 D:\李曙光\Git\admin\Om\bin\Utilities.dll
 D:\李曙光\Git\admin\Om\bin\WebGrease.dll
-D:\李曙光\Git\admin\Om\bin\DLL.dll
 D:\李曙光\Git\admin\Om\bin\SharpZipLib.dll
 D:\李曙光\Git\admin\Om\bin\BLL.pdb
 D:\李曙光\Git\admin\Om\bin\DBHelper.pdb
@@ -734,7 +733,6 @@ D:\李曙光\Git\admin\Om\bin\Microsoft.Owin.Security.OAuth.xml
 D:\李曙光\Git\admin\Om\bin\Microsoft.Owin.Security.Google.xml
 D:\李曙光\Git\admin\Om\bin\Microsoft.Owin.Security.Twitter.xml
 D:\李曙光\Git\admin\Om\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-D:\李曙光\Git\admin\Om\bin\DLL.pdb
 D:\李曙光\Git\admin\Om\bin\zh-Hans\System.Web.Helpers.resources.dll
 D:\李曙光\Git\admin\Om\bin\zh-Hans\System.Web.Mvc.resources.dll
 D:\李曙光\Git\admin\Om\bin\zh-Hans\System.Web.Optimization.resources.dll
@@ -897,3 +895,5 @@ D:\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.d
 D:\Git\admin\Om\obj\Debug\OperationManager.csprojResolveAssemblyReference.cache
 D:\Git\admin\Om\obj\Debug\Om.dll
 D:\Git\admin\Om\obj\Debug\Om.pdb
+D:\李曙光\Git\admin\Om\bin\DAl.dll
+D:\李曙光\Git\admin\Om\bin\DAl.pdb

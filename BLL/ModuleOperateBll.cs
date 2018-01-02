@@ -31,6 +31,17 @@ namespace BLL
             return ModuleOperateDal.GetInstance().ModuleOperateEdit(model);
         }
 
+        //添加模块默认创建添加删除修改的按钮操作
+        public void CreateOperateAfterModuleAdd(List<ModuleOperate> list)
+        {
+            foreach (var item in list)
+            {
+                ModuleOperateAdd(item);
+            }
+
+
+        }
+
 
     }
 }

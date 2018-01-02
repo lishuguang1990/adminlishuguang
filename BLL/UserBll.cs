@@ -1,5 +1,4 @@
 ﻿using DAL;
-using DLL;
 using MallWCF.DBHelper;
 using Model;
 using System;

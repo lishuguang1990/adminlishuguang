@@ -234,6 +234,7 @@
     <Compile Include="Areas\admin\Controllers\ApiM_SolutionController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiPredicSettingController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiRoleController.cs" />
+    <Compile Include="Areas\admin\Controllers\ApiActivityAreaController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiUpfileController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiUserController.cs" />
     <Compile Include="Areas\admin\Controllers\LoginController.cs" />
@@ -1462,6 +1463,10 @@
     <Content Include="lib\webuploader\0.1.5\server\fileupload2.php" />
     <Content Include="lib\webuploader\0.1.5\server\preview.php" />
     <Content Include="Areas\admin\Views\SaleActivity\List.cshtml" />
+    <Content Include="Areas\admin\Views\SaleActivity\AreaList.cshtml" />
+    <Content Include="Areas\admin\Views\SaleActivity\AreaAdd.cshtml" />
+    <Content Include="Areas\admin\Views\SaleActivity\TypeList.cshtml" />
+    <Content Include="Areas\admin\Views\SaleActivity\TypeAdd.cshtml" />
     <None Include="Properties\PublishProfiles\132.pubxml" />
     <None Include="Properties\PublishProfiles\OM.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

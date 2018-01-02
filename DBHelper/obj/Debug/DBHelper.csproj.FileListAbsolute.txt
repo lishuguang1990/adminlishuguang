@@ -1,4 +1,4 @@
-D:\李曙光\项目\Om\DBHelper\obj\Debug\DBHelper.csprojResolveAssemblyReference.cache
+﻿D:\李曙光\项目\Om\DBHelper\obj\Debug\DBHelper.csprojResolveAssemblyReference.cache
 D:\李曙光\项目\Om\DBHelper\bin\Debug\DBHelper.dll
 D:\李曙光\项目\Om\DBHelper\bin\Debug\DBHelper.pdb
 D:\李曙光\项目\Om\DBHelper\bin\Debug\Newtonsoft.Json.dll
@@ -31,7 +31,6 @@ D:\李曙光\Git\Manage\DBHelper\bin\Debug\Newtonsoft.Json.dll
 D:\李曙光\Git\Manage\DBHelper\bin\Debug\Newtonsoft.Json.xml
 D:\李曙光\Git\Manage\DBHelper\obj\Debug\DBHelper.dll
 D:\李曙光\Git\Manage\DBHelper\obj\Debug\DBHelper.pdb
-<<<<<<< HEAD
 D:\李曙光\Git\admin\DBHelper\bin\Debug\DBHelper.dll
 D:\李曙光\Git\admin\DBHelper\bin\Debug\DBHelper.pdb
 D:\李曙光\Git\admin\DBHelper\bin\Debug\Newtonsoft.Json.dll
@@ -39,7 +38,6 @@ D:\李曙光\Git\admin\DBHelper\bin\Debug\Newtonsoft.Json.xml
 D:\李曙光\Git\admin\DBHelper\obj\Debug\DBHelper.csprojResolveAssemblyReference.cache
 D:\李曙光\Git\admin\DBHelper\obj\Debug\DBHelper.dll
 D:\李曙光\Git\admin\DBHelper\obj\Debug\DBHelper.pdb
-=======
 D:\Git\admin\DBHelper\bin\Debug\DBHelper.dll
 D:\Git\admin\DBHelper\bin\Debug\DBHelper.pdb
 D:\Git\admin\DBHelper\bin\Debug\Newtonsoft.Json.dll
@@ -47,4 +45,3 @@ D:\Git\admin\DBHelper\bin\Debug\Newtonsoft.Json.xml
 D:\Git\admin\DBHelper\obj\Debug\DBHelper.csprojResolveAssemblyReference.cache
 D:\Git\admin\DBHelper\obj\Debug\DBHelper.dll
 D:\Git\admin\DBHelper\obj\Debug\DBHelper.pdb
->>>>>>> 3c90e86c63778879c9bed9f1cf57722daea6a99a

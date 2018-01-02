@@ -17,15 +17,53 @@ namespace Om.Areas.admin.Controllers
     public class ApiModuleController : ApiController
     {
         ModuleBll mduleBll = new ModuleBll();
+        ModuleOperateBll ModuleOperateBll = new ModuleOperateBll();
         public Dictionary<string, object> ModuleAdd(Module model)
         {
             model.CreateTime = DateTime.Now;
             model.CreateUserId = ManageProvider.Provider.Current().UserId;
             if (model.ModuleId == 0)
             {
-                if (mduleBll.ModuleAdd(model) > 0)
+                int newid = mduleBll.ModuleAdd(model);
+                if (newid > 0)
                 {
-                       return new Dictionary<string, object>
+                    List<ModuleOperate> list = new List<ModuleOperate>();
+                    var operate = new ModuleOperate();
+                    operate.CreateTime = model.CreateTime;
+                    operate.CreateUserId = model.CreateUserId;
+                    operate.CreateUserName = ManageProvider.Provider.Current().Account;
+                    operate.ModuleId = newid;
+                    operate.ModuleOperateName = "添加";
+                    operate.JsEvent = "btn_add()";
+                    operate.Sort = 1;
+                    operate.Icon = "&#xe600";
+                    operate.Enabled = 1;
+                    list.Add(operate);
+                    var operate1 = new ModuleOperate();
+                    operate1.CreateTime = model.CreateTime;
+                    operate1.CreateUserId = model.CreateUserId;
+                    operate1.CreateUserName = ManageProvider.Provider.Current().Account;
+                    operate1.ModuleId = newid;
+                    operate1.ModuleOperateName = "编辑";
+                    operate1.JsEvent = "btn_edit()";
+                    operate1.Sort = 1;
+                    operate1.Icon = "&#xe60c";
+                    operate1.Enabled = 1;
+                    list.Add(operate1);
+                    var operate2 = new ModuleOperate();
+                    operate2.CreateUserName = ManageProvider.Provider.Current().Account;
+                    operate2.CreateTime = model.CreateTime;
+                    operate2.CreateUserId = model.CreateUserId;
+                    operate2.ModuleId = newid;
+                    operate2.ModuleOperateName = "删除";
+                    operate2.JsEvent = "btn_del()";
+                    operate2.Sort = 1;
+                    operate2.Icon = "&#xe6e2";
+                    operate2.Enabled = 1;
+                    list.Add(operate2);
+                    ModuleOperateBll.CreateOperateAfterModuleAdd(list);
+
+                    return new Dictionary<string, object>
                        {
                           { "code","1"}
                       };
@@ -41,6 +79,9 @@ namespace Om.Areas.admin.Controllers
             }
             else
             {
+            
+              
+
                 if (mduleBll.ModuleEdit(model) > 0)
                 {
                     return new Dictionary<string, object>
