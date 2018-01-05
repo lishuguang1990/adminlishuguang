@@ -13,6 +13,7 @@ using Model.ModelView;
 using System.Text;
 using Quartz.Impl;
 using Quartz;
+using System.Threading.Tasks;
 
 namespace Om.Areas.admin.Controllers
 {
@@ -644,11 +645,13 @@ namespace Om.Areas.admin.Controllers
             }
 
         }
-
+ 
         //预警饼图
         [HttpPost]
         public Dictionary<string, object> YujingListBingTu()
         {
+            Task task = new TaskFactory().StartNew(() => { });
+             
             string path = HttpContext.Current.Server.MapPath("/App_Data/selfsetting.xml");
             XmlDocument xmldoc = new XmlDocument();
             xmldoc.Load(path);

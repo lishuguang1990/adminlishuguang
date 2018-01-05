@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <state id="1" name="待审核">
+    <role id="1" name="销售">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+    </role>
+    <role id="1" name="中台">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2036" btn="add" name="编辑">
+      </operate>
+      <operate id="2037" btn="add" name="审核">
+      </operate>
+      <operate id="2038" btn="add" name="拒绝">
+      </operate>
+    </role>
+    <role id="1" name="老板">
+    </role>
+    <role id="1" name="财务">
+    </role>
+    <role id="1" name="仓库">
+    </role>
+    <role id="1" name="运营">
+    </role>
+  </state>
+  <state id="2" name="已拒绝">
+    <role id="1" name="销售">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+    </role>
+    <role id="1" name="中台">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+    </role>
+    <role id="1" name="老板">
+    </role>
+    <role id="1" name="财务">
+    </role>
+    <role id="1" name="仓库">
+    </role>
+    <role id="1" name="运营">
+    </role>
+  </state>
+  <state id="3" name="已审核">
+    <role id="1" name="销售">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+    </role>
+    <role id="1" name="中台">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+    </role>
+    <role id="1" name="老板">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+      <operate id="2045" btn="add" name="通过">
+      </operate>
+      <operate id="2046" btn="add" name="拒绝">
+      </operate>
+    </role>
+    <role id="1" name="财务">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+    </role>
+    <role id="1" name="仓库">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+    </role>
+    <role id="1" name="运营">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+    </role>
+  </state>
+  <state id="4" name="已通过">
+    <role id="1" name="销售">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+    </role>
+    <role id="1" name="中台">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+    </role>
+    <role id="1" name="老板">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+    </role>
+    <role id="1" name="财务">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+      <operate id="2040" btn="add" name="确认充豆">
+      </operate>
+    </role>
+    <role id="1" name="仓库">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+    </role>
+    <role id="1" name="运营">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+    </role>
+  </state>
+  <state id="5" name="已充豆">
+    <role id="1" name="销售">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+    </role>
+    <role id="1" name="中台">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+    </role>
+    <role id="1" name="老板">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+    </role>
+    <role id="1" name="财务">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+      <operate id="2041" btn="add" name="财务报表">
+      </operate>
+    </role>
+    <role id="1" name="仓库">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2041" btn="add" name="财务报表">
+      </operate>
+      <operate id="2042" btn="add" name="一键下单">
+      </operate>
+    </role>
+    <role id="1" name="运营">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+    </role>
+  </state>
+  <state id="6" name="已下单">
+    <role id="1" name="销售">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="中台">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+    </role>
+    <role id="1" name="老板">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="财务">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+      <operate id="2041" btn="add" name="财务报表">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="仓库">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2041" btn="add" name="财务报表">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="运营">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+    </role>
+  </state>
+  <state id="7" name="已支付">
+    <role id="1" name="销售">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="中台">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+    </role>
+    <role id="1" name="老板">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="财务">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+      <operate id="2041" btn="add" name="财务报表">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="仓库">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2041" btn="add" name="财务报表">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="运营">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2044" btn="add" name="培训反馈">
+      </operate>
+    </role>
+  </state>
+  <state id="8" name="已培训">
+    <role id="1" name="销售">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="中台">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+    </role>
+    <role id="1" name="老板">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="财务">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2039" btn="add" name="修改记录">
+      </operate>
+      <operate id="2041" btn="add" name="财务报表">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="仓库">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2041" btn="add" name="财务报表">
+      </operate>
+      <operate id="2043" btn="add" name="铺货清单">
+      </operate>
+    </role>
+    <role id="1" name="运营">
+      <operate id="2035" btn="add" name="派单信息表">
+      </operate>
+      <operate id="2047" btn="add" name="培训详情">
+      </operate>
+      <operate id="2048" btn="add" name="申请补货">
+      </operate>
+      <operate id="2051" btn="add" name="终止合同">
+      </operate>
+    </role>
+  </state>
+    <state id="9" name="补货申请">
+      <role id="1" name="销售">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="中台">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+      </role>
+      <role id="1" name="老板">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+        <operate id="2049" btn="add" name="补货申请单">
+        </operate>
+      </role>
+      <role id="1" name="财务">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="仓库">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="运营">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2047" btn="add" name="培训详情">
+        </operate>
+       </role>
+    </state>
+    <state id="10" name="补货通过">
+      <role id="1" name="销售">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="中台">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+      </role>
+      <role id="1" name="老板">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="财务">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+        <operate id="2050" btn="add" name="补货充豆" isshow="0">
+        </operate>
+      </role>
+      <role id="1" name="仓库">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="运营">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2047" btn="add" name="培训详情">
+        </operate>
+      </role>
+    </state>
+    <state id="11" name="补货中">
+      <role id="1" name="销售">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="中台">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+      </role>
+      <role id="1" name="老板">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="财务">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="仓库">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="运营">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2047" btn="add" name="培训详情">
+        </operate>
+      </role>
+    </state>
+    <state id="12" name="已补货">
+      <role id="1" name="销售">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="中台">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+      </role>
+      <role id="1" name="老板">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="财务">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="仓库">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="运营">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2047" btn="add" name="培训详情">
+        </operate>
+        <operate id="2048" btn="add" name="申请补货">
+        </operate>
+        <operate id="2051" btn="add" name="终止合同">
+        </operate>
+      </role>
+    </state>
+    <state id="13" name="终止申请">
+      <role id="1" name="销售">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="中台">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+      </role>
+      <role id="1" name="老板">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+        <operate id="2054" btn="add" name="终止合作表">
+        </operate>
+      </role>
+      <role id="1" name="财务">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+        <operate id="2054" btn="add" name="终止合作表">
+        </operate>
+      </role>
+      <role id="1" name="仓库">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+        <operate id="2054" btn="add" name="终止合作表">
+        </operate>
+        <operate id="2052" btn="add" name="确认入库">
+        </operate>
+      </role>
+      <role id="1" name="运营">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2047" btn="add" name="培训详情">
+        </operate>
+      </role>
+    </state>
+    <state id="14" name="财务清算">
+      <role id="1" name="销售">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="中台">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+      </role>
+      <role id="1" name="老板">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+        <operate id="2054" btn="add" name="终止合作表">
+        </operate>
+      </role>
+      <role id="1" name="财务">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+        <operate id="2054" btn="add" name="终止合作表">
+        </operate>
+        <operate id="2053" btn="add" name="清算完结">
+        </operate>
+      </role>
+      <role id="1" name="仓库">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+        <operate id="2054" btn="add" name="终止合作表">
+        </operate>
+     
+      </role>
+      <role id="1" name="运营">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2047" btn="add" name="培训详情">
+        </operate>
+      </role>
+    </state>
+    <state id="15" name="终止合作">
+      <role id="1" name="销售">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+      </role>
+      <role id="1" name="中台">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+      </role>
+      <role id="1" name="老板">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+        <operate id="2054" btn="add" name="终止合作表">
+        </operate>
+      </role>
+      <role id="1" name="财务">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2039" btn="add" name="修改记录">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+        <operate id="2054" btn="add" name="终止合作表">
+        </operate>
+       
+      </role>
+      <role id="1" name="仓库">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2041" btn="add" name="财务报表">
+        </operate>
+        <operate id="2043" btn="add" name="铺货清单">
+        </operate>
+        <operate id="2054" btn="add" name="终止合作表">
+        </operate>
+      </role>
+      <role id="1" name="运营">
+        <operate id="2035" btn="add" name="派单信息表">
+        </operate>
+        <operate id="2047" btn="add" name="培训详情">
+        </operate>
+      </role>
+    </state>
+     
+</root>

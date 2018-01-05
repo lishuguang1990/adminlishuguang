@@ -60,6 +60,7 @@
     <Compile Include="SysLog.cs" />
     <Compile Include="SysLogDetail.cs" />
     <Compile Include="Sys_CauseSuggestion.cs" />
+    <Compile Include="T_SaleActivityType.cs" />
     <Compile Include="UserRole.cs" />
   </ItemGroup>
   <ItemGroup>

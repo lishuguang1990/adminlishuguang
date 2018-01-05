@@ -51,6 +51,7 @@
     <Compile Include="SysLogDal.cs" />
     <Compile Include="M_CauseSuggestion.cs" />
     <Compile Include="T_ActivityAreaDal.cs" />
+    <Compile Include="T_SaleActivityTypeDal.cs" />
     <Compile Include="UserDal.cs" />
   </ItemGroup>
   <ItemGroup>

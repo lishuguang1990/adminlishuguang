@@ -28,14 +28,15 @@ namespace Utilities.Base.Common
             List<SelectListItem> listitem = new List<SelectListItem>();
             if (SelectListItemSelect.Ok == select)
             {
-                listitem.Add(new SelectListItem { Text = "请选择", Value = "" });
+                listitem.Add(new SelectListItem { Text = "请选择", Value = "",Selected=true });
             }
+         
             foreach (string key in list.Keys)
             {
                var  values = list.GetValues(key);
                 foreach (string value in values)
                 {
-                    listitem.Add(new SelectListItem { Text = value, Value = key });
+                   listitem.Add(new SelectListItem { Text = value, Value = key});
                 }
             }
             return listitem;

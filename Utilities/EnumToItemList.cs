@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
-namespace com.zh.kj.MallWeiXin.BizLogic
+namespace Utilities
 {
   public static  class EnumToItemList
     {

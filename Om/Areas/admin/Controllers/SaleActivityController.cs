@@ -39,8 +39,22 @@ namespace Om.Areas.admin.Controllers
         {
             var model = new T_ActivityArea();
             if (Request.QueryString["areaid"] != null)
-            model = bll.GetModel(int.Parse(Request.QueryString["areaid"].ToString()));
+            {
+                model = bll.GetModel(int.Parse(Request.QueryString["areaid"].ToString()));
+
+            }
+            else
+            {
+                model.IsShow = 1;
+            }
+
             return View(model);
+        }
+        [ModuleAuthorize]
+        public ActionResult TypeList()
+        {
+            var list = bll.GetList();
+            return View(list);
         }
     }
 }

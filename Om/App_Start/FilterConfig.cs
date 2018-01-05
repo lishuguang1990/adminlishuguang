@@ -1,4 +1,5 @@
-﻿using System.Web;
+﻿using Om.App_Start;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Om
@@ -7,7 +8,8 @@ namespace Om
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorAttribute());
+          //  filters.Add(new HandleErrorAttribute());
+            filters.Add(new CustomerErrorHadlerAttribute());
         }
     }
 }

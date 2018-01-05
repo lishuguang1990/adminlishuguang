@@ -59,10 +59,12 @@ namespace Utilities
     }
     public enum ModuleType
     {
-      [Description("显示")]
-        Show =1,
-      [Description("隐藏")]
-        Hide =0
+    
+  
+        [Description("显示")]
+        Show = 1,
+        [Description("隐藏")]
+        Hide = 0
     }
     /// <summary>
     /// 获取SelectListItem列表是否给个请选择

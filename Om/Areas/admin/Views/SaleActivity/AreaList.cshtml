@@ -2,6 +2,7 @@
     ViewBag.Title = "区域列表";
 }
 @using BLL;
+@using Utilities;
 @model List<Model.T_ActivityArea>
 
 <nav class="breadcrumb"></nav>
@@ -22,6 +23,7 @@
                     <th width="40">ID</th>
                     <th width="150">区域名称</th>
                     <th width="150">排序</th>
+                    <th width="150">状态</th>
                     <th width="150">创建时间</th>
                     <th width="150">创建用户</th>
                 </tr>
@@ -34,6 +36,7 @@
                         <td>@item.ActivitAreaId</td>
                         <td>@item.ActivityName</td>
                         <td>@item.SortCode</td>
+                        <td>@item.IsShow.ToEnumDescriptionString(typeof(ModuleType))</td>
                         <td>@item.CreateTime.ToString("yyyy-MM-dd")</td>
                         <td>@item.CreateUserName</td>
                     </tr>

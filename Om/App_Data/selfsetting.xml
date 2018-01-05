@@ -10,7 +10,7 @@
   </mothtimes>
   <showcount value="5">
   </showcount>
-  <daorutime value="0 0 2 * * ?">
+  <daorutime value="0 1 1 * * ?">
   </daorutime>
   <daorudir value="D:\01">
   </daorudir>

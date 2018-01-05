@@ -220,6 +220,7 @@
   <ItemGroup>
     <Compile Include="App_Start\AutoMapperConfig.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\CustomerErrorHadlerAttribute.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -235,6 +236,7 @@
     <Compile Include="Areas\admin\Controllers\ApiPredicSettingController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiRoleController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiActivityAreaController.cs" />
+    <Compile Include="Areas\admin\Controllers\ApiSaleActivityTypeController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiUpfileController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiUserController.cs" />
     <Compile Include="Areas\admin\Controllers\LoginController.cs" />
