@@ -79,8 +79,9 @@ namespace Om.Areas.admin.Controllers
             }
             else
             {
-            
-              
+
+                if (model.Icon == null)
+                    model.Icon = "";
 
                 if (mduleBll.ModuleEdit(model) > 0)
                 {

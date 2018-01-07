@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 
 namespace Om.Areas.admin.Controllers
@@ -26,6 +27,7 @@ namespace Om.Areas.admin.Controllers
                 var model1 = bll.GetModel(model.ActivitAreaId);
                 model1.ActivityName = model.ActivityName;
                 model1.SortCode = model.SortCode;
+                model1.IsShow = model.IsShow;
 
                 if (bll.Update(model1) > 0)
                 {
@@ -62,6 +64,27 @@ namespace Om.Areas.admin.Controllers
      
         
              
+        }
+        [HttpPost]
+        public Dictionary<string, object> AreaDel()
+        {
+            var idList = HttpContext.Current.Request.Form["areaidlist"].ToString();
+            int result = bll.UpdateAll(idList);
+            if (result > 0)
+            {
+                return new Dictionary<string, object>
+                {
+                    { "code",1},
+                    { "result",result}
+                };
+            }
+            else
+            {
+                return new Dictionary<string, object>
+                 {
+                     {"code",0}
+                 };
+            }
         }
     }
 }

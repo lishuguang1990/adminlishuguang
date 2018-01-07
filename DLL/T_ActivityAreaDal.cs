@@ -40,11 +40,20 @@ namespace DAL
         }
         public List<T_ActivityArea> GetList()
         {
-            return Repository().FindList(" order by SortCode");
+            return Repository().FindList(" and isDelete=0 order by SortCode");
         }
         public T_ActivityArea GetModel(int id)
         {
             return Repository().FindEntity(id);
+        }
+        public int DelList(string idList)
+        {
+           return  Repository().Delete(idList.Split(','));
+        }
+        public int UpdateAll(string idList)
+        {
+            StringBuilder sb = new StringBuilder("update T_ActivityArea set IsDelete=1 where ActivitAreaId in (" + idList + ")");
+            return Repository().ExecuteBySql(sb);
         }
     }
 }

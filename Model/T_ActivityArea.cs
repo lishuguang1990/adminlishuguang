@@ -23,5 +23,7 @@ namespace Model
          public int IsShow { get; set; }
 
         public string CreateUserName { get; set; }
+
+        public int IsDelete { get; set; } = 0;
     }
 }

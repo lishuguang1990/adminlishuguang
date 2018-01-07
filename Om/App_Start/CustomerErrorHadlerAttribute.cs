@@ -13,14 +13,15 @@ namespace Om.App_Start
         public override void OnException(ExceptionContext filterContext)
         {
             //base.OnException(filterContext);
-            var e = filterContext.Exception;
-            log.Info(e.Message);
-            filterContext.ExceptionHandled = true;
-        
+            //var e = filterContext.Exception;
+            //log.Info(e.Message);
+            //filterContext.ExceptionHandled = true;
+
             //var result = new ViewResult();
             //result.ViewName = "Error";
             //result.ViewBag.Error = e.Message;
             //filterContext.Result = result;
+            base.OnException(filterContext);
         }
     }
 }

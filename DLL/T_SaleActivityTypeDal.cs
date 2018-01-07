@@ -44,7 +44,12 @@ namespace DAL
         }
         public List<T_SaleActivityType> GetList()
         {
-            return Repository().FindList(" group by SortCode");
+            return Repository().FindList(" and IsDelete=0 order by SortCode");
+        }
+        public int UpdateAll(string idList)
+        {
+            StringBuilder sb = new StringBuilder("update T_SaleActivityType set IsDelete=1 where SaleActivityTypeId in (" + idList + ")");
+            return Repository().ExecuteBySql(sb);
         }
 
     }

@@ -3,7 +3,7 @@
 @{
     Layout = null;
 }
-@model Model.T_ActivityArea
+@model Model.T_SaleActivityType
 @using Utilities.Base.Common;
 <!DOCTYPE HTML>
 <html>
@@ -33,13 +33,13 @@
 </head>
 <body>
     <article class="cl pd-20">
-        <form action="/api/ApiActivityArea/Add" method="post" class="form form-horizontal" id="form-admin-add">
+        <form action="/api/ApiActivityType/Add" method="post" class="form form-horizontal" id="form-admin-add">
             <div class="row cl">
 
-                @Html.HiddenFor(a => a.ActivitAreaId)
-                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>区域名称：</label>
+                @Html.HiddenFor(a =>a.SaleActivityTypeId)
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>类型名称：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    @Html.TextBoxFor(a => a.ActivityName, new { @class = "input-text" })
+                    @Html.TextBoxFor(a => a.SaleActivityTypeName, new { @class = "input-text" })
                 </div>
             </div>
 
@@ -84,24 +84,9 @@ $(function(){
 
 	$("#form-admin-add").validate({
 		rules:{
-		    Account: {
-				required:true,
-				minlength:2,
-				maxlength:16
-			},
-		    UserPassword: {
-				required:true,
-			},
-			password2:{
-				required:true,
-				equalTo: "#UserPassword"
-			},
-			Mobile: {
-				isPhone:true,
-			},
-			Email: {
-				email:true,
-			}
+		    SaleActivityTypeName: {
+				required:true}
+		 
 
 		},
 		onkeyup:false,

@@ -227,6 +227,8 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
+    <Compile Include="Areas\admin\Controllers\ApiActivityTypeController.cs" />
+    <Compile Include="Areas\admin\Controllers\ApiAgencyController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiCauseController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiLoginController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiModuleController.cs" />
@@ -236,6 +238,7 @@
     <Compile Include="Areas\admin\Controllers\ApiPredicSettingController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiRoleController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiActivityAreaController.cs" />
+    <Compile Include="Areas\admin\Controllers\ApiSaleActivityController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiSaleActivityTypeController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiUpfileController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiUserController.cs" />
@@ -1469,6 +1472,9 @@
     <Content Include="Areas\admin\Views\SaleActivity\AreaAdd.cshtml" />
     <Content Include="Areas\admin\Views\SaleActivity\TypeList.cshtml" />
     <Content Include="Areas\admin\Views\SaleActivity\TypeAdd.cshtml" />
+    <Content Include="Areas\admin\Views\SaleActivity\AgencyList.cshtml" />
+    <Content Include="Areas\admin\Views\SaleActivity\AgencyAdd.cshtml" />
+    <Content Include="Areas\admin\Views\SaleActivity\Add.cshtml" />
     <None Include="Properties\PublishProfiles\132.pubxml" />
     <None Include="Properties\PublishProfiles\OM.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

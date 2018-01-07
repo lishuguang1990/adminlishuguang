@@ -105,9 +105,9 @@
                     }
                     );
 
-                    $.post("/api/ApiRole/RoleDel", { "roleidlist": roleid }, function (data) {
+                    $.post("/api/ApiActivityArea/AreaDel", { "areaidlist": roleid }, function (data) {
                         removeLoading('test');
-                       // alert("删除成功");
+                        // alert("删除成功");
                         location.href = location.href
 
                     }, "json"

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelView\ActivityViewModel.cs" />
     <Compile Include="T_ActivityArea.cs" />
     <Compile Include="ModelView\ModuleViewModel.cs" />
     <Compile Include="ModelView\M_HitchInfoView.cs" />
@@ -60,6 +61,8 @@
     <Compile Include="SysLog.cs" />
     <Compile Include="SysLogDetail.cs" />
     <Compile Include="Sys_CauseSuggestion.cs" />
+    <Compile Include="T_Agency.cs" />
+    <Compile Include="T_SaleActivity.cs" />
     <Compile Include="T_SaleActivityType.cs" />
     <Compile Include="UserRole.cs" />
   </ItemGroup>

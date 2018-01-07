@@ -37,7 +37,6 @@ namespace DAL
         public DataTable GetPageList(ref JqGridParam jqgridparam)
         {
             StringBuilder strSql = new StringBuilder();
-            List<DbParameter> parameter = new List<DbParameter>();
             strSql.Append(@"select UserId,Account,Mobile, Email,CreateTime,Enabled from BaseUser");
             return Repository().FindTablePageBySql(strSql.ToString(),ref jqgridparam);
         }

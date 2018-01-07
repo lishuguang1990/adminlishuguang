@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace BLL
 {
@@ -32,5 +33,28 @@ namespace BLL
 
             return T_ActivityAreaDal.GetInstance().GetModel(id);
         }
+       public int DelList(string idlist)
+        {
+            return T_ActivityAreaDal.GetInstance().DelList(idlist);
+
+        }
+        public int UpdateAll(string idlist)
+        {
+            return T_ActivityAreaDal.GetInstance().UpdateAll(idlist);
+        }
+
+        public  List<SelectListItem> SelectListItem()
+        {
+            var list = GetList();
+            List<SelectListItem> listselect = new List<SelectListItem>();
+            listselect.Add(new SelectListItem() { Text ="全部", Value ="0" });
+            foreach (var item in list)
+            {
+                listselect.Add(new SelectListItem() { Text = item.ActivityName, Value = item.ActivitAreaId.ToString() });
+            }
+            return listselect;
+       }
+
+
     }
 }

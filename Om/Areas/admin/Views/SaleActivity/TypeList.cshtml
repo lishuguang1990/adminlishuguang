@@ -1,9 +1,9 @@
 ﻿@{
-    ViewBag.Title = "区域列表";
+    ViewBag.Title = "类型列表";
 }
 @using BLL;
 @using Utilities;
-@model List<Model.T_ActivityArea>
+@model List<Model.T_SaleActivityType>
 
 <nav class="breadcrumb"></nav>
 <div class="Hui-article">
@@ -16,12 +16,12 @@
         <table class="table table-border table-bordered table-bg">
             <thead>
                 <tr>
-                    <th scope="col" colspan="9">区域列表</th>
+                    <th scope="col" colspan="9">类型列表</th>
                 </tr>
                 <tr class="text-c">
                     <th width="25"><input type="checkbox" name="" value=""></th>
                     <th width="40">ID</th>
-                    <th width="150">区域名称</th>
+                    <th width="150">类型名称</th>
                     <th width="150">排序</th>
                     <th width="150">状态</th>
                     <th width="150">创建时间</th>
@@ -32,9 +32,9 @@
                 @foreach (var item in Model)
                 {
                     <tr class="text-c">
-                        <td><input type="checkbox" value="@item.ActivitAreaId" name=""></td>
-                        <td>@item.ActivitAreaId</td>
-                        <td>@item.ActivityName</td>
+                        <td><input type="checkbox" value="@item.SaleActivityTypeId" name=""></td>
+                        <td>@item.SaleActivityTypeId</td>
+                        <td>@item.SaleActivityTypeName</td>
                         <td>@item.SortCode</td>
                         <td>@item.IsShow.ToEnumDescriptionString(typeof(ModuleType))</td>
                         <td>@item.CreateTime.ToString("yyyy-MM-dd")</td>
@@ -84,7 +84,7 @@
         );
 
         function btn_add() {
-            admin_add('添加', '/admin/SaleActivity/AreaAdd', '800', '500')
+            admin_add('添加', '/admin/SaleActivity/TypeAdd', '800', '500')
         }
 
         function btn_del()
@@ -105,7 +105,7 @@
                     }
                     );
 
-                    $.post("/api/ApiRole/RoleDel", { "roleidlist": roleid }, function (data) {
+                    $.post("/api/ApiActivityType/TypeDel", { "typeidlist": roleid }, function (data) {
                         removeLoading('test');
                        // alert("删除成功");
                         location.href = location.href
@@ -123,7 +123,7 @@
         function btn_edit() {
             if ($("#view1").find(":checkbox:checked").length == 1) {
                 var roleid=$("#view1").find(":checkbox:checked").val();
-                admin_add('修改', '/admin/SaleActivity/AreaAdd?areaid=' + roleid, '800', '500')
+                admin_add('编辑', '/admin/SaleActivity/TypeAdd?TypeId=' + roleid, '800', '500')
             }
             else {
                 $.Huimodalalert('请选择一个需要修改的数据',1000)

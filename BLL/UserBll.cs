@@ -21,9 +21,6 @@ namespace BLL
         }
         public BaseUser UserLogin(string Account, string Password, out int result)
         {
-            log.Error("123");
-
-
             return UserDal.GetInstance().UserLogin(Account, Password, out result);
         }
                 //添加用户
