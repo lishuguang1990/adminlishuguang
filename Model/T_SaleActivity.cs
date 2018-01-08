@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MallWCF.DBHelper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,14 +7,15 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-  public   class T_SaleActivity
+    [PrimaryKey("SaleActivityId")]
+    public   class T_SaleActivity
     {
         public int SaleActivityId { get; set; }
 
         public int AgencyId { get; set; }
         public int AreaId { get; set; }
 
-        public DateTime ActivityDate { get; set; }
+        public DateTime ActivityDate { get; set; } = DateTime.Now;
 
         public int SaleActivityTypeId { get; set; }
 
@@ -39,6 +41,8 @@ namespace Model
         public int IsShow { get; set; }
 
         public int IsDelete { get; set; } = 0;
+
+        public string CreateUserName { get; set;}
 
     }
 }

@@ -83,6 +83,23 @@ namespace Utilities
         周末工作日固定比例 =1
     }
 
+    public enum Position
+    {
+        Horizontal,
+        Vertical
+    }
+
+    public enum PublishWay
+    {
+        [Description("朋友圈")]
+        PublishWay1 = 0,
+        [Description("经销商公众号")]
+        PublishWay2 = 1,
+        [Description("俱乐部公众号")]
+        PublishWay3 = 2
+      }
+
+
 
 
 }

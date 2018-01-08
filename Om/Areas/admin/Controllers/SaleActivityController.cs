@@ -94,5 +94,19 @@ namespace Om.Areas.admin.Controllers
             }
             return View(model);
         }
+        public ActionResult Add()
+        {
+            var model = new T_SaleActivity();
+            var bll = new T_SaleActivityBll();
+            if (Request.QueryString["SaleActivityId"] != null)
+            {
+                model = bll.GetModel(int.Parse(Request.QueryString["SaleActivityId"].ToString()));
+            }
+            else
+            {
+                model.IsShow = 1;
+            }
+            return View(model);
+        }
     }
 }

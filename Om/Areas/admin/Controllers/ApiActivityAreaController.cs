@@ -25,7 +25,7 @@ namespace Om.Areas.admin.Controllers
             if (model.ActivitAreaId > 0)
             {
                 var model1 = bll.GetModel(model.ActivitAreaId);
-                model1.ActivityName = model.ActivityName;
+                model1.ActivityAreaName = model.ActivityAreaName;
                 model1.SortCode = model.SortCode;
                 model1.IsShow = model.IsShow;
 

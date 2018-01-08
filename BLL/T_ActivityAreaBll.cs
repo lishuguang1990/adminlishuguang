@@ -47,10 +47,10 @@ namespace BLL
         {
             var list = GetList();
             List<SelectListItem> listselect = new List<SelectListItem>();
-            listselect.Add(new SelectListItem() { Text ="全部", Value ="0" });
+            listselect.Add(new SelectListItem() { Text ="请选择", Value ="" });
             foreach (var item in list)
             {
-                listselect.Add(new SelectListItem() { Text = item.ActivityName, Value = item.ActivitAreaId.ToString() });
+                listselect.Add(new SelectListItem() { Text = item.ActivityAreaName, Value = item.ActivitAreaId.ToString() });
             }
             return listselect;
        }

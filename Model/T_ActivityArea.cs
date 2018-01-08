@@ -12,7 +12,7 @@ namespace Model
     {
         public int ActivitAreaId { get; set;}
 
-        public string ActivityName { get; set; }
+        public string ActivityAreaName { get; set; }
 
         public DateTime CreateTime { get; set; }
 

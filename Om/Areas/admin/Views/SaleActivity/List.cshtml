@@ -21,23 +21,23 @@
         <table class="table table-border table-bordered table-bg">
             <thead>
                 <tr>
-                    <th scope="col" colspan="9">活动列表</th>
+                    <th scope="col" colspan="13">活动列表</th>
                 </tr>
                 <tr class="text-c">
                     <th width="25"><input type="checkbox" name="" value=""></th>
                     <th width="40">ID</th>
-                    <th width="150">经销商名称</th>
-                    <th width="90">区域</th>
-                    <th width="150">日期</th>
-                    <th width="150">活动类别</th>
-                    <th width="150">活动客流量</th>
-                    <th width="150">活动潜客量</th>
-                    <th width="150">活动车主量</th>
-                    <th width="150">活动订单量</th>
-                    <th width="150">活动成本金额</th>
-                    <th width="150">活动后续订单量</th>
-                    <th width="100">宣传类型</th>
-                    <th width="130">状态</th>
+                    <th>经销商名称</th>
+                    <th width="100">区域</th>
+                    <th width="100">日期</th>
+                    <th width="100">活动类别</th>
+                    <th width="80">活动客流量</th>
+                    <th width="80">活动潜客量</th>
+                    <th width="80">活动车主量</th>
+                    <th width="80">活动订单量</th>
+                    <th width="100">活动成本金额</th>
+                    <th width="120">活动后续订单量</th>
+                    <th width="210">宣传类型</th>
+                   
                     </tr>
             </thead>
             <tbody id="view1"></tbody>
@@ -65,13 +65,13 @@
     )
 
     function btn_add() {
-        admin_add('添加', '/admin/System/UserAdd', '800', '500')
+        admin_add('添加', '/admin/SaleActivity/Add', '1000', '700')
     }
 
     function btn_edit() {
         if ($("#view1").find(":checkbox:checked").length == 1) {
             var UseridId = $("#view1").find(":checkbox:checked").val();
-            admin_add('修改', '/admin/System/UserAdd?UseridId=' + UseridId, '800', '500')
+            admin_add('修改', '/admin/SaleActivity/Add?SaleActivityId=' + UseridId, '800', '500')
         }
         else {
             $.Huimodalalert('请选择一个需要修改的数据', 1000)
@@ -87,19 +87,19 @@
             //此处仅仅是为了演示变化的内容
             for (var i = 0; i < res.rows.length; i++) {
                 strhtml+="<tr class=\"text-c\">";
-                strhtml += "<td><input type=\"checkbox\" value=\"" + res.rows[i].userid + "\" name=\"\"></td>";
-                strhtml += "<td>" + res.rows[i].userid + "</td>";
-                strhtml += "<td>" + res.rows[i].account + "</td>";
-                strhtml += "<td>" + res.rows[i].mobile + "</td>";
-                strhtml += "<td>" + res.rows[i].email + "</td>";
-                var date = new Date(res.rows[i].createtime);
-                strhtml += "<td>" + date.pattern("yyyy-MM-dd HH:mm:ss") + "</td>";
-                var enabled = "禁用";
-                if (res.rows[i].enabled)
-                {
-                    enabled = "启用";
-                }
-                strhtml += "<td >" + enabled + "</td>";
+                strhtml += "<td><input type=\"checkbox\" value=\"" + res.rows[i].saleactivityid + "\" name=\"\"></td>";
+                strhtml += "<td>" + res.rows[i].saleactivityid + "</td>";
+                strhtml += "<td>" + res.rows[i].agencyname + "</td>";
+                strhtml += "<td>" + res.rows[i].activityareaname + "</td>";
+                strhtml += "<td>" + res.rows[i].activitydate.substring(0, 10) + "</td>";
+                strhtml += "<td>" + res.rows[i].saleactivitytypename + "</td>";
+                strhtml += "<td>" + res.rows[i].passengerflow + "</td>";
+                strhtml += "<td>" + res.rows[i].latentpassengerflow + "</td>";
+                strhtml += "<td>" + res.rows[i].carowner + "</td>";
+                strhtml += "<td>" + res.rows[i].orderquantity + "</td>";
+                strhtml += "<td>" + res.rows[i].primecost + "</td>";
+                strhtml += "<td>" + res.rows[i].laterorderquantity + "</td>";
+                strhtml += "<td >" + res.rows[i].publishwaycontent + "</td>";
                 strhtml+="</tr>"
 
             }
@@ -150,7 +150,6 @@
                     else {
                         ids += "," + $(this).val();
                     }
-
                 }
                 );
 
@@ -158,7 +157,6 @@
                     //removeLoading('test');
                     // alert("删除成功");
                     location.href = location.href
-
                 }, "json"
                 )
 

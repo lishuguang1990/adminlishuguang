@@ -6,6 +6,7 @@
 @model Model.T_SaleActivity
 @using Utilities.Base.Common;
 @using BLL;
+@using BLL.MyHtmlHelper;
 
 <!DOCTYPE HTML>
 <html>
@@ -30,53 +31,109 @@
     <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script><![endif]-->
     <!--/meta 作为公共模版分离出去-->
-
-    <title>区域管理</title>
+    <style>
+        .checkbox {
+            height:30px;
+            font-size:inherit
+        }
+    </style>
 </head>
 <body>
     @{ T_ActivityAreaBll T_ActivityAreaBll = new T_ActivityAreaBll();
-        T_AgencyBll T_AgencyBll = new T_AgencyBll()
-        }}
+        T_AgencyBll T_AgencyBll = new T_AgencyBll();
+        T_SaleActivityTypeBll T_SaleActivityTypeBll = new T_SaleActivityTypeBll();
+        }
     <article class="cl pd-20">
-        <form action="/api/ApiAgency/Add" method="post" class="form form-horizontal" id="form-admin-add">
+        <form action="/api/ApiSaleActivity/Add" method="post" class="form form-horizontal" id="form-admin-add">
             <div class="row cl">
-
-                @Html.HiddenFor(a => a.AgencyId)
+                @Html.HiddenFor(a => a.SaleActivityId)
                 <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>经销商名称：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    @Html.DropDownListFor(a => a.AgencyId, T_AgencyBll.SelectListItem())</div>
+                    @Html.DropDownListFor(a => a.AgencyId, T_AgencyBll.SelectListItem(), new { @class = "checkbox" })</div>
             </div>
-
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>区域：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    @Html.DropDownListFor(a => a.AreaId, T_ActivityAreaBll.SelectListItem())
+                    @Html.DropDownListFor(a => a.AreaId, T_ActivityAreaBll.SelectListItem(),new { @class= "checkbox" })
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>日期：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    @Html(a => a.AreaId, T_ActivityAreaBll.SelectListItem())
+                   
+
+
+                    @Html.TextBoxFor(a => a.ActivityDate, new { @class = "input-text Wdate", autocomplete = "off", onclick= "WdatePicker()" })
                 </div>
             </div>
             <div class="row cl">
-                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>r：</label>
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>活动类型：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.DropDownListFor(a => a.SaleActivityTypeId, T_SaleActivityTypeBll.SelectListItem(), new { @class = "checkbox" })
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>活动客流量：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.PassengerFlow, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>活动潜客量：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.LatentPassengerFlow, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>活动车主量：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.CarOwner, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>活动订单量：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.OrderQuantity, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>活动成本金额：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.PrimeCost, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>活动后续订单量：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.TextBoxFor(a => a.LaterOrderQuantity, new { @class = "input-text", autocomplete = "off" })
+                </div>
+            </div>
+     
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>活动宣传方式：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    @Html.CheckBoxListFor(a => a.PublishWay, new Utilities.PublishWay().GetSelectListItemByEnum(Utilities.SelectListItemSelect.No), 3,null)
+                </div>
+            </div>
+
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red">*</span>是否显示：</label>
                 <div class="formControls col-xs-8 col-sm-9">
                     @Html.DropDownListFor(a => a.IsShow, new Utilities.ModuleType().GetSelectListItemByEnum(Utilities.SelectListItemSelect.No))
                 </div>
             </div>
-
-
-
+           <input type="hidden" id="RealPublishWay"  name="RealPublishWay" value="" />
             <div class="row cl">
                 <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
                     <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
                 </div>
             </div>
+            <input type="hidden" id="hiddenpublishway" value="@Model.PublishWay"/>
         </form>
     </article>
 
     <!--_footer 作为公共模版分离出去-->
+    <script type="text/javascript" src="/lib/My97DatePicker/4.8/WdatePicker.js"></script>
     <script type="text/javascript" src="/lib/jquery/1.9.1/jquery.min.js"></script>
     <script type="text/javascript" src="/lib/layer/2.4/layer.js"></script>
     <script type="text/javascript" src="/static/h-ui/js/H-ui.js"></script>
@@ -94,13 +151,83 @@ $(function(){
 		radioClass: 'iradio-blue',
 		increaseArea: '20%'
 	});
+	$(function () {
+	    $("[name=PublishWay]").each(function ()
+	    {
+	        $(this).change(function () {
+	            // alert($(this).prop("checked"))
+	            var strcheck = "";
+	            $("[name=PublishWay]").each(function ()
+	            {
+	                if($(this).prop("checked"))
+	                {
+	                    strcheck+=$(this).val()+",";
+	                }
+	            }
+            );
+	            $("#RealPublishWay").val(strcheck.substring(0, strcheck.length - 1));
+	        }
+        )
+	    });
+	 
+	    if ($("#hiddenpublishway").val() != "")
+	    {
+	        var arrt = $("#hiddenpublishway").val().split(',');
+	      
+	        $("[name=PublishWay]").each(function ()
+	        {
+	            for (var i = 0; i < arrt.length; i++) {
+	                if ($(this).val() == arrt[i])
+	                {
+	                    $(this).prop("checked", true);
+
+	                }
+	            }
+	        })
+	    }
+	})
+
 
 	$("#form-admin-add").validate({
 		rules:{
-		    AgencyName: {
+		    AgencyId: {
 				required:true,
-
-			},
+		    },
+		    AreaId: {
+		        required: true,
+		    },
+		    ActivityDate: {
+		        required: true,
+		        date: true
+		    },
+		    SaleActivityTypeId: {
+		        required: true
+		    },
+		    PassengerFlow: {
+		        required: true,
+		        digits: true
+		    },
+		    LatentPassengerFlow: {
+		        required: true,
+		        digits: true
+		    },
+		    CarOwner: {
+		        required: true,
+		        digits: true
+		    },
+		    OrderQuantity: {
+		        required: true,
+		        digits: true
+		    },
+		    PrimeCost: {
+		        required: true,
+		        number: true
+		    },
+		    LaterOrderQuantity: {
+		        required: true,
+		        digits: true
+		    },
+		
 		},
 		onkeyup:false,
 		focusCleanup:true,
