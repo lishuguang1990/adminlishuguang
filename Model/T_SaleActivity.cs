@@ -26,7 +26,7 @@ namespace Model
 
         public int OrderQuantity { get; set; }
 
-        public decimal PrimeCost { get; set; }
+        public int PrimeCost { get; set; }
 
         public int LaterOrderQuantity { get; set; }
 

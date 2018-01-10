@@ -48,11 +48,11 @@ namespace Om.Areas.admin.Controllers
             }
             if (!string.IsNullOrEmpty(begindate))
             {
-                strwhere += " and ActivityDate>'" + begindate + "'";
+                strwhere += " and ActivityDate>='" + begindate + "'";
             }
             if (!string.IsNullOrEmpty(enddate))
             {
-                strwhere += " and ActivityDate<'" + enddate + "'";
+                strwhere += " and ActivityDate<='" + enddate + "'";
             }
             data = re.FindTablePageBySql("select * from View_Activity where IsDelete=0 " + strwhere+"", ref jqgridparam);
             //for (int i = 0; i < data.Rows.Count; i++)
@@ -84,11 +84,11 @@ namespace Om.Areas.admin.Controllers
                         }
 
                     }
-                    data.Rows[0]["publishwaycontent"] = publishwaycontent.Substring(0, publishwaycontent.Length - 1);
+                    data.Rows[i]["publishwaycontent"] = publishwaycontent.Substring(0, publishwaycontent.Length - 1);
                 }
                 else
                 {
-                    data.Rows[0]["publishwaycontent"] = "";
+                    data.Rows[i]["publishwaycontent"] = "";
                 }
   
 

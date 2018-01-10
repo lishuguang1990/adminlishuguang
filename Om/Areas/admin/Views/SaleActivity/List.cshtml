@@ -1,18 +1,32 @@
 ﻿@{
     ViewBag.Title = "活动列表";
 }
-
-
+@using BLL;
+@{ T_ActivityAreaBll T_ActivityAreaBll = new T_ActivityAreaBll();
+    T_AgencyBll T_AgencyBll = new T_AgencyBll();
+    T_SaleActivityTypeBll T_SaleActivityTypeBll = new T_SaleActivityTypeBll();
+}
+<style>
+            .checkbox {
+            height:30px;
+            font-size:inherit
+        }
+</style>
 <nav class="breadcrumb"></nav>
 <div class="Hui-article">
     <article class="cl pd-20">
         <div class="text-c">
-            日期范围：
-            <input type="text" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate" style="width:120px;">
+            经销商名称
+            @Html.DropDownList("agencyid", T_AgencyBll.SelectListItem(), new { @class = "checkbox" })&nbsp;
+            区域名称
+            @Html.DropDownList("activitareaid", T_ActivityAreaBll.SelectListItem(), new { @class = "checkbox" })&nbsp;
+            活动类型
+            @Html.DropDownList("saleactivitytypeid", T_SaleActivityTypeBll.SelectListItem(), new { @class = "checkbox" })&nbsp;
+            活动日期范围：
+            <input type="text" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" value="" class="input-text Wdate" style="width:120px;">
             -
-            <input type="text" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'datemin\')}',maxDate:'%y-%M-%d'})" id="datemax" class="input-text Wdate" style="width:120px;">
-            <input type="text" class="input-text" style="width:250px" placeholder="输入关键词" id="" name="">
-            <button type="submit" class="btn btn-success radius" id="" name=""><i class="Hui-iconfont">&#xe665;</i> 搜意见</button>
+            <input type="text" onfocus="WdatePicker({minDate:'#F{$dp.$D(\'datemin\')}',maxDate:'%y-%M-%d'})" id="datemax" class="input-text Wdate" style="width:120px;" value="">
+            <button type="button" class="btn btn-success radius"  onclick="search()"><i class="Hui-iconfont">&#xe665;</i> 查询</button>
         </div>
         <div class="cl pd-5 bg-1 bk-gray mt-20">
             <span class="l" id="operate"> <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="admin_add('添加用户','/System/UserAdd','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加管理员</a> </span>
@@ -25,18 +39,17 @@
                 </tr>
                 <tr class="text-c">
                     <th width="25"><input type="checkbox" name="" value=""></th>
-                    <th width="40">ID</th>
                     <th>经销商名称</th>
                     <th width="100">区域</th>
                     <th width="100">日期</th>
                     <th width="100">活动类别</th>
-                    <th width="80">活动客流量</th>
-                    <th width="80">活动潜客量</th>
-                    <th width="80">活动车主量</th>
-                    <th width="80">活动订单量</th>
+                    <th width="100">活动客流量</th>
+                    <th width="100">活动潜客量</th>
+                    <th width="100">活动车主量</th>
+                    <th width="100">活动现场订单量</th>
                     <th width="100">活动成本金额</th>
                     <th width="120">活动后续订单量</th>
-                    <th width="210">宣传类型</th>
+                    <th width="230">宣传类型</th>
                    
                     </tr>
             </thead>
@@ -78,9 +91,13 @@
         }
 
     }
+    function search()
+    {
+        demo(1);
+    }
     function demo(page) {
         $.post('/api/ApiSaleActivity/GetActivityList',
-           { "page": page, "rows": 20, "sord": "desc", "sidx": "SaleActivityId", activitareaid: "", agencyid: "", saleactivitytypeid: "", begindate: "", enddate:"" } //向服务端传的参数，此处只是演示
+           { "page": page, "rows": 20, "sord": "desc", "sidx": "SaleActivityId", activitareaid: $("#activitareaid").val(), agencyid: $("#agencyid").val(), saleactivitytypeid: $("#saleactivitytypeid").val(), begindate: $("#datemin").val(), enddate: $("#datemax").val() } //向服务端传的参数，此处只是演示
         , function (res) {
             $("#total").html(res.records);
             var strhtml="";
@@ -88,7 +105,6 @@
             for (var i = 0; i < res.rows.length; i++) {
                 strhtml+="<tr class=\"text-c\">";
                 strhtml += "<td><input type=\"checkbox\" value=\"" + res.rows[i].saleactivityid + "\" name=\"\"></td>";
-                strhtml += "<td>" + res.rows[i].saleactivityid + "</td>";
                 strhtml += "<td>" + res.rows[i].agencyname + "</td>";
                 strhtml += "<td>" + res.rows[i].activityareaname + "</td>";
                 strhtml += "<td>" + res.rows[i].activitydate.substring(0, 10) + "</td>";
@@ -159,9 +175,7 @@
                     location.href = location.href
                 }, "json"
                 )
-
             }
-
         }
         else {
             $.Huimodalalert('请勾选要禁用的用户', 1000)

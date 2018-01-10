@@ -248,6 +248,7 @@
     <Compile Include="Areas\admin\Controllers\SharedController.cs" />
     <Compile Include="Areas\admin\Controllers\SystemController.cs" />
     <Compile Include="AutoMapper\Profiles\ModuleProfile.cs" />
+    <Compile Include="Controllers\apiActivityChartController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

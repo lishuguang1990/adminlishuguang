@@ -64,6 +64,10 @@ namespace BLL
                };
             }
         }
+        public int UpdateAll(string idlist)
+        {
+            return UserDal.GetInstance().UpdateAll(idlist);
+        }
 
     }
 }

@@ -815,7 +815,7 @@ namespace MallWCF.DBHelper
         /// <returns></returns>
         public T FindEntityByWhere(string WhereSql)
         {
-            return DataFactory.Database().FindEntity<T>(WhereSql);
+            return DataFactory.Database().FindEntityByWhere<T>(WhereSql);
         }
         /// <summary>
         /// 查询对象、返回实体

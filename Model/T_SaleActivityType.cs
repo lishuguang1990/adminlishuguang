@@ -1,4 +1,5 @@
 ﻿using MallWCF.DBHelper;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,9 @@ namespace Model
     [PrimaryKey("SaleActivityTypeId")]
     public  class T_SaleActivityType
     {
-         public int SaleActivityTypeId { get; set; }
+        [JsonProperty("saleactivitytypeid")]
+        public int SaleActivityTypeId { get; set; }
+        [JsonProperty("saleactivitytypename")]
         public string SaleActivityTypeName { get; set;}
         public int SortCode { get; set; } = 0;
 

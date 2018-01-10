@@ -54,5 +54,7 @@ namespace Model
 
         public string ModifyUserName { get; set; }
 
+        public int IsDelete { get; set; } = 0;
+
     }
 }

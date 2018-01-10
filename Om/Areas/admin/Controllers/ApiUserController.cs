@@ -48,7 +48,7 @@ namespace Om.Areas.admin.Controllers
                 model.CreateUserName = ManageProvider.Provider.Current().Account;
                 model.Enabled = 1;
                 model.CreateTime = DateTime.Now;
-                model.UserPassword = "123456";
+                model.UserPassword = model.Mobile.Substring(5);
                 model.UserPassword = Md5Helper.MD5(DESEncrypt.Encrypt(model.UserPassword.ToLower(), "qwertyui"));
 
                 return UserBll.AddUser(model);
@@ -180,6 +180,31 @@ namespace Om.Areas.admin.Controllers
                 { "code","1"}
             };
 
+        }
+
+        [HttpPost]
+        public Dictionary<string, object> Del()
+        {
+            var idList = HttpContext.Current.Request.Form["idlist"].ToString();
+           string userid= ManageProvider.Provider.Current().UserId.ToString();
+            var array = idList.Split(',').Where(a => a != userid).ToArray();
+            var strlist = string.Join(",", array);
+            int result = UserBll.UpdateAll(strlist);
+            if (result > 0)
+            {
+                return new Dictionary<string, object>
+                {
+                    { "code",1},
+                    { "result",result}
+                };
+            }
+            else
+            {
+                return new Dictionary<string, object>
+                 {
+                     {"code",0}
+                 };
+            }
         }
     }
 }

@@ -37,13 +37,14 @@ namespace DAL
         public DataTable GetPageList(ref JqGridParam jqgridparam)
         {
             StringBuilder strSql = new StringBuilder();
-            strSql.Append(@"select UserId,Account,Mobile, Email,CreateTime,Enabled from BaseUser");
+            strSql.Append(@"select UserId,Account,Mobile, Email,CreateTime,Enabled from BaseUser where IsDelete=0 ");
             return Repository().FindTablePageBySql(strSql.ToString(),ref jqgridparam);
         }
         //登录
         public BaseUser UserLogin(string Account, string Password,out int result)
         {
-            BaseUser entity = Repository().FindEntity("Account", Account);
+            BaseUser entity = Repository().FindEntityByWhere(" and (Account='"+Account+ "' or Mobile='"+Account+"')");
+
             if (entity != null && entity.UserId > 0)
             {
                 //有效
@@ -94,6 +95,12 @@ namespace DAL
         public int EditUser(BaseUser model)
         {
             return Repository().Update(model);
+        }
+
+        public int UpdateAll(string idList)
+        {
+            StringBuilder sb = new StringBuilder("update BaseUser set IsDelete=1 where UserId in (" + idList + ")");
+            return Repository().ExecuteBySql(sb);
         }
     }
 }

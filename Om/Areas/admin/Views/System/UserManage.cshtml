@@ -16,12 +16,12 @@
             </div>
             <div class="cl pd-5 bg-1 bk-gray mt-20">
                 <span class="l" id="operate"> <a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a href="javascript:;" onclick="admin_add('添加用户','/System/UserAdd','800','500')" class="btn btn-primary radius"><i class="Hui-iconfont">&#xe600;</i> 添加管理员</a> </span>
-                <span class="r">共有数据：<strong>54</strong> 条</span>
+                <span class="r">共有数据：<strong id="total"></strong> 条</span>
             </div>         
                 <table class="table table-border table-bordered table-bg">
                     <thead>
                         <tr>
-                            <th scope="col" colspan="9">员工列表</th>
+                            <th scope="col" colspan="9">人员列表</th>
                         </tr>
                         <tr class="text-c">
                             <th width="25"><input type="checkbox" name="" value=""></th>
@@ -81,7 +81,7 @@
             //此处仅仅是为了演示变化的内容
             for (var i = 0; i < res.rows.length; i++) {
                 strhtml+="<tr class=\"text-c\">";
-                strhtml += "<td><input type=\"checkbox\" value=\"" + res.rows[i].userid + "\" name=\"\"></td>";
+                strhtml += "<td><input type=\"checkbox\"  value=\"" + res.rows[i].userid + "\" name=\"\"></td>";
                 strhtml += "<td>" + res.rows[i].userid + "</td>";
                 strhtml += "<td>" + res.rows[i].account + "</td>";
                 strhtml += "<td>" + res.rows[i].mobile + "</td>";
@@ -134,8 +134,40 @@
 
     function btn_del() {
         if ($("#view1").find(":checkbox:checked").length > 0) {
-            if (confirm("你确定禁用选定用户吗")) {
+            if (confirm("你确定删除选定用户吗")) {
               //  loading1();
+                var ids = "";
+                $("#view1").find(":checkbox:checked").each(function (index) {
+                    if (ids == "") {
+                        ids = $(this).val();
+                    }
+                    else {
+                        ids += "," + $(this).val();
+                    }
+
+                }
+                );
+
+                $.post("/api/ApiUser/Del", { "idlist": ids }, function (data) {
+                    //removeLoading('test');
+                    // alert("删除成功");
+                    location.href = location.href
+
+                }, "json"
+                )
+
+            }
+
+        }
+        else {
+            $.Huimodalalert('请勾选要删除的用户', 1000)
+        }
+    }
+
+    function btn_disabled() {
+        if ($("#view1").find(":checkbox:checked").length > 0) {
+            if (confirm("你确定禁用选定用户吗")) {
+                //  loading1();
                 var ids = "";
                 $("#view1").find(":checkbox:checked").each(function (index) {
                     if (ids == "") {
@@ -163,6 +195,7 @@
             $.Huimodalalert('请勾选要禁用的用户', 1000)
         }
     }
+
 
       function btn_qy()
     {
@@ -193,7 +226,7 @@
 
         }
         else {
-            $.Huimodalalert('请勾选要禁用的用户', 1000)
+            $.Huimodalalert('请勾选要启用的用户', 1000)
         }
     }
 
