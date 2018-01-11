@@ -44,6 +44,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C_ClubActivityInfo.cs" />
+    <Compile Include="C_ClubActivityType.cs" />
+    <Compile Include="C_ClubInfo.cs" />
     <Compile Include="ModelView\ActivityViewModel.cs" />
     <Compile Include="ModelView\AgencyStatisticsViewModel.cs" />
     <Compile Include="ModelView\PublishwayStatistics.cs" />

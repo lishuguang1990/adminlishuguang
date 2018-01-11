@@ -76,7 +76,7 @@ namespace Om.Areas.admin.Controllers
             var request = context.Request;
             string roleid = request.Form["roleid"];
             IDatabase database = DataFactory.Database();
-            var ds = database.FindDataSetBySql(" select  a.userId,a.Account,b.RoleId from BaseUser a left join UserRole b on a.UserId=b.UserId   where a.[UserId]   in (select [UserId] from [UserRole] where roleId="+roleid+"  ) or a.[UserId] not in(select [UserId] from [UserRole])");
+            var ds = database.FindDataSetBySql(" select  a.userId,a.Account,b.RoleId from BaseUser a left join UserRole b on a.UserId=b.UserId   where IsDelete=0  and   (a.[UserId]   in (select [UserId] from [UserRole] where roleId=" + roleid+"  ) or a.[UserId] not in(select [UserId] from [UserRole]))");
             List<UserRoleViewModel> list = new List<UserRoleViewModel>();
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {

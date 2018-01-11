@@ -285,9 +285,9 @@ namespace Om.Controllers
             return new Dictionary<string, object>
             {
                  {"code",1 },
-                 { "typelist",typelist.Select(a=>new { saleactivitytypeid=a.SaleActivityTypeId,saleactivitytypename=a.SaleActivityTypeName})},
+                 {"typelist",typelist.Select(a=>new { saleactivitytypeid=a.SaleActivityTypeId,saleactivitytypename=a.SaleActivityTypeName})},
                  {"averagelist",dsaverage.Tables[0]},
-                 { "monthlist",listmonth}
+                 {"monthlist",listmonth}
             };
         }
 

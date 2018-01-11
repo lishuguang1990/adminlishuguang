@@ -41,6 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="C_ClubActivityInfoDal.cs" />
+    <Compile Include="C_ClubActivityTypeDal.cs" />
+    <Compile Include="C_ClubInfoDal.cs" />
     <Compile Include="ModuleDal.cs" />
     <Compile Include="ModuleOperateDal.cs" />
     <Compile Include="M_HitchInfoDal.cs" />

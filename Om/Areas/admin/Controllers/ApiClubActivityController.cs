@@ -15,17 +15,16 @@ using Utilities;
 
 namespace Om.Areas.admin.Controllers
 {
-    [RoutePrefix("api/ApiSaleActivity")]
+    [RoutePrefix("api/ApiClubActivity")]
     [Route("{action}")]
-    public class ApiSaleActivityController : ApiController
+    public class ApiClubActivityController : ApiController
     {
         [HttpPost]
         public Dictionary<string, object> GetActivityList(JqGridParam jqgridparam)
         {
-            //区域
-            var activitareaid = HttpContext.Current.Request.Form["activitareaid"].ToString();
-            //经销商
-            var agencyid = HttpContext.Current.Request.Form["agencyid"].ToString();
+            //俱乐部名称
+            var clubname = HttpContext.Current.Request.Form["clubname"].ToString();
+       
             //类型
             var saleactivitytypeid = HttpContext.Current.Request.Form["saleactivitytypeid"].ToString();
             var begindate = HttpContext.Current.Request.Form["begindate"].ToString();
@@ -33,18 +32,18 @@ namespace Om.Areas.admin.Controllers
             IDatabase database = DataFactory.Database();
             IRepository<ActivityViewModel> re = new Repository<ActivityViewModel>();
             DataTable data = new DataTable();
-            string strwhere = "";
-            if (!string.IsNullOrEmpty(activitareaid))
+            string strwhere = " IsDelete=0  ";
+            if (!string.IsNullOrEmpty(clubname))
             {
-                strwhere += " and ActivitAreaId=" + activitareaid;
+                strwhere += " and ClubName like '%" + clubname + "%'";
             }
-            if (!string.IsNullOrEmpty(agencyid))
-            {
-                strwhere += " and AgencyId=" + agencyid;
-            }
+            //if (!string.IsNullOrEmpty(agencyid))
+            //{
+            //    strwhere += " and AgencyId=" + agencyid;
+            //}
             if (!string.IsNullOrEmpty(saleactivitytypeid))
             {
-                strwhere += " and SaleActivityTypeId=" + saleactivitytypeid;
+                strwhere += " and ClubActivityTypeId=" + saleactivitytypeid;
             }
             if (!string.IsNullOrEmpty(begindate))
             {
@@ -54,49 +53,7 @@ namespace Om.Areas.admin.Controllers
             {
                 strwhere += " and ActivityDate<='" + enddate + "'";
             }
-            data = re.FindTablePageBySql("select * from View_Activity where IsDelete=0 " + strwhere+"", ref jqgridparam);
-            //for (int i = 0; i < data.Rows.Count; i++)
-            //{
-            //    DataRow row = data.NewRow();
-            //    row["abc"] = "工作号"+i.ToString();
-            //    data.Rows.Add(row);
-            //}
-            var newd = data.Columns.Add("publishwaycontent", typeof(String));
-            var list = new Utilities.PublishWay().ToSelectListItem();
-            for (int i = 0; i < data.Rows.Count; i++)
-            {
-                string str = data.Rows[i]["publishway"].ToString();
-                if (!string.IsNullOrEmpty(str))
-                {
-                    string[] arrstr = str.Split(',');
-                    string publishwaycontent = "";
-                    if (!string.IsNullOrEmpty(str))
-                    {
-                        foreach (var item in list)
-                        {
-                            foreach (var item1 in arrstr)
-                            {
-                                if (item.Value == item1)
-                                {
-                                    publishwaycontent += item.Text + ",";
-                                }
-                            }
-                        }
-
-                    }
-                    data.Rows[i]["publishwaycontent"] = publishwaycontent.Substring(0, publishwaycontent.Length - 1);
-                }
-                else
-                {
-                    data.Rows[i]["publishwaycontent"] = "";
-                }
-  
-
-
-            }
-              
-      
-        
+            data = re.FindTablePageBySql("select [clubactivityinfoid],[clubname],[clubactivitytypeid],[activitydate],[activitycost],[createtime],[createuserid],[isshow] ,[isdelete],[createusername],[clubactivitytypename]  from C_ClubActivityInfoView where " + strwhere + "", ref jqgridparam);
             return new Dictionary<string, object>
             {
                 { "code",1},
@@ -109,19 +66,17 @@ namespace Om.Areas.admin.Controllers
 
         [HttpPost]
 
-        public Dictionary<string, object> Add(T_SaleActivity model)
+        public Dictionary<string, object> Add(C_ClubActivityInfo model)
         {
-            T_SaleActivityBll bll = new T_SaleActivityBll();
-           var RealPublishWay = HttpContext.Current.Request.Form["RealPublishWay"].ToString();
-            model.PublishWay = RealPublishWay;
-        
-            if (model.SaleActivityId > 0)
+            C_ClubActivityInfoBll bll = new C_ClubActivityInfoBll();
+      
+               
+            if (model.ClubActivityInfoId > 0)
             {
-                var oldmodel = bll.GetModel(model.SaleActivityId);
+                var oldmodel = bll.GetModel(model.ClubActivityInfoId);
                 model.CreateUserId = oldmodel.CreateUserId;
                 model.CreateUserName = oldmodel.CreateUserName;
                 model.CreateTime = oldmodel.CreateTime;
-                model.PublishWay = RealPublishWay;
                 if (bll.Update(model) > 0)
                 {
                     return new Dictionary<string, object>
@@ -142,7 +97,6 @@ namespace Om.Areas.admin.Controllers
                 model.CreateUserId = ManageProvider.Provider.Current().UserId;
                 model.CreateUserName = ManageProvider.Provider.Current().Account;
                 model.CreateTime = DateTime.Now;
-                model.PublishWay = RealPublishWay;
                 if (bll.Add(model) > 0)
                 {
                     return new Dictionary<string, object>
@@ -163,7 +117,7 @@ namespace Om.Areas.admin.Controllers
         [HttpPost]
         public Dictionary<string, object> Del()
         {
-            T_SaleActivityBll bll = new T_SaleActivityBll();
+            C_ClubActivityInfoBll bll = new C_ClubActivityInfoBll();
            var idList = HttpContext.Current.Request.Form["idlist"].ToString();
             int result = bll.UpdateAll(idList);
             if (result > 0)

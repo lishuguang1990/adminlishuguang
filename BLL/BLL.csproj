@@ -67,6 +67,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="C_ClubActivityInfoBll.cs" />
+    <Compile Include="C_ClubActivityTypeBll.cs" />
+    <Compile Include="C_ClubInfoBll.cs" />
     <Compile Include="MyHtmlHelper\CheckBoxListHelper.cs" />
     <Compile Include="MyHtmlHelper\CheckBoxListHelper1.cs" />
     <Compile Include="MyHtmlHelper\RadioButtonListHelper.cs" />

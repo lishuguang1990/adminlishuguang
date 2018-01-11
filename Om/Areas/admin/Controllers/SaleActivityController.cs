@@ -21,6 +21,7 @@ namespace Om.Areas.admin.Controllers
         {
             return View();
         }
+        [ModuleAuthorize]
         public ActionResult List()
         {
             T_ActivityAreaBll bll = new T_ActivityAreaBll();
