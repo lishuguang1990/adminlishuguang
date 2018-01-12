@@ -21,6 +21,21 @@ namespace Om.Areas.admin.Controllers
         {
             return View();
         }
+        public ActionResult ClubInfoAdd()
+        {
+            var model = new C_ClubInfo();
+            var bll = new C_ClubInfoBll();
+            if (Request.QueryString["ClubInfoId"] != null)
+           {
+                model = bll.GetModel(int.Parse(Request.QueryString["ClubInfoId"].ToString()));
+            }
+            else
+            {
+                model.ClubDate = DateTime.Now;
+                model.IsShow = 1;
+            }
+            return View(model);
+        }
         public ActionResult ClubActivityAdd()
         {
             var model = new C_ClubActivityInfo();

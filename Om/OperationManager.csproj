@@ -244,6 +244,7 @@
     <Compile Include="Areas\admin\Controllers\ApiSaleActivityTypeController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiUpfileController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiUserController.cs" />
+    <Compile Include="Areas\admin\Controllers\ApiClubInfoController.cs" />
     <Compile Include="Areas\admin\Controllers\ClubActivityController.cs" />
     <Compile Include="Areas\admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\admin\Controllers\ManageController.cs" />
@@ -1483,6 +1484,8 @@
     <Content Include="Areas\admin\Views\ClubActivity\ClubTypeAdd.cshtml" />
     <Content Include="Areas\admin\Views\ClubActivity\ClubActivityList.cshtml" />
     <Content Include="Areas\admin\Views\ClubActivity\ClubActivityAdd.cshtml" />
+    <Content Include="Areas\admin\Views\ClubActivity\ClubInfoList.cshtml" />
+    <Content Include="Areas\admin\Views\ClubActivity\ClubInfoAdd.cshtml" />
     <None Include="Properties\PublishProfiles\132.pubxml" />
     <None Include="Properties\PublishProfiles\OM.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

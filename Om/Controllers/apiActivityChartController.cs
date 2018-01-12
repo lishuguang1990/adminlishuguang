@@ -52,7 +52,7 @@ namespace Om.Controllers
                         listtypeview.Add(new ActivityType() { Quantity = 0, TypeName = item.SaleActivityTypeName });
                     }
                 }
-               
+
             }
             else
             {
@@ -60,7 +60,7 @@ namespace Om.Controllers
                 {
                     listtypeview.Add(new ActivityType() { Quantity = 0, TypeName = item.SaleActivityTypeName });
                 }
-              
+
             }
             viewmodel.Total = total;
             viewmodel.List = listtypeview;
@@ -94,7 +94,7 @@ namespace Om.Controllers
             T_SaleActivityTypeBll typebll = new T_SaleActivityTypeBll();
             var typelist = typebll.GetList();
             string date = DateTime.Now.Year.ToString() + "-01-01";
-           // string month = HttpContext.Current.Request.Form["month"].ToString();
+            // string month = HttpContext.Current.Request.Form["month"].ToString();
             var database = DataFactory.Database();
             int indexmonth = DateTime.Now.Month;
             var listmonth = new List<int>();
@@ -103,7 +103,7 @@ namespace Om.Controllers
                 listmonth.Add(i);
             }
             //计算出当前年份每月，每种类型的场次数量成本的平均值 
-            var dsaverage = database.FindDataSetBySql("select DATEPART(month, ActivityDate) as month, (sum(PrimeCost) / count(SaleActivityTypeId)) as average, count(SaleActivityTypeId) as count, saleactivitytypeid from T_SaleActivity  where datediff(year,ActivityDate,'"+date+ "')=0 group by SaleActivityTypeId, DATEPART(month, ActivityDate) order by DATEPART(month,ActivityDate)");
+            var dsaverage = database.FindDataSetBySql("select DATEPART(month, ActivityDate) as month, (sum(PrimeCost) / count(SaleActivityTypeId)) as average, count(SaleActivityTypeId) as count, saleactivitytypeid from T_SaleActivity  where datediff(year,ActivityDate,'" + date + "')=0 group by SaleActivityTypeId, DATEPART(month, ActivityDate) order by DATEPART(month,ActivityDate)");
             var alldsaverage = database.FindDataSetBySql("select  DATEPART(month,ActivityDate) as nmonth,sum(PrimeCost)/count(PrimeCost) as average from T_SaleActivity where datediff(year,ActivityDate,'" + date + "')=0 group by DATEPART(month,ActivityDate) order by DATEPART(month,ActivityDate)");
             return new Dictionary<string, object>
             {
@@ -122,7 +122,7 @@ namespace Om.Controllers
         {
             T_SaleActivityTypeBll typebll = new T_SaleActivityTypeBll();
             var typelist = typebll.GetList();
-          
+
             string date = DateTime.Now.Year.ToString() + "-01-01";
             // string month = HttpContext.Current.Request.Form["month"].ToString();
             var database = DataFactory.Database();
@@ -181,7 +181,7 @@ namespace Om.Controllers
             var database = DataFactory.Database();
             int indexmonth = DateTime.Now.Month;
             var listmonth = new List<int>();
-            for (int i = 1; i < indexmonth+1; i++)
+            for (int i = 1; i < indexmonth + 1; i++)
             {
                 listmonth.Add(i);
             }
@@ -197,7 +197,7 @@ namespace Om.Controllers
         }
 
         [ActionName("geteverymonthpublishwaystatistics")]
-       // 经销商活动后续宣传发布统计
+        // 经销商活动后续宣传发布统计
         public Dictionary<string, object> GetEveryMonthPublishWayStatistics()
         {
             T_AgencyBll t_agencybll = new T_AgencyBll();
@@ -221,8 +221,8 @@ namespace Om.Controllers
                     PublishwayStatistics model = new PublishwayStatistics();
                     var list = new List<int>();
                     model.Month = item1;
-                 
-                   var result=dsaverage.Tables[0].Select($"AgencyId={item.AgencyId} and nmonth={item1}");
+
+                    var result = dsaverage.Tables[0].Select($"AgencyId={item.AgencyId} and nmonth={item1}");
                     foreach (var item2 in result)
                     {
                         var PublishWay = item2["PublishWay"].ToString();
@@ -241,20 +241,20 @@ namespace Om.Controllers
                                 }
                             }
                         }
-                      
-                      
+
+
                     }
-                 
+
                     model.Publishwaylist = list;
                     listway.Add(model);
                     //if(result.Where(a=>a["PublishWay"])
                 }
-              
+
                 listdic.Add(item.AgencyId, listway);
 
 
             }
-   
+
             return new Dictionary<string, object>
             {
                 {"code",1 },
@@ -266,7 +266,7 @@ namespace Om.Controllers
         }
 
         //每月不同类型活动单潜客成本及潜客成本转化率活动 成本金额总和/活动订单量
-        [ActionName("GetEveryMonthPassengerFlowChange")]
+        [ActionName("geteverymonthpassengerflowchange")]
         public Dictionary<string, object> GetEveryMonthPassengerFlowChange()
         {
             T_SaleActivityTypeBll typebll = new T_SaleActivityTypeBll();
@@ -280,16 +280,72 @@ namespace Om.Controllers
             {
                 listmonth.Add(i);
             }
-            //按照类型获取当年所有月份的平均单潜客成本及潜客成本转化率活动
-            var dsaverage = database.FindDataSetBySql("select saleactivitytypeid, DATEPART(month, ActivityDate) as nmonth,  sum(LatentPassengerFlow) / count(SaleActivityTypeId) as latentpassengerflowaverage from T_SaleActivity   where datediff(year, ActivityDate, '2018-01-01') = 0 group by SaleActivityTypeId, DATEPART(month, ActivityDate) order by DATEPART(month, ActivityDate)");
+            //潜客成本 活动总金额/潜客总量
+            //潜客转化率 潜客量/总量
+            var dsaverage = database.FindDataSetBySql("select saleactivitytypeid, DATEPART(month, ActivityDate) as nmonth,  sum(PrimeCost) / sum(LatentPassengerFlow) as LatentPassengerFlowcost, CONVERT(varchar(20),(Round(CONVERT(float,(sum(LatentPassengerFlow))) / sum(PassengerFlow),2)*100))+'%' as rate  from T_SaleActivity   where datediff(year, ActivityDate, '" + date+"') = 0 group by SaleActivityTypeId, DATEPART(month, ActivityDate) order by DATEPART(month, ActivityDate)");
+            //每个月的总平均值
+            var alldsaverage = database.FindDataSetBySql("select  DATEPART(month, ActivityDate) as nmonth,  sum(PrimeCost) / sum(LatentPassengerFlow) as LatentPassengerFlowcost, CONVERT(varchar(20),(Round(CONVERT(float,(sum(LatentPassengerFlow))) / sum(PassengerFlow),2)*100))+'%' as rate from T_SaleActivity   where datediff(year, ActivityDate, '2018-01-01') = 0 group by  DATEPART(month, ActivityDate) order by DATEPART(month, ActivityDate)");
             return new Dictionary<string, object>
             {
                  {"code",1 },
                  {"typelist",typelist.Select(a=>new { saleactivitytypeid=a.SaleActivityTypeId,saleactivitytypename=a.SaleActivityTypeName})},
                  {"averagelist",dsaverage.Tables[0]},
+                 {"allaveragelist",alldsaverage.Tables[0]},
                  {"monthlist",listmonth}
             };
         }
+
+        //没有不同类型车主俱乐部活动场均成本
+        [ActionName("geteverymonthclubaveragecost")]
+        public Dictionary<string, object> GetEveryMonthClubAverageCost()
+        {
+            C_ClubActivityTypeBll typebll = new C_ClubActivityTypeBll();
+            var typelist = typebll.GetList();
+            string date = DateTime.Now.Year.ToString() + "-01-01";
+            var database = DataFactory.Database();
+            int indexmonth = DateTime.Now.Month;
+            var listmonth = new List<int>();
+            for (int i = 1; i < indexmonth + 1; i++)
+            {
+                listmonth.Add(i);
+            }
+            //车主俱乐部活动按照类型统计每月平均成本价格
+            var dsaverage = database.FindDataSetBySql("select clubactivityinfoid, DATEPART(month, ActivityDate) as nmonth, sum(ActivityCost) / count(ClubActivityInfoId)  as costaverage from C_ClubActivityInfo   where datediff(year, ActivityDate, '"+ date + "') = 0 group by ClubActivityInfoId, DATEPART(month, ActivityDate) order by DATEPART(month, ActivityDate)");
+            var dsaveragelist = database.FindDataSetBySql("select DATEPART(month, ActivityDate) as nmonth, sum(ActivityCost) / count(ClubActivityInfoId)  as costaverage from C_ClubActivityInfo   where datediff(year, ActivityDate, '" + date + "') = 0 group by DATEPART(month, ActivityDate) order by DATEPART(month, ActivityDate)");
+            return new Dictionary<string, object>
+            {
+            {"code",1 },
+            {"typelist",typelist.Select(a=>new {saleactivitytypeid=a.ClubActivityTypeId,saleactivitytypename=a.ClubActivityTypeName})},
+            {"averagelist",dsaverage.Tables[0]},
+            {"allaveragelist",dsaveragelist},
+            {"monthlist",listmonth}
+            };
+        }
+        //每月不同类型车主俱乐部活动场次统计
+        [ActionName("geteverymonthclubactivitybuildecount")]
+        public Dictionary<string, object> GetEveryMonthClubActivityBuildeCount()
+        {
+            C_ClubActivityTypeBll typebll = new C_ClubActivityTypeBll();
+            var typelist = typebll.GetList();
+            string date = DateTime.Now.Year.ToString() + "-01-01";
+            var database = DataFactory.Database();
+            int indexmonth = DateTime.Now.Month;
+            var listmonth = new List<int>();
+            for (int i = 1; i < indexmonth + 1; i++)
+            {
+                listmonth.Add(i);
+            }
+            //车主俱乐部活动按照类型统计每月平均成本价格
+            var dsaverage = database.FindDataSetBySql("select DATEPART(month, ActivityDate) as nmonth, count(ClubActivityInfoId) as count from C_ClubActivityInfo   where datediff(year, ActivityDate, '2018-01-01') = 0 group by DATEPART(month, ActivityDate) order by DATEPART(month, ActivityDate)");
+            return new Dictionary<string, object>
+            {
+                {"code",1 },
+                {"typelist",typelist.Select(a=>new {saleactivitytypeid=a.ClubActivityTypeId,saleactivitytypename=a.ClubActivityTypeName})},
+                {"averagelist",dsaverage.Tables[0]},
+                {"monthlist",listmonth}
+            };
+        }
+
 
 
     }

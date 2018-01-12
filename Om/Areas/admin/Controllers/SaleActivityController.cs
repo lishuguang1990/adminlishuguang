@@ -109,5 +109,15 @@ namespace Om.Areas.admin.Controllers
             }
             return View(model);
         }
+
+        public ActionResult ClubInfoList()
+        {
+            return View();
+        }
+        public ActionResult ClubInfoAdd()
+        {
+            return View();
+        }
     }
+
 }
