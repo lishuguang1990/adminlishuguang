@@ -1,4 +1,5 @@
-﻿using BLL;
+﻿using AppLibrary.WriteExcel;
+using BLL;
 using LeaRun.Utilities;
 using MallWCF.DBHelper;
 using Model;
@@ -90,13 +91,7 @@ namespace Om.Areas.admin.Controllers
                 {
                     data.Rows[i]["publishwaycontent"] = "";
                 }
-  
-
-
             }
-              
-      
-        
             return new Dictionary<string, object>
             {
                 { "code",1},
@@ -181,6 +176,98 @@ namespace Om.Areas.admin.Controllers
                      {"code",0}
                  };
             }
+        }
+
+        public void Print()
+        {
+
+            //区域
+            var activitareaid = HttpContext.Current.Request.QueryString["activitareaid"].ToString();
+            //经销商
+            var agencyid = HttpContext.Current.Request.QueryString["agencyid"].ToString();
+            //类型
+            var saleactivitytypeid = HttpContext.Current.Request.QueryString["saleactivitytypeid"].ToString();
+            var begindate = HttpContext.Current.Request.QueryString["begindate"].ToString();
+            var enddate = HttpContext.Current.Request.QueryString["enddate"].ToString();
+            IDatabase database = DataFactory.Database();
+            IRepository<ActivityViewModel> re = new Repository<ActivityViewModel>();
+            DataTable data = new DataTable();
+            string strwhere = "";
+            if (!string.IsNullOrEmpty(activitareaid))
+            {
+                strwhere += " and ActivitAreaId=" + activitareaid;
+            }
+            if (!string.IsNullOrEmpty(agencyid))
+            {
+                strwhere += " and AgencyId=" + agencyid;
+            }
+            if (!string.IsNullOrEmpty(saleactivitytypeid))
+            {
+                strwhere += " and SaleActivityTypeId=" + saleactivitytypeid;
+            }
+            if (!string.IsNullOrEmpty(begindate))
+            {
+                strwhere += " and ActivityDate>='" + begindate + "'";
+            }
+            if (!string.IsNullOrEmpty(enddate))
+            {
+                strwhere += " and ActivityDate<='" + enddate + "'";
+            }
+             data = database.FindTableBySql("select * from View_Activity where IsDelete=0 " + strwhere + "");
+           
+            var newd = data.Columns.Add("publishwaycontent", typeof(String));
+            var list = new Utilities.PublishWay().ToSelectListItem();
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                string str = data.Rows[i]["publishway"].ToString();
+                if (!string.IsNullOrEmpty(str))
+                {
+                    string[] arrstr = str.Split(',');
+                    string publishwaycontent = "";
+                    if (!string.IsNullOrEmpty(str))
+                    {
+                        foreach (var item in list)
+                        {
+                            foreach (var item1 in arrstr)
+                            {
+                                if (item.Value == item1)
+                                {
+                                    publishwaycontent += item.Text + ",";
+                                }
+                            }
+                        }
+
+                    }
+                    data.Rows[i]["publishwaycontent"] = publishwaycontent.Substring(0, publishwaycontent.Length - 1);
+                }
+                else
+                {
+                    data.Rows[i]["publishwaycontent"] = "";
+                }
+            }
+            AppLibrary.WriteExcel.XlsDocument doc = new AppLibrary.WriteExcel.XlsDocument();
+         //   HttpContext.Current.Response.Write();
+            doc.FileName = DateTime.Now.ToString("yyyyMMddHHmmss") + ".xls";
+            string sheetname = "SHEET";
+           Worksheet sheet = doc.Workbook.Worksheets.Add(sheetname);
+            Cells cells = sheet.Cells;
+            XF XFstyle = doc.NewXF();
+            XFstyle.HorizontalAlignment = HorizontalAlignments.Centered;
+            cells.Add(1, 1, "ceshi");
+            cells.Add(1, 2, "ceshi");
+            cells.Add(1, 3, "ceshi");
+            cells.Add(1, 4, "ceshi");
+            doc.Send();
+            HttpContext.Current.Response.Flush();
+            HttpContext.Current.Response.End();
+            //return new Dictionary<string, object>
+            //{
+            //    { "code",1},
+            //    { "total",jqgridparam.total},
+            //    { "page",jqgridparam.page},
+            //    { "records",jqgridparam.records},
+            //    { "rows",data},
+            //};
         }
     }
 }

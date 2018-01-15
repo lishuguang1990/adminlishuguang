@@ -50,7 +50,6 @@
                     <th >活动成本金额</th>
                     <th >活动后续订单量</th>
                     <th >宣传类型</th>
-                   
                     </tr>
             </thead>
             <tbody id="view1"></tbody>
@@ -90,6 +89,13 @@
             $.Huimodalalert('请选择一个需要修改的数据', 1000)
         }
 
+    }
+
+    function btn_print()
+    {
+     
+        var url = "/api/ApiSaleActivity/Print?activitareaid=" + $("#activitareaid").val() + "&agencyid=" + $("#agencyid").val() + "&saleactivitytypeid=" + $("#saleactivitytypeid").val() + "&begindate=" + $("#datemin").val() + "&enddate=" + $("#datemax").val();
+        $('<form method="post" action="' + url + '"></form>').appendTo('body').submit().remove();
     }
     function search()
     {

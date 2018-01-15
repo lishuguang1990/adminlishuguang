@@ -10,16 +10,20 @@ namespace Model.ModelView
     public class AgencyStatisticsViewModel
     {
         [JsonProperty("agencyname")]
-        public string agencyname { get; set; }
+        public string AgencyName { get; set; }
+        [JsonProperty("agencyid")]
+        public int AgencyId { get; set; }
 
+        public List<Months> listmonth { get; set; }
+        
         public class Months
         {
             [JsonProperty("month")]
             public string Month { get; set; }
+            [JsonProperty("saleactivitytypeidlist")]
+
+            public List<int> SaleActivityTypeIdList { get; set; }
         }
-        public class MonthtType
-        {
-            public int TypeId { get; set; }
-        }
+   
     }
 }
