@@ -45,3 +45,9 @@ E:\Job\Work\Lincoln\DBHelper\bin\Debug\Newtonsoft.Json.xml
 E:\Job\Work\Lincoln\DBHelper\obj\Debug\DBHelper.dll
 E:\Job\Work\Lincoln\DBHelper\obj\Debug\DBHelper.pdb
 E:\Job\Work\Lincoln\DBHelper\obj\Debug\DBHelper.csprojResolveAssemblyReference.cache
+D:\Git\admin\DBHelper\bin\Debug\DBHelper.dll
+D:\Git\admin\DBHelper\bin\Debug\DBHelper.pdb
+D:\Git\admin\DBHelper\bin\Debug\Newtonsoft.Json.dll
+D:\Git\admin\DBHelper\bin\Debug\Newtonsoft.Json.xml
+D:\Git\admin\DBHelper\obj\Debug\DBHelper.dll
+D:\Git\admin\DBHelper\obj\Debug\DBHelper.pdb

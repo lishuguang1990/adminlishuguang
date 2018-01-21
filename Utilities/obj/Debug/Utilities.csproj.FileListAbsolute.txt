@@ -116,3 +116,15 @@ E:\Job\Work\Lincoln\Utilities\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.r
 E:\Job\Work\Lincoln\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
 E:\Job\Work\Lincoln\Utilities\obj\Debug\Utilities.dll
 E:\Job\Work\Lincoln\Utilities\obj\Debug\Utilities.pdb
+D:\Git\admin\Utilities\bin\Debug\Utilities.dll
+D:\Git\admin\Utilities\bin\Debug\Utilities.pdb
+D:\Git\admin\Utilities\bin\Debug\DBHelper.dll
+D:\Git\admin\Utilities\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Git\admin\Utilities\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Git\admin\Utilities\bin\Debug\DBHelper.pdb
+D:\Git\admin\Utilities\bin\Debug\Microsoft.Web.Infrastructure.xml
+D:\Git\admin\Utilities\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Git\admin\Utilities\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+D:\Git\admin\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+D:\Git\admin\Utilities\obj\Debug\Utilities.dll
+D:\Git\admin\Utilities\obj\Debug\Utilities.pdb

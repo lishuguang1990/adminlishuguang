@@ -19,7 +19,7 @@
             <div class="nav-link">
                 <span><a href="/index">活动场次汇总</a></span>
                 <span><a href="javascript:;">全国经销商活动场次统计</a></span>
-                <span><a href="/index/averagecost">活动场次及成本统计</a></span>
+                <span class="@(Request.Url.AbsolutePath.Contains("index/averagecost")?"a":"b")"><a href="/index/averagecost"  >活动场次及成本统计</a></span>
                 <span><a href="/index/averagepassengerflow">活动场均客流统计</a></span>
                 <span><a href="/index/averageorder">活动平均订单数量统计</a></span>
                 <span><a href="/index/averagelatentpassengerflow">活动平均潜客统计</a></span>
