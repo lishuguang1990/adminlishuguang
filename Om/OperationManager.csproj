@@ -1506,6 +1506,7 @@
     <Content Include="Areas\admin\Views\ClubActivity\ClubInfoAdd.cshtml" />
     <Content Include="WebForm2.aspx" />
     <Content Include="Areas\admin\Views\SaleActivity\Hitchleadingin.cshtml" />
+    <Content Include="Content\saletemplet.xls" />
     <None Include="Properties\PublishProfiles\132.pubxml" />
     <None Include="Properties\PublishProfiles\OM.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
