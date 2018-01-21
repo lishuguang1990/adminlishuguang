@@ -561,11 +561,42 @@ function averageOrder() {
             var summaryList = new Array(); //每月活动订单数统计
 
             for (var i = 0; i < data.averagelist.length; i++) {
+                var month = data.averagelist[i].nmonth + '月';
+                if (monthList.indexOf(month) == -1) {
+                    monthList.push(month);
+                    summaryList.push({
+                        nmonth: month.substr(0, month.length - 1),
+                        hobby: 0,
+                        party: 0,
+                        job: 0
+                    });
+                }
+            }
+            console.log('monthList', monthList);
+
+            //设置数组默认值, 占满x轴长度
+            for (var i = 0; i < monthList.length; i++) {
+                hobbyList.push(0);
+                partyList.push(0);
+                jobList.push(0);
+
+                hobbyLaterList.push(0);
+                partyLaterList.push(0);
+                jobLaterList.push(0);
+
+                str += '<span>' + monthList[i] + '</span>';
+            }
+            $('.select-option').html(str);
+            $('.select-show').html(monthList[0]);
+
+            for (var i = 0; i < data.averagelist.length; i++) {
                 if (data.averagelist[i].saleactivitytypeid == 2) {
-                    hobbyList.push(data.averagelist[i].orderquantityaverage);
-                    hobbyLaterList.push(data.averagelist[i].laterorderquantityaverage);
+                    var index = monthList.indexOf(data.averagelist[i].nmonth + '月');
+                    hobbyList[index] = data.averagelist[i].orderquantityaverage;
+                    hobbyLaterList[index] = data.averagelist[i].laterorderquantityaverage
                 }
                 if (data.averagelist[i].saleactivitytypeid == 1) {
+                    var index = monthList.indexOf(data.averagelist[i].nmonth + '月');
                     partyList.push(data.averagelist[i].orderquantityaverage);
                     partyLaterList.push(data.averagelist[i].laterorderquantityaverage);
                 }
@@ -573,18 +604,6 @@ function averageOrder() {
                     jobList.push(data.averagelist[i].orderquantityaverage);
                     jobLaterList.push(data.averagelist[i].laterorderquantityaverage);
                 }
-
-                var month = data.averagelist[i].nmonth + '月';
-                if (monthList.indexOf(month) == -1) {
-                    monthList.push(month);
-                    summaryList.push({
-                        nmonth: month.substr(0, month.length-1),
-                        hobby: 0,
-                        party: 0,
-                        job: 0
-                    });
-                }
-
                 
                 for (var j = 0; j < summaryList.length; j++) {
                     if (summaryList[j].nmonth == data.averagelist[i].nmonth) {

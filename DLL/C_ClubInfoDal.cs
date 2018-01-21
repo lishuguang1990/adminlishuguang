@@ -55,5 +55,10 @@ namespace DAL
             StringBuilder sb = new StringBuilder("update C_ClubInfo set IsDelete=1 where ClubInfoId in (" + idList + ")");
             return Repository().ExecuteBySql(sb);
         }
+        public C_ClubInfo GetModel(string date)
+        {
+            return Repository().FindEntityByWhere(" and  DATEDIFF(month,ClubDate,'"+ date + "')=0 and IsDelete=0");
+        }
+
     }
 }

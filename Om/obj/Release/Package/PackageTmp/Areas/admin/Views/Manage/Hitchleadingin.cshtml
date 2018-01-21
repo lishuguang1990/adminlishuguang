@@ -1,0 +1,217 @@
+﻿<!--_meta 作为公共模版分离出去-->
+
+@{
+    Layout = null;
+}
+@model Model.Role
+@using Utilities.Base.Common;
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="Bookmark" href="favicon.ico">
+    <link rel="Shortcut Icon" href="favicon.ico" />
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="lib/html5.js"></script>
+    <script type="text/javascript" src="lib/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="/static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="/lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="/static/h-ui.admin/css/style.css" />
+    <link href="~/lib/webuploader/0.1.5/webuploader.css" rel="stylesheet" />
+
+    <!--[if IE 6]>
+    <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
+    <script>DD_belatedPNG.fix('*');</script><![endif]-->
+    <!--/meta 作为公共模版分离出去-->
+
+    <title></title>
+    <style>
+        select {
+            height: 30px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <article class="cl pd-20">
+        <form  method="post" class="form form-horizontal" id="form-admin-add">
+            <div class="row cl">
+                <div id="divtips" style="color:red; margin-left:150px;font-size:large"></div>
+                
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>导入时间：</label>
+                <div class="formControls col-xs-8 col-sm-9">
+                    <input type="text" onclick="WdatePicker({onpicked:getMonday})" id="leandingtime"name="leandingtime" class="input-text Wdate" style="width:120px;" value="@DateTime.Now.ToString("yyyy-MM-dd")">
+
+                    <button  class="btn btn-primary " onclick="del()">删除当前日期的数据</button>
+
+                </div>
+            </div>
+            <div class="row cl">
+                <label class="form-label col-xs-4 col-sm-3"><span class="c-red"></span>导入结果：</label>
+                <div class="formControls col-xs-8 col-sm-9" id="leadinginresult">
+                </div>
+            </div>
+                <div class="row cl">
+                    <label class="form-label col-xs-4 col-sm-2"></label>
+                    <div class="formControls col-xs-8 col-sm-9">
+                        <div class="uploader-thum-container">
+                            <div id="fileList" class="uploader-list"></div>
+                            <div id="filePicker">选择文件</div>&nbsp;
+                            <button id="ctlBtn" class="btn btn-default">上传并导入</button>
+                            <button  class="btn btn-default" onclick="location.href=location.href">刷新继续导入</button>
+                        </div>
+                    </div>
+                </div>
+</form>
+    </article>
+
+    <!--_footer 作为公共模版分离出去-->
+      <script type="text/javascript" src="/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+    <script type="text/javascript" src="/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/lib/layer/2.4/layer.js"></script>
+    <script type="text/javascript" src="/static/h-ui/js/H-ui.js"></script>
+    <script type="text/javascript" src="/static/h-ui.admin/js/H-ui.admin.page.js"></script>
+
+    <!--/_footer /作为公共模版分离出去-->
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script src="~/lib/webuploader/0.1.5/webuploader.js"></script>
+    <script type="text/javascript">
+       
+        function del()
+        {
+            if (confirm("你确实删除" + $("#leandingtime").val() + "当天的数据吗？"))
+            {
+                $.post("/api/ApiM_HitchInfo/DelByDate", { "date": $("#leandingtime").val() }, function (data) {
+                    alert("删除"+data.msg+"条数据");
+                }, "json"
+                );
+            }
+        }
+        function selectMonth() {
+           
+            WdatePicker({ dateFmt: 'yyyy-MM', isShowToday: false, isShowClear: false });
+        }
+        function getMonday()
+        {
+            $.post("/api/ApiM_HitchInfo/IsExistByDate", { "date": $("#leandingtime").val() }, function (data)
+            {
+                if (data.code == "1") {
+                    $("#divtips").html($("#leandingtime").val() + "已经存在了是否确认还要导入");
+                }
+                else {
+                    $("#divtips").html("");
+                }
+            },"json")
+        }
+        $(function () {
+
+            getMonday();
+            $list = $("#fileList");
+        
+            var uploader = WebUploader.create({
+
+                // swf文件路径
+                swf: "/lib/webuploader/0.1.5/Uploader.swf",
+
+                // 文件接收服务端。
+                server: '/api/ApiUpfile/Hitchupfile',
+
+                // 选择文件的按钮。可选。
+                // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+                pick: '#filePicker',
+                multiple: false,
+                // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
+                resize: false,
+                accept: {
+                title: '只能传xls格式的文件',
+                extensions: 'xls',
+                mimeTypes: 'xls/*'
+        }
+            });
+            uploader.on('fileQueued', function (file) {
+                var $li = $(
+                    '<div id="' + file.id + '" class="item">' +
+                        '<div class="pic-box"><img></div>' +
+                        '<div class="info">' + file.name + '</div>' +
+                        '<p class="state">等待上传...</p>' +
+                    '</div>'
+                ),
+                $img = $li.find('img');
+                $list.append($li);
+            });
+            uploader.on('uploadSuccess', function (file, response) {
+                $('#' + file.id).find('p.state').text('已上传');
+                $.post("/api/ApiM_HitchInfo/LeadingInM_HitchInfo", { "leadingindatetime": $("#leandingtime").val(), "url": response.url, "filename": response.filename }, function (data) {
+                    if (data.code == 1)
+                    {
+                        $("#leadinginresult").append("文件" + data.filename + "一共" + data.count + "成功导入" + data.successcount + "数据" + "失败" + data.failcount + "条数据") + "444444";
+                    }
+                },"json"
+                );
+
+            });
+            uploader.on('uploadError', function (file) {
+                $('#' + file.id).find('p.state').text('上传出错');
+            });
+
+            uploader.on('uploadComplete', function (file) {
+              
+                $('#' + file.id).find('.progress').fadeOut();
+            });
+            $("#ctlBtn").on("click", function ()
+            {
+                alert("22");
+                 uploader.upload();
+            }
+            )
+       
+
+	$('.skin-minimal input').iCheck({
+		checkboxClass: 'icheckbox-blue',
+		radioClass: 'iradio-blue',
+		increaseArea: '20%'
+	});
+
+	$("#form-admin-add").validate({
+		rules:{
+		    RoleName: {
+				required:true,
+
+			},
+		    Sort: {
+				required:true,
+		    },
+
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler: function (form) {
+		    $(form).ajaxSubmit(function (data) {
+		        if (data.code)
+		        {
+		            var index = parent.layer.getFrameIndex(window.name);
+		            parent.location.reload();
+		            parent.layer.close(index);
+		        }
+
+
+		    });
+	}
+	});
+});
+    </script>
+    <!--/请在上方写此页面业务相关的脚本-->
+</body>
+</html>
