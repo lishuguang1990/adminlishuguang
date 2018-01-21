@@ -43,15 +43,6 @@ D:\李曙光\Git\Manage\Model\bin\Debug\Newtonsoft.Json.xml
 D:\李曙光\Git\Manage\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\李曙光\Git\Manage\Model\obj\Debug\Model.dll
 D:\李曙光\Git\Manage\Model\obj\Debug\Model.pdb
-D:\Git\admin\Model\bin\Debug\Model.dll
-D:\Git\admin\Model\bin\Debug\Model.pdb
-D:\Git\admin\Model\bin\Debug\DBHelper.dll
-D:\Git\admin\Model\bin\Debug\Newtonsoft.Json.dll
-D:\Git\admin\Model\bin\Debug\DBHelper.pdb
-D:\Git\admin\Model\bin\Debug\Newtonsoft.Json.xml
-D:\Git\admin\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
-D:\Git\admin\Model\obj\Debug\Model.dll
-D:\Git\admin\Model\obj\Debug\Model.pdb
 D:\李曙光\Git\admin\Model\bin\Debug\Model.dll
 D:\李曙光\Git\admin\Model\bin\Debug\Model.pdb
 D:\李曙光\Git\admin\Model\bin\Debug\DBHelper.dll
@@ -62,7 +53,6 @@ D:\李曙光\Git\admin\Model\bin\Debug\Newtonsoft.Json.xml
 D:\李曙光\Git\admin\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 D:\李曙光\Git\admin\Model\obj\Debug\Model.dll
 D:\李曙光\Git\admin\Model\obj\Debug\Model.pdb
-<<<<<<< HEAD
 E:\Job\Work\Lincoln\Model\bin\Debug\Model.dll
 E:\Job\Work\Lincoln\Model\bin\Debug\Model.pdb
 E:\Job\Work\Lincoln\Model\bin\Debug\DBHelper.dll
@@ -73,6 +63,3 @@ E:\Job\Work\Lincoln\Model\bin\Debug\Newtonsoft.Json.xml
 E:\Job\Work\Lincoln\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
 E:\Job\Work\Lincoln\Model\obj\Debug\Model.dll
 E:\Job\Work\Lincoln\Model\obj\Debug\Model.pdb
-=======
-D:\Git\admin\Model\bin\Debug\Newtonsoft.Json.pdb
->>>>>>> 92a5f06071e375cb32e66b6cdcae6873237e4823
