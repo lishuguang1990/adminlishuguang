@@ -40,6 +40,11 @@ namespace BLL
         {
             return C_ClubInfoDal.GetInstance().UpdateAll(idlist);
         }
- 
+
+        public C_ClubInfo GetModelByDate(string date)
+        {
+            return C_ClubInfoDal.GetInstance().GetModel(date);
+        }
+
     }
 }

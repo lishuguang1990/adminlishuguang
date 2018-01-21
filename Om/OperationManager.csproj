@@ -105,12 +105,20 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -281,6 +289,13 @@
     <Compile Include="WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\selfsetting.xml">
@@ -290,6 +305,7 @@
     <Content Include="Areas\admin\Content\bootstrap.min.css" />
     <Content Include="Areas\admin\Content\Images\loginbg.jpg" />
     <Content Include="Areas\admin\Content\Images\logo.jpg" />
+    <Content Include="Areas\admin\Content\Site.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\loginbg.jpg" />
@@ -298,7 +314,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Areas\admin\Content\Site.css" />
     <Content Include="HtmlPage1.html" />
     <Content Include="lib\Calendar\images\body-bg.jpg" />
     <Content Include="lib\Calendar\images\download-button.png" />
@@ -1489,6 +1504,8 @@
     <Content Include="Areas\admin\Views\ClubActivity\ClubActivityAdd.cshtml" />
     <Content Include="Areas\admin\Views\ClubActivity\ClubInfoList.cshtml" />
     <Content Include="Areas\admin\Views\ClubActivity\ClubInfoAdd.cshtml" />
+    <Content Include="WebForm2.aspx" />
+    <Content Include="Areas\admin\Views\SaleActivity\Hitchleadingin.cshtml" />
     <None Include="Properties\PublishProfiles\132.pubxml" />
     <None Include="Properties\PublishProfiles\OM.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />

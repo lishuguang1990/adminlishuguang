@@ -27,7 +27,7 @@ namespace Model
         public int CreateUserId { get; set; }
 
         public string CreateUserName { get; set; }
-         public int AreaId { get; set;}
+         public int ActivitAreaId { get; set;}
 
     }
 }
