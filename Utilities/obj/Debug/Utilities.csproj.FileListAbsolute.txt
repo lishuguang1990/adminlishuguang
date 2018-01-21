@@ -126,3 +126,15 @@ D:\李曙光\Git\admin\Utilities\bin\Debug\zh-Hans\System.Web.WebPages.Deploymen
 D:\李曙光\Git\admin\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
 D:\李曙光\Git\admin\Utilities\obj\Debug\Utilities.dll
 D:\李曙光\Git\admin\Utilities\obj\Debug\Utilities.pdb
+E:\Job\Work\Lincoln\Utilities\bin\Debug\Utilities.dll
+E:\Job\Work\Lincoln\Utilities\bin\Debug\Utilities.pdb
+E:\Job\Work\Lincoln\Utilities\bin\Debug\DBHelper.dll
+E:\Job\Work\Lincoln\Utilities\bin\Debug\Microsoft.Web.Infrastructure.dll
+E:\Job\Work\Lincoln\Utilities\bin\Debug\System.Web.WebPages.Deployment.dll
+E:\Job\Work\Lincoln\Utilities\bin\Debug\DBHelper.pdb
+E:\Job\Work\Lincoln\Utilities\bin\Debug\Microsoft.Web.Infrastructure.xml
+E:\Job\Work\Lincoln\Utilities\bin\Debug\System.Web.WebPages.Deployment.xml
+E:\Job\Work\Lincoln\Utilities\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
+E:\Job\Work\Lincoln\Utilities\obj\Debug\Utilities.csprojResolveAssemblyReference.cache
+E:\Job\Work\Lincoln\Utilities\obj\Debug\Utilities.dll
+E:\Job\Work\Lincoln\Utilities\obj\Debug\Utilities.pdb

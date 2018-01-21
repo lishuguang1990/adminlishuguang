@@ -113,6 +113,12 @@
     <Compile Include="MyConfig.cs" />
     <Compile Include="EnumToItemList.cs" />
     <Compile Include="HtmltHelper.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +130,52 @@
       <Project>{af80e713-decb-47da-a6d3-b24875673cdd}</Project>
       <Name>DBHelper</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\DBHelper.dll" />
+    <Content Include="bin\Debug\DBHelper.pdb" />
+    <Content Include="bin\Debug\log4net.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Infrastructure.xml" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\SharpZipLib.dll" />
+    <Content Include="bin\Debug\System.Web.Mvc.dll" />
+    <Content Include="bin\Debug\System.Web.Mvc.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.xml" />
+    <Content Include="bin\Debug\Utilities.dll" />
+    <Content Include="bin\Debug\Utilities.pdb" />
+    <Content Include="bin\Debug\zh-Hans\System.Web.Mvc.resources.dll" />
+    <Content Include="bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="bin\Debug\zh-Hans\System.Web.WebPages.resources.dll" />
+    <Content Include="bin\Release\DBHelper.dll" />
+    <Content Include="bin\Release\DBHelper.pdb" />
+    <Content Include="bin\Release\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Release\Microsoft.Web.Infrastructure.xml" />
+    <Content Include="bin\Release\Newtonsoft.Json.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.xml" />
+    <Content Include="bin\Release\SharpZipLib.dll" />
+    <Content Include="bin\Release\System.Web.Mvc.dll" />
+    <Content Include="bin\Release\System.Web.Mvc.xml" />
+    <Content Include="bin\Release\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\Release\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\Release\System.Web.WebPages.dll" />
+    <Content Include="bin\Release\System.Web.WebPages.xml" />
+    <Content Include="bin\Release\Utilities.dll" />
+    <Content Include="bin\Release\Utilities.pdb" />
+    <Content Include="bin\Release\zh-Hans\System.Web.Mvc.resources.dll" />
+    <Content Include="bin\Release\zh-Hans\System.Web.WebPages.Deployment.resources.dll" />
+    <Content Include="bin\Release\zh-Hans\System.Web.WebPages.resources.dll" />
+    <Content Include="obj\Release\Utilities.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\Utilities.dll" />
+    <Content Include="obj\Release\Utilities.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Release\Utilities.csprojResolveAssemblyReference.cache" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

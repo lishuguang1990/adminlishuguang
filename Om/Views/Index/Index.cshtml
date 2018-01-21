@@ -1,17 +1,26 @@
 ﻿@{
-    Layout = null;
+    Layout = "../Shared/_Layout.cshtml";
 }
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title></title>
-</head>
-<body>
-    <div>
-    aaaa
+<section class="wrapper">
+    <div class="title">
+        <h1>活动场次汇总</h1>
+        @*<div class="summary-box">
+            <span>活动总场次：<em>300</em>场</span>
+        </div>*@
     </div>
-</body>
-</html>
+    <div class="data-filter">
+        <em class="sub-title">数据筛选：</em>
+        <div class="date-picker">
+            <input type="text" id="date_1" /><span>至</span><input type="text" id="date_2" />
+            <a href="javascript:;" class="check-btn">查询</a>
+        </div>
+    </div>
+    <div class="chart-cont" id="main"></div>
+</section>
+
+@section Scripts{
+    <script>
+        activitiesSummary();
+    </script>
+}

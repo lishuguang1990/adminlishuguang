@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="title">
+        <h1>车主俱乐部活动场次</h1>
+        <div class="summary-box">
+            <span class="summary-drive">自驾游：<em class="pink">0</em>场</span>
+            <span class="summary-course">讲堂类：<em class="blue">0</em>场</span>
+            <span class="summary-other">其他类：<em class="orange">0</em>场</span>
+            <span class="summary-total">总场次：<em>0</em>场</span>
+        </div>
+    </div>
+    <div class="data-filter">
+        <em class="sub-title">数据筛选：</em>
+        <div class="date-picker">
+            <div class="select-box">
+                <span class="select-show"></span>
+                <div class="select-option"></div>
+            </div>
+        </div>
+    </div>
+    <div class="chart-cont" id="main"></div>
+</section>
+
+@section Scripts{
+    <script>
+        selectBox();
+        clubInfo();
+    </script>
+}
