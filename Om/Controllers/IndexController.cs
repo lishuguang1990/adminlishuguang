@@ -13,5 +13,40 @@ namespace Om.Controllers
         {
             return View();
         }
+
+        public ActionResult AverageCost()
+        {
+            return View();
+        }
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+
+        public ActionResult AveragePassengerFlow()
+        {
+            return View();
+        }
+
+        public ActionResult AverageOrder()
+        {
+            return View();
+        }
+
+        public ActionResult AverageLatentPassengerFlow()
+        {
+            return View();
+        }
+
+        public ActionResult AveragePassengerFlowChange()
+        {
+            return View();
+        }
+
+        public ActionResult AverageOrderCost()
+        {
+            return View();
+        }
     }
 }

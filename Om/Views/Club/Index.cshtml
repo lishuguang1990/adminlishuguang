@@ -1,0 +1,29 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="title">
+        <h1>全国经销商车主俱乐部概况统计</h1>
+        <div class="summary-box">
+            <span class="summary-already">已成立：<em class="pink">0</em>个</span>
+            <span class="summary-ing">计划中：<em class="blue">0</em>个</span>
+            <span class="summary-not">未成立：<em class="orange">0</em>个</span>
+        </div>
+    </div>
+    <div class="data-filter">
+        <em class="sub-title">数据筛选：</em>
+        <div class="date-picker">
+            <input type="text" id="date_1" /><span>至</span><input type="text" id="date_2" />
+            <a href="javascript:;" class="check-btn">查询</a>
+        </div>
+    </div>
+    <div class="chart-cont" id="main"></div>
+</section>
+
+@section Scripts{
+    <script>
+        selectBox();
+        club();
+    </script>
+}

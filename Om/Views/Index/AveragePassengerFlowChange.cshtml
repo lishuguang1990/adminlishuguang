@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="title">
+        <h1>单潜客成本及潜客转化率统计</h1> 
+        <div class="summary-box">
+            <span class="summary-cost">潜客成本：<em class="blue">0</em>CNY</span>
+            <span class="summary-rate">潜客转化率：<em>0</em></span>
+        </div>      
+    </div>
+    <div class="data-filter">
+        <em class="sub-title">数据筛选：</em>
+        <div class="date-picker">
+            <div class="select-box">
+                <span class="select-show"></span>
+                <div class="select-option"></div>
+            </div>
+        </div>
+    </div> 
+    <div class="chart-cont" id="main"></div>
+</section>
+
+@section Scripts{
+    <script>
+        selectBox();
+        averagePassengerFlowChange();
+    </script>
+}
