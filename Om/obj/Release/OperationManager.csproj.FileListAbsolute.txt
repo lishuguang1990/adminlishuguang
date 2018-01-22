@@ -253,7 +253,6 @@ D:\李曙光\Git\Om\Om\bin\Common.Logging.pdb
 D:\李曙光\Git\Om\Om\bin\Common.Logging.xml
 D:\李曙光\Git\Om\Om\bin\Common.Logging.Core.pdb
 D:\李曙光\Git\Om\Om\bin\Common.Logging.Core.xml
-<<<<<<< HEAD
 D:\李曙光\Git\admin\Om\bin\ApplicationInsights.config
 D:\李曙光\Git\admin\Om\bin\roslyn\csc.exe
 D:\李曙光\Git\admin\Om\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -487,4 +486,3 @@ D:\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.d
 D:\Git\admin\Om\obj\Release\OperationManager.csprojResolveAssemblyReference.cache
 D:\Git\admin\Om\obj\Release\Om.dll
 D:\Git\admin\Om\obj\Release\Om.pdb
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c

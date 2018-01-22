@@ -311,18 +311,14 @@
     </Content>
     <Content Include="Areas\admin\Content\bootstrap.css" />
     <Content Include="Areas\admin\Content\bootstrap.min.css" />
-<<<<<<< HEAD
-=======
     <Content Include="Areas\admin\Content\Images\loginbg.jpg" />
     <Content Include="Areas\admin\Content\Images\logo.jpg" />
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c
     <Content Include="Areas\admin\Content\Site.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\loginbg.jpg" />
     <Content Include="Content\Images\logo.jpg" />
     <Content Include="Content\Site.css" />
-    <Content Include="errorLog2017\201712\20171225.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -2932,7 +2928,6 @@
     <Content Include="Views\ClubInfo\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Areas\admin\Content\Images\" />
     <Folder Include="Areas\admin\Content\Styles\" />
     <Folder Include="Areas\admin\Views\Default1\" />
     <Folder Include="bin\" />

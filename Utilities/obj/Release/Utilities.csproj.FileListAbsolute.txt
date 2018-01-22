@@ -40,7 +40,6 @@ D:\Git\Om\Utilities\bin\Release\zh-Hans\System.Web.WebPages.Deployment.resources
 D:\Git\Om\Utilities\obj\Release\Utilities.csprojResolveAssemblyReference.cache
 D:\Git\Om\Utilities\obj\Release\Utilities.dll
 D:\Git\Om\Utilities\obj\Release\Utilities.pdb
-<<<<<<< HEAD
 D:\李曙光\Git\admin\Utilities\bin\Release\Utilities.dll
 D:\李曙光\Git\admin\Utilities\bin\Release\Utilities.pdb
 D:\李曙光\Git\admin\Utilities\bin\Release\DBHelper.dll
@@ -86,4 +85,3 @@ D:\Git\admin\Utilities\bin\Release\zh-Hans\System.Web.WebPages.Deployment.resour
 D:\Git\admin\Utilities\obj\Release\Utilities.csprojResolveAssemblyReference.cache
 D:\Git\admin\Utilities\obj\Release\Utilities.dll
 D:\Git\admin\Utilities\obj\Release\Utilities.pdb
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c

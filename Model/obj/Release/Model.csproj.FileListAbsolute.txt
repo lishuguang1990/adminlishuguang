@@ -16,7 +16,6 @@ D:\Git\Om\Model\bin\Release\Newtonsoft.Json.xml
 D:\Git\Om\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
 D:\Git\Om\Model\obj\Release\Model.dll
 D:\Git\Om\Model\obj\Release\Model.pdb
-<<<<<<< HEAD
 D:\李曙光\Git\admin\Model\bin\Release\Model.dll
 D:\李曙光\Git\admin\Model\bin\Release\Model.pdb
 D:\李曙光\Git\admin\Model\bin\Release\DBHelper.dll
@@ -27,7 +26,6 @@ D:\李曙光\Git\admin\Model\bin\Release\Newtonsoft.Json.xml
 D:\李曙光\Git\admin\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
 D:\李曙光\Git\admin\Model\obj\Release\Model.dll
 D:\李曙光\Git\admin\Model\obj\Release\Model.pdb
-=======
 D:\Git\admin\Model\bin\Release\Model.dll
 D:\Git\admin\Model\bin\Release\Model.pdb
 D:\Git\admin\Model\bin\Release\DBHelper.dll

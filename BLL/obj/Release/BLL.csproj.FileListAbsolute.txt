@@ -63,7 +63,6 @@ D:\李曙光\Git\Om\BLL\bin\Release\Common.Logging.Core.pdb
 D:\李曙光\Git\Om\BLL\bin\Release\Common.Logging.Core.xml
 D:\李曙光\Git\Om\BLL\bin\Release\Quartz.pdb
 D:\李曙光\Git\Om\BLL\bin\Release\Quartz.xml
-<<<<<<< HEAD
 D:\李曙光\Git\admin\BLL\bin\Release\BLL.dll.config
 D:\李曙光\Git\admin\BLL\bin\Release\BLL.dll
 D:\李曙光\Git\admin\BLL\bin\Release\BLL.pdb
@@ -141,4 +140,3 @@ D:\Git\admin\BLL\bin\Release\zh-Hans\System.Web.WebPages.Deployment.resources.dl
 D:\Git\admin\BLL\obj\Release\BLL.csprojResolveAssemblyReference.cache
 D:\Git\admin\BLL\obj\Release\BLL.dll
 D:\Git\admin\BLL\obj\Release\BLL.pdb
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c

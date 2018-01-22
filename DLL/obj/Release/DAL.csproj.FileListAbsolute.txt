@@ -48,7 +48,6 @@ D:\Git\Om\DLL\bin\Release\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 D:\Git\Om\DLL\obj\Release\DAL.csprojResolveAssemblyReference.cache
 D:\Git\Om\DLL\obj\Release\DLL.dll
 D:\Git\Om\DLL\obj\Release\DLL.pdb
-<<<<<<< HEAD
 D:\李曙光\Git\admin\DLL\bin\Release\DAl.dll
 D:\李曙光\Git\admin\DLL\bin\Release\DAl.pdb
 D:\李曙光\Git\admin\DLL\bin\Release\DBHelper.dll
@@ -74,7 +73,6 @@ D:\李曙光\Git\admin\DLL\bin\Release\zh-Hans\System.Web.WebPages.Deployment.re
 D:\李曙光\Git\admin\DLL\obj\Release\DAL.csprojResolveAssemblyReference.cache
 D:\李曙光\Git\admin\DLL\obj\Release\DAl.dll
 D:\李曙光\Git\admin\DLL\obj\Release\DAl.pdb
-=======
 D:\Git\admin\DLL\bin\Release\DAl.dll
 D:\Git\admin\DLL\bin\Release\DAl.pdb
 D:\Git\admin\DLL\bin\Release\DBHelper.dll
@@ -100,4 +98,3 @@ D:\Git\admin\DLL\bin\Release\zh-Hans\System.Web.WebPages.Deployment.resources.dl
 D:\Git\admin\DLL\obj\Release\DAL.csprojResolveAssemblyReference.cache
 D:\Git\admin\DLL\obj\Release\DAl.dll
 D:\Git\admin\DLL\obj\Release\DAl.pdb
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c

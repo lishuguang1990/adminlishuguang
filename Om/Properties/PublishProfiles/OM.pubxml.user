@@ -13,7 +13,6 @@
       <publishTime>12/30/2017 13:50:30</publishTime>
     </File>
     <File Include="App_Data/selfsetting.xml">
-<<<<<<< HEAD
       <publishTime>01/10/2018 18:39:21</publishTime>
     </File>
     <File Include="Areas/admin/Content/bootstrap.css">
@@ -455,7 +454,6 @@
     </File>
     <File Include="Areas/admin/Views/_ViewStart.cshtml">
       <publishTime>12/30/2017 13:50:30</publishTime>
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c
     </File>
     <File Include="bin/Antlr3.Runtime.dll">
       <publishTime>12/30/2017 13:50:38</publishTime>
@@ -473,11 +471,8 @@
       <publishTime>12/30/2017 13:50:38</publishTime>
     </File>
     <File Include="bin/BLL.dll">
-<<<<<<< HEAD
       <publishTime>01/15/2018 18:20:47</publishTime>
-=======
       <publishTime>01/21/2018 20:08:01</publishTime>
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c
     </File>
     <File Include="bin/Common.Logging.Core.dll">
       <publishTime>12/30/2017 13:50:38</publishTime>
@@ -492,11 +487,8 @@
       <publishTime>01/15/2018 18:20:45</publishTime>
     </File>
     <File Include="bin/DBHelper.dll">
-<<<<<<< HEAD
       <publishTime>01/15/2018 17:42:00</publishTime>
-=======
       <publishTime>01/20/2018 14:16:53</publishTime>
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c
     </File>
     <File Include="bin/DLL.dll">
       <publishTime>12/04/2017 13:07:11</publishTime>
@@ -577,7 +569,6 @@
       <publishTime>12/30/2017 13:50:39</publishTime>
     </File>
     <File Include="bin/Model.dll">
-<<<<<<< HEAD
       <publishTime>01/15/2018 18:20:39</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
@@ -588,7 +579,6 @@
     </File>
     <File Include="bin/Om.dll.config">
       <publishTime>01/03/2018 11:05:50</publishTime>
-=======
       <publishTime>01/21/2018 20:08:00</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
@@ -596,7 +586,6 @@
     </File>
     <File Include="bin/Om.dll">
       <publishTime>01/21/2018 20:08:06</publishTime>
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>12/30/2017 13:50:41</publishTime>
@@ -680,11 +669,8 @@
       <publishTime>12/30/2017 13:50:39</publishTime>
     </File>
     <File Include="bin/Utilities.dll">
-<<<<<<< HEAD
       <publishTime>01/15/2018 17:42:08</publishTime>
-=======
       <publishTime>01/20/2018 14:16:53</publishTime>
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c
     </File>
     <File Include="bin/WebGrease.dll">
       <publishTime>12/30/2017 13:50:41</publishTime>
@@ -761,12 +747,9 @@
     <File Include="Content/bootstrap.min.css">
       <publishTime>12/30/2017 13:50:30</publishTime>
     </File>
-<<<<<<< HEAD
-=======
     <File Include="Content/Images/loginbg.jpg">
       <publishTime>12/30/2017 13:50:30</publishTime>
     </File>
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c
     <File Include="Content/Images/logo.jpg">
       <publishTime>12/30/2017 13:50:30</publishTime>
     </File>
@@ -3510,11 +3493,8 @@
       <publishTime>12/30/2017 13:50:34</publishTime>
     </File>
     <File Include="packages.config">
-<<<<<<< HEAD
       <publishTime>12/25/2017 14:32:28</publishTime>
-=======
       <publishTime>01/20/2018 14:15:28</publishTime>
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c
     </File>
     <File Include="Resource/IPScaner/QQWry.Dat">
       <publishTime>12/30/2017 13:50:30</publishTime>
@@ -4462,11 +4442,8 @@
       <publishTime>08/14/2017 15:13:25</publishTime>
     </File>
     <File Include="Views/Index/Index.cshtml">
-<<<<<<< HEAD
       <publishTime>12/22/2017 10:09:02</publishTime>
-=======
       <publishTime>12/30/2017 13:50:30</publishTime>
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c
     </File>
     <File Include="Views/Login/index - 复制.cshtml">
       <publishTime>11/08/2017 13:48:24</publishTime>
@@ -4583,21 +4560,19 @@
       <publishTime>09/25/2017 14:23:12</publishTime>
     </File>
     <File Include="Views/Web.config">
-<<<<<<< HEAD
+
       <publishTime>12/22/2017 10:12:34</publishTime>
-=======
+
       <publishTime>12/30/2017 13:50:30</publishTime>
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>08/14/2017 14:55:42</publishTime>
     </File>
     <File Include="Web.config">
-<<<<<<< HEAD
+
       <publishTime>01/15/2018 17:43:34</publishTime>
-=======
+
       <publishTime>01/20/2018 18:10:35</publishTime>
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c
     </File>
     <File Include="WebForm1.aspx">
       <publishTime>12/30/2017 13:50:30</publishTime>
