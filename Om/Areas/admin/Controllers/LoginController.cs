@@ -12,11 +12,10 @@ namespace Om.Areas.admin.Controllers
     //[Route("{action=index}")]
     public class LoginController : Controller
     {
-        log4net.ILog log = log4net.LogManager.GetLogger(typeof(LoginController));
-
+    
         public ActionResult index()
         {
-            log.Info("456");
+       
             return View();
         }
         //public ActionResult Login(User model)

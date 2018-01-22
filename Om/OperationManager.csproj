@@ -288,8 +288,7 @@
     </Content>
     <Content Include="Areas\admin\Content\bootstrap.css" />
     <Content Include="Areas\admin\Content\bootstrap.min.css" />
-    <Content Include="Areas\admin\Content\Images\loginbg.jpg" />
-    <Content Include="Areas\admin\Content\Images\logo.jpg" />
+    <Content Include="Areas\admin\Content\Site.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\loginbg.jpg" />
@@ -298,7 +297,6 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Areas\admin\Content\Site.css" />
     <Content Include="HtmlPage1.html" />
     <Content Include="lib\Calendar\images\body-bg.jpg" />
     <Content Include="lib\Calendar\images\download-button.png" />
@@ -1564,6 +1562,7 @@
     <Content Include="uploads\20171022\201710222251035324.xls" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Areas\admin\Content\Images\" />
     <Folder Include="Areas\admin\Content\Styles\" />
     <Folder Include="Areas\admin\Views\Default1\" />
     <Folder Include="Content\Styles\" />

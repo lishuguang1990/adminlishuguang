@@ -68,6 +68,11 @@
     function btn_add() {
         admin_add('添加', '/admin/ClubActivity/ClubActivityAdd', '1000', '700')
     }
+    function btn_export() 
+    {
+        var url = "/api/ApiClubActivity/Export?clubname=" + $("#clubname").val() + "&saleactivitytypeid=" + $("#saleactivitytypeid").val()+ "&begindate=" + $("#datemin").val() + "&enddate=" + $("#datemax").val();
+        $('<form method="post" action="' + url + '"></form>').appendTo('body').submit().remove();
+    }
 
     function btn_del() {
         if ($("#view1").find(":checkbox:checked").length > 0) {
@@ -81,10 +86,8 @@
                     else {
                         roleid += "," + $(this).val();
                     }
-
                 }
                 );
-
                 $.post("/api/ApiClubActivity/Del", { "idlist": roleid }, function (data) {
                     removeLoading('test');
                     // alert("删除成功");

@@ -762,6 +762,7 @@ D:\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.d
 D:\Git\admin\Om\obj\Debug\OperationManager.csprojResolveAssemblyReference.cache
 D:\Git\admin\Om\obj\Debug\Om.dll
 D:\Git\admin\Om\obj\Debug\Om.pdb
+D:\李曙光\Git\admin\Om\obj\Debug\OperationManager.csprojResolveAssemblyReference.cache
 D:\李曙光\Git\admin\Om\bin\ApplicationInsights.config
 D:\李曙光\Git\admin\Om\bin\roslyn\csc.exe
 D:\李曙光\Git\admin\Om\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -779,6 +780,7 @@ D:\李曙光\Git\admin\Om\bin\Om.dll.config
 D:\李曙光\Git\admin\Om\bin\Om.dll
 D:\李曙光\Git\admin\Om\bin\Om.pdb
 D:\李曙光\Git\admin\Om\bin\Antlr3.Runtime.dll
+D:\李曙光\Git\admin\Om\bin\AppLibrary.dll
 D:\李曙光\Git\admin\Om\bin\AutoMapper.dll
 D:\李曙光\Git\admin\Om\bin\BLL.dll
 D:\李曙光\Git\admin\Om\bin\Common.Logging.Core.dll
@@ -894,7 +896,5 @@ D:\李曙光\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.Facebook.resources
 D:\李曙光\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.Google.resources.dll
 D:\李曙光\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.Twitter.resources.dll
 D:\李曙光\Git\admin\Om\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-D:\李曙光\Git\admin\Om\obj\Debug\OperationManager.csprojResolveAssemblyReference.cache
 D:\李曙光\Git\admin\Om\obj\Debug\Om.dll
 D:\李曙光\Git\admin\Om\obj\Debug\Om.pdb
-D:\李曙光\Git\admin\Om\bin\AppLibrary.dll
