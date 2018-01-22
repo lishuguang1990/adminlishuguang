@@ -167,11 +167,7 @@
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
-    <Reference Include="Antlr3.Runtime">
-      <Private>True</Private>
-      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+     </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Net.Http.Formatting">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -290,20 +286,6 @@
     <Compile Include="Areas\admin\UserAttribute\LoginAuthorizeAttribute.cs" />
     <Compile Include="Areas\admin\UserAttribute\ModuleAuthorizeAttribute.cs" />
     <Compile Include="Areas\admin\UserAttribute\SetModuleAttribute.cs" />
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm2.aspx.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm2.aspx.designer.cs">
-      <DependentUpon>WebForm2.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\selfsetting.xml">
@@ -1204,7 +1186,6 @@
     <Content Include="obj\Release\Package\PackageTmp\bin\Common.Logging.Core.dll" />
     <Content Include="obj\Release\Package\PackageTmp\bin\Common.Logging.dll" />
     <Content Include="obj\Release\Package\PackageTmp\bin\DBHelper.dll" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\DLL.dll" />
     <Content Include="obj\Release\Package\PackageTmp\bin\EntityFramework.dll" />
     <Content Include="obj\Release\Package\PackageTmp\bin\EntityFramework.SqlServer.dll" />
     <Content Include="obj\Release\Package\PackageTmp\bin\Microsoft.AI.Agent.Intercept.dll" />
@@ -2152,8 +2133,6 @@
     <Content Include="obj\Release\Package\PackageTmp\lib\zTree\v3\js\jquery.ztree.exedit.js" />
     <Content Include="obj\Release\Package\PackageTmp\lib\zTree\v3\js\jquery.ztree.exhide-3.5.js" />
     <Content Include="obj\Release\Package\PackageTmp\lib\zTree\v3\js\jquery.ztree.exhide-3.5.min.js" />
-    <Content Include="obj\Release\Package\PackageTmp\Scripts\ai.0.15.0-build58334.js" />
-    <Content Include="obj\Release\Package\PackageTmp\Scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="obj\Release\Package\PackageTmp\Scripts\bootstrap.js" />
     <Content Include="obj\Release\Package\PackageTmp\Scripts\bootstrap.min.js" />
     <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-1.10.2.js" />
@@ -2168,6 +2147,7 @@
     <Content Include="Areas\admin\Views\SaleActivity\AgencyInto.cshtml" />
     <Content Include="Content\agencytemplet.xls" />
     <Content Include="Areas\admin\Views\ClubActivity\Hitchleadingin.cshtml" />
+    <Content Include="Content\clubtemplet.xls" />
     <None Include="obj\Release\Package\PackageTmp\Scripts\_references.js" />
     <Content Include="obj\Release\Package\PackageTmp\static\h-ui.admin\css\H-ui.admin.css" />
     <Content Include="obj\Release\Package\PackageTmp\static\h-ui.admin\css\H-ui.login.css" />
@@ -2639,7 +2619,6 @@
     <Content Include="static\main\js\jquery-ui.min.js" />
     <Content Include="static\main\js\jquery.nicescroll.js" />
     <Content Include="static\main\js\layout.js" />
-    <Content Include="WebForm1.aspx" />
     <Content Include="Areas\admin\Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Areas\admin\Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Areas\admin\Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -2841,7 +2820,6 @@
     <Content Include="obj\Release\TransformWebConfig\original\Web.config" />
     <Content Include="obj\Release\TransformWebConfig\transformed\Web.config" />
     <Content Include="OperationManager.csproj.bak" />
-    <Content Include="WebForm2.aspx" />
     <Content Include="Areas\admin\Views\SaleActivity\Hitchleadingin.cshtml" />
     <Content Include="Content\saletemplet.xls" />
     <None Include="Properties\PublishProfiles\132.pubxml" />

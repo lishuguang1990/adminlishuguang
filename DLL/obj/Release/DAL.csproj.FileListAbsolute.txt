@@ -88,12 +88,8 @@ D:\Git\admin\DLL\bin\Release\DBHelper.pdb
 D:\Git\admin\DLL\bin\Release\Model.pdb
 D:\Git\admin\DLL\bin\Release\Utilities.pdb
 D:\Git\admin\DLL\bin\Release\Newtonsoft.Json.xml
-D:\Git\admin\DLL\bin\Release\System.Web.Mvc.xml
-D:\Git\admin\DLL\bin\Release\System.Web.WebPages.xml
 D:\Git\admin\DLL\bin\Release\Microsoft.Web.Infrastructure.xml
 D:\Git\admin\DLL\bin\Release\System.Web.WebPages.Deployment.xml
-D:\Git\admin\DLL\bin\Release\zh-Hans\System.Web.Mvc.resources.dll
-D:\Git\admin\DLL\bin\Release\zh-Hans\System.Web.WebPages.resources.dll
 D:\Git\admin\DLL\bin\Release\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 D:\Git\admin\DLL\obj\Release\DAL.csprojResolveAssemblyReference.cache
 D:\Git\admin\DLL\obj\Release\DAl.dll

@@ -78,5 +78,9 @@ namespace Om.Areas.admin.Controllers
             }
             return View(model);
         }
+        public ActionResult Hitchleadingin()
+        {
+            return View();
+        }
     }
 }

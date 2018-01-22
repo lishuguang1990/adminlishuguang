@@ -66,7 +66,7 @@
                             <div id="fileList" class="uploader-list"></div>
                             <div id="filePicker">选择文件</div>&nbsp;
                             <button id="ctlBtn" class="btn btn-default">上传并导入</button>
-                            <a class="btn btn-primary " href="/Content/saletemplet.xls">下载模板</a>
+                            <a class="btn btn-primary " href="/Content/clubtemplet.xls">下载模板</a>
                             @*<button  class="btn btn-default" onclick="location.href=location.href">刷新继续导入</button>*@
                         </div>
                     </div>
@@ -133,7 +133,8 @@
             });
             uploader.on('uploadSuccess', function (file, response) {
                 $('#' + file.id).find('p.state').text('已上传');
-                $.post("/api/ApiSaleActivity/IntoSalActivity", { "url": response.url, "filename": response.filename }, function (data) {
+                alert(response.url);
+                $.post("/api/ApiClubActivity/IntoClubActivityInfo", { "url": response.url, "filename": response.filename }, function (data) {
                     if (data.code == 1)
                     {
                         $("#leadinginresult").append("文件" + data.filename + "一共" + data.count + "成功导入" + data.successcount + "数据" + "失败" + data.failcount + "条数据") + "444444";

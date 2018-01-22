@@ -1,7 +1,6 @@
 D:\李曙光\Git\Om\BLL\bin\Release\BLL.dll
 D:\李曙光\Git\Om\BLL\bin\Release\BLL.pdb
 D:\李曙光\Git\Om\BLL\bin\Release\DBHelper.dll
-D:\李曙光\Git\Om\BLL\bin\Release\DLL.dll
 D:\李曙光\Git\Om\BLL\bin\Release\Model.dll
 D:\李曙光\Git\Om\BLL\bin\Release\Utilities.dll
 D:\李曙光\Git\Om\BLL\bin\Release\Newtonsoft.Json.dll
@@ -28,7 +27,6 @@ D:\李曙光\Git\Om\BLL\obj\Release\BLL.pdb
 D:\Git\Om\BLL\bin\Release\BLL.dll
 D:\Git\Om\BLL\bin\Release\BLL.pdb
 D:\Git\Om\BLL\bin\Release\DBHelper.dll
-D:\Git\Om\BLL\bin\Release\DLL.dll
 D:\Git\Om\BLL\bin\Release\Model.dll
 D:\Git\Om\BLL\bin\Release\Utilities.dll
 D:\Git\Om\BLL\bin\Release\Newtonsoft.Json.dll

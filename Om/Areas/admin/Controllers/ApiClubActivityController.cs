@@ -13,6 +13,7 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using Utilities;
+using Utilities.Base.File;
 
 namespace Om.Areas.admin.Controllers
 {
@@ -190,6 +191,60 @@ namespace Om.Areas.admin.Controllers
             doc.Send();
             HttpContext.Current.Response.Flush();
             HttpContext.Current.Response.End();
+        }
+
+
+        [HttpPost]
+        public Dictionary<string, object> IntoClubActivityInfo()
+        {
+            C_ClubActivityInfoBll bll = new C_ClubActivityInfoBll();
+            string url = HttpContext.Current.Request.Form["url"].ToString();
+            string filename = HttpContext.Current.Request.Form["filename"].ToString();
+            DataSet ds = ExportFile.ExcelSqlConnection(HttpContext.Current.Server.MapPath(url), "Info");           //调用自定义方法
+            DataRow[] dr = ds.Tables[0].Select();
+            int successcount = 0;
+            int failcount = 0;
+            for (int i = 0; i < dr.Length; i++)
+            {
+                try
+                {
+                    C_ClubActivityInfo model = new C_ClubActivityInfo();
+
+                    model.ClubName = dr[i][0].ToString();
+                    model.ClubActivityTypeId = int.Parse(dr[i][1].ToString());
+                    model.ActivityDate = DateTime.Parse(dr[i][2].ToString());
+                    model.ActivityCost = int.Parse(dr[i][3].ToString());
+                    model.CreateUserId = ManageProvider.Provider.Current().UserId;
+                    model.CreateUserName = ManageProvider.Provider.Current().Account;
+                    model.CreateTime = DateTime.Now;
+                    model.IsDelete = 0;
+                    model.IsShow = 1;
+                   if (bll.Add(model) > 0)
+                    {
+                        successcount++;
+                    }
+                    else
+                    {
+                        failcount++;
+                    }
+
+                }
+                catch (Exception)
+                {
+
+                    failcount++;
+                }
+
+            }
+            return new Dictionary<string, object>
+            {
+                { "code","1"},
+                { "successcount",successcount},
+                { "failcount",failcount},
+                { "filename",filename},
+                { "count",dr.Length}
+
+            };
         }
     }
 }

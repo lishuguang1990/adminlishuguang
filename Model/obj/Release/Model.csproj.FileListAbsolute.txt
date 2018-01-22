@@ -36,4 +36,3 @@ D:\Git\admin\Model\bin\Release\Newtonsoft.Json.xml
 D:\Git\admin\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
 D:\Git\admin\Model\obj\Release\Model.dll
 D:\Git\admin\Model\obj\Release\Model.pdb
->>>>>>> ffa1f75e7d051306d8135932b976c63a564da88c

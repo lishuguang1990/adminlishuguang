@@ -4,7 +4,6 @@ D:\李曙光\项目\Om\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 D:\李曙光\项目\Om\BLL\obj\Debug\BLL.dll
 D:\李曙光\项目\Om\BLL\obj\Debug\BLL.pdb
 D:\李曙光\项目\Om\BLL\bin\Debug\DBHelper.dll
-D:\李曙光\项目\Om\BLL\bin\Debug\DLL.dll
 D:\李曙光\项目\Om\BLL\bin\Debug\Model.dll
 D:\李曙光\项目\Om\BLL\bin\Debug\Newtonsoft.Json.dll
 D:\李曙光\项目\Om\BLL\bin\Debug\DBHelper.pdb
@@ -14,7 +13,6 @@ D:\李曙光\项目\Om\BLL\bin\Debug\Newtonsoft.Json.xml
 E:\Git\Om\Om\BLL\bin\Debug\BLL.dll
 E:\Git\Om\Om\BLL\bin\Debug\BLL.pdb
 E:\Git\Om\Om\BLL\bin\Debug\DBHelper.dll
-E:\Git\Om\Om\BLL\bin\Debug\DLL.dll
 E:\Git\Om\Om\BLL\bin\Debug\Model.dll
 E:\Git\Om\Om\BLL\bin\Debug\Utilities.dll
 E:\Git\Om\Om\BLL\bin\Debug\Newtonsoft.Json.dll
@@ -42,7 +40,6 @@ D:\Git\Om\BLL\bin\Debug\BLL.dll.config
 D:\Git\Om\BLL\bin\Debug\BLL.dll
 D:\Git\Om\BLL\bin\Debug\BLL.pdb
 D:\Git\Om\BLL\bin\Debug\DBHelper.dll
-D:\Git\Om\BLL\bin\Debug\DLL.dll
 D:\Git\Om\BLL\bin\Debug\Model.dll
 D:\Git\Om\BLL\bin\Debug\Utilities.dll
 D:\Git\Om\BLL\bin\Debug\Newtonsoft.Json.dll
@@ -72,7 +69,6 @@ D:\李曙光\Git\Om\BLL\bin\Debug\BLL.pdb
 D:\李曙光\Git\Om\BLL\bin\Debug\Common.Logging.Core.dll
 D:\李曙光\Git\Om\BLL\bin\Debug\Common.Logging.dll
 D:\李曙光\Git\Om\BLL\bin\Debug\DBHelper.dll
-D:\李曙光\Git\Om\BLL\bin\Debug\DLL.dll
 D:\李曙光\Git\Om\BLL\bin\Debug\Model.dll
 D:\李曙光\Git\Om\BLL\bin\Debug\Quartz.dll
 D:\李曙光\Git\Om\BLL\bin\Debug\Utilities.dll
@@ -109,7 +105,6 @@ D:\李曙光\Git\Manage\BLL\bin\Debug\BLL.pdb
 D:\李曙光\Git\Manage\BLL\bin\Debug\Common.Logging.Core.dll
 D:\李曙光\Git\Manage\BLL\bin\Debug\Common.Logging.dll
 D:\李曙光\Git\Manage\BLL\bin\Debug\DBHelper.dll
-D:\李曙光\Git\Manage\BLL\bin\Debug\DLL.dll
 D:\李曙光\Git\Manage\BLL\bin\Debug\Model.dll
 D:\李曙光\Git\Manage\BLL\bin\Debug\Quartz.dll
 D:\李曙光\Git\Manage\BLL\bin\Debug\Utilities.dll
