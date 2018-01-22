@@ -186,8 +186,6 @@ namespace Om.Areas.admin.Controllers
                 cells.Add(f, 2, data.Rows[i]["clubactivitytypename"]);
                 cells.Add(f, 3, DateTime.Parse(data.Rows[i]["activitydate"].ToString()).ToString("yyyy-MM-dd"));
                 cells.Add(f, 4, data.Rows[i]["activitycost"]);
-
-
             }
             doc.Send();
             HttpContext.Current.Response.Flush();

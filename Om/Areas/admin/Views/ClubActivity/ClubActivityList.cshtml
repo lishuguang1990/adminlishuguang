@@ -74,6 +74,11 @@
         $('<form method="post" action="' + url + '"></form>').appendTo('body').submit().remove();
     }
 
+    function btn_into()
+    {
+        admin_add("导入", '/admin/ClubActivity/Hitchleadingin', '1000', '700')
+    }
+
     function btn_del() {
         if ($("#view1").find(":checkbox:checked").length > 0) {
             if (confirm("你确定删除吗")) {
