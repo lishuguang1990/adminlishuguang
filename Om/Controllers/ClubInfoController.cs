@@ -12,6 +12,11 @@ namespace Om.Controllers
         public ActionResult Index()
         {
             return View();
-        }        
+        }
+
+        public ActionResult ClubAverageCost()
+        {
+            return View();
+        }
     }
 }

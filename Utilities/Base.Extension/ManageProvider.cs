@@ -119,5 +119,60 @@ namespace LeaRun.Utilities
                 return false;
             }
         }
+
+        public void AddCurrent(IManageUser user, string key)
+        {
+            try
+            {
+                if (LoginProvider == "Cookie")
+                {
+                  
+                    CookieHelper.WriteCookie(key, DESEncrypt.Encrypt(JsonConvert.SerializeObject(user)), 1440);
+                }
+                else
+                {
+                    SessionHelper.Add(key, DESEncrypt.Encrypt(JsonConvert.SerializeObject(user)));
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
+
+        public bool IsOverdue(string key)
+        {
+            object str = "";
+            if (LoginProvider == "Cookie")
+            {
+                str = CookieHelper.GetCookie(key);
+            }
+            else
+            {
+                str = SessionHelper.Get(key);
+            }
+            if (str != null && str.ToString() != "")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public void EmptyCurrent(string key)
+        {
+            if (LoginProvider == "Cookie")
+            {
+                HttpCookie objCookie = new HttpCookie(key);
+                objCookie.Expires = DateTime.Now.AddYears(-5);
+                HttpContext.Current.Response.Cookies.Add(objCookie);
+            }
+            else
+            {
+                SessionHelper.Remove(LoginUserKey.Trim());
+            }
+        }
     }
 }

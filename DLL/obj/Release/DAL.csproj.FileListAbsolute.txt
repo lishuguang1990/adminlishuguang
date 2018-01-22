@@ -94,3 +94,4 @@ D:\Git\admin\DLL\bin\Release\zh-Hans\System.Web.WebPages.Deployment.resources.dl
 D:\Git\admin\DLL\obj\Release\DAL.csprojResolveAssemblyReference.cache
 D:\Git\admin\DLL\obj\Release\DAl.dll
 D:\Git\admin\DLL\obj\Release\DAl.pdb
+D:\Git\admin\DLL\bin\Release\log4net.dll

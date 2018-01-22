@@ -15,6 +15,7 @@ namespace LeaRun.Utilities
         /// </summary>
         /// <param name="user">成员信息</param>
         void AddCurrent(IManageUser user);
+        void AddCurrent(IManageUser user,string key);
         /// <summary>
         /// 获取当前用户
         /// </summary>
@@ -24,10 +25,12 @@ namespace LeaRun.Utilities
         /// 删除当前用户
         /// </summary>
         void EmptyCurrent();
+        void EmptyCurrent(string key);
         /// <summary>
         /// 是否过期
         /// </summary>
         /// <returns></returns>
         bool IsOverdue();
+        bool IsOverdue(string key);
     }
 }

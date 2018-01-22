@@ -23,15 +23,49 @@
             </div>
             <div class="login-input">
                 <em>用户登录 &nbsp;&nbsp;LOGIN</em>
-                @using (Html.BeginForm())
+                @using (Html.BeginForm("Login", "api/apiactivitychart", FormMethod.Post,new { id= "form_login" }))
                 {
-                    @Html.TextBox("username", "", new { placeholder = "用户名", @class = "username" })
-                    @Html.Password("password", "", new { placeholder = "密码", @class = "password" })
-                    <a href="javascript:;" class="submit-btn">登陆</a>
+                    @Html.TextBox("UserName", "", new { placeholder = "用户名", @class = "username" })
+                    @Html.Password("PassWord", "", new { placeholder = "密码", @class = "password" })
+                    <input type="submit" href="javascript:;" class="submit-btn" id="login" value="登录"/>
                 }
             </div>
         </div>
     </section>
-    @Scripts.Render("~/assets/js/common")
+ 
+    <script type="text/javascript" src="/lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/h-ui/js/H-ui.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script>
+        $(function () {
+            $("#form_login").validate({
+                rules: {
+                    UserName: {
+                        required: true,
+                    },
+                    PassWord: {
+                        required: true,
+                    },
+                },
+                onkeyup: false,
+                focusCleanup: true,
+                success: "valid",
+                submitHandler: function (form) {
+                    $(form).ajaxSubmit(function (data) {
+                        if (data.code == 1) {
+                            location.href = "/index";
+                        }
+                        else {
+                          alert(data.msg);
+                           
+                        }
+                    });
+                }
+            });
+        }
+        );
+    </script>
 </body>
 </html>

@@ -477,7 +477,14 @@ namespace Om.Controllers
                 { "code",1}
             };
         }
-
+        [HttpPost]
+        public Dictionary<string, object> Login()
+        {
+              UserBll bll = new UserBll();
+            string UserName = HttpContext.Current.Request.Form["UserName"].ToString();
+            string PassWord = HttpContext.Current.Request.Form["PassWord"].ToString();
+            return bll.Login(UserName, PassWord);
+        }
 
 
     }

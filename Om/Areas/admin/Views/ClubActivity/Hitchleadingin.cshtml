@@ -133,7 +133,7 @@
             });
             uploader.on('uploadSuccess', function (file, response) {
                 $('#' + file.id).find('p.state').text('已上传');
-                alert(response.url);
+               
                 $.post("/api/ApiClubActivity/IntoClubActivityInfo", { "url": response.url, "filename": response.filename }, function (data) {
                     if (data.code == 1)
                     {

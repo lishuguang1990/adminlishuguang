@@ -1,4 +1,5 @@
 ﻿using DAL;
+using LeaRun.Utilities;
 using MallWCF.DBHelper;
 using Model;
 using System;
@@ -67,6 +68,55 @@ namespace BLL
         public int UpdateAll(string idlist)
         {
             return UserDal.GetInstance().UpdateAll(idlist);
+        }
+
+        public Dictionary<string, object> Login(string Account,string UserPassword)
+        {
+            string Msg = "";
+          
+            int msg = 0;
+            BaseUser base_user = UserLogin(Account, UserPassword, out msg);
+
+            switch (msg)
+            {
+                case 0:
+                    Msg = "账号不存在";
+                    break;
+                case 1:
+                    RoleBll RoleBll = new RoleBll();
+                    Role role = RoleBll.GetModelByUserId(base_user.UserId);
+
+                    IManageUser mangeuser = new IManageUser();
+                    mangeuser.UserId = base_user.UserId;
+                    mangeuser.Account = base_user.Account;
+                 
+                    if (role != null)
+                    {
+                        mangeuser.RoleName = role.RoleName;
+                        mangeuser.RoleId = role.RoleId;
+                    }
+                    else
+                    {
+                        mangeuser.RoleName = "";
+                        mangeuser.RoleId = 0;
+                    }
+                    ManageProvider.Provider.AddCurrent(mangeuser, "LoginModel");
+                 
+                    break;
+                case 2:
+                    Msg = "账户锁定";
+               
+                    break;
+                case 3:
+                    Msg = "密码错误";
+                    break;
+            }
+
+            return new Dictionary<string, object>
+            {
+                { "code",msg},
+                { "msg",Msg}
+            };
         }
 
     }

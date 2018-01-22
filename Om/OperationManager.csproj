@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -167,7 +168,7 @@
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
     </Reference>
-     </ItemGroup>
+  </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Net.Http.Formatting">
       <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
@@ -248,7 +249,6 @@
     <Compile Include="Areas\admin\Controllers\ApiActivityAreaController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiClubActivityController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiSaleActivityController.cs" />
-    <Compile Include="Areas\admin\Controllers\ApiSaleActivityTypeController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiUpfileController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiUserController.cs" />
     <Compile Include="Areas\admin\Controllers\ApiClubInfoController.cs" />
@@ -263,6 +263,7 @@
     <Compile Include="Controllers\ClubInfoController.cs" />
     <Compile Include="Controllers\ClubController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
+    <Compile Include="Controllers\LoginAuthorizeAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2390,7 +2391,6 @@
     <Content Include="obj\Release\Package\PackageTmp\temp\Thumb\weishengjian2.jpg" />
     <Content Include="obj\Release\Package\PackageTmp\temp\Thumb\woshi.jpg" />
     <Content Include="obj\Release\Package\PackageTmp\temp\Thumb\youyongchi.jpg" />
-    <Content Include="obj\Release\Package\PackageTmp\WebForm1.aspx" />
     <Content Include="obj\Release\_WPPLastBuildInfo.txt" />
     <Content Include="Scripts\ai.0.15.0-build58334.js" />
     <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
@@ -2619,18 +2619,6 @@
     <Content Include="static\main\js\jquery-ui.min.js" />
     <Content Include="static\main\js\jquery.nicescroll.js" />
     <Content Include="static\main\js\layout.js" />
-    <Content Include="Areas\admin\Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Areas\admin\Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Areas\admin\Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Areas\admin\Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Areas\admin\Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Areas\admin\Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Areas\admin\Views\Account\Login.cshtml" />
-    <Content Include="Areas\admin\Views\Account\Register.cshtml" />
-    <Content Include="Areas\admin\Views\Account\ResetPassword.cshtml" />
-    <Content Include="Areas\admin\Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Areas\admin\Views\Account\SendCode.cshtml" />
-    <Content Include="Areas\admin\Views\Account\VerifyCode.cshtml" />
     <Content Include="Areas\admin\Views\Home\About.cshtml" />
     <Content Include="Areas\admin\Views\Home\Contact.cshtml" />
     <Content Include="Areas\admin\Views\Home\Index.cshtml" />
@@ -2717,108 +2705,6 @@
     <Content Include="Areas\admin\Views\ClubActivity\ClubActivityAdd.cshtml" />
     <Content Include="Areas\admin\Views\ClubActivity\ClubInfoList.cshtml" />
     <Content Include="Areas\admin\Views\ClubActivity\ClubInfoAdd.cshtml" />
-    <Content Include="obj\Release\DesignTimeResolveAssemblyReferences.cache" />
-    <Content Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
-    <Content Include="obj\Release\OperationManager.csprojResolveAssemblyReference.cache" />
-    <Content Include="obj\Release\Package\PackageTmp\ApplicationInsights.config" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\ApplicationInsights.config" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.CSharp.Core.targets" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\Microsoft.VisualBasic.Core.targets" />
-    <Content Include="obj\Release\Package\PackageTmp\bin\roslyn\VBCSCompiler.exe.config" />
-    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="obj\Release\Package\PackageTmp\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\hcharts\Highcharts\5.0.6\license.pdf" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\Hui-iconfont\1.0.8\iconfont.eot" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\Hui-iconfont\1.0.8\iconfont.ttf" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\Hui-iconfont\1.0.8\iconfont.woff" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\lightbox2\2.8.1\js\lightbox-plus-jquery.min.map" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\lightbox2\2.8.1\js\lightbox.min.map" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\jsp\config.json" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\jsp\controller.jsp" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\net\config.json" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\net\controller.ashx" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\net\README.md" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\net\Web.config" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\php\action_crawler.php" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\php\action_list.php" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\php\action_upload.php" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\php\config.json" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\php\controller.php" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\php\Uploader.class.php" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\third-party\jquery-1.10.2.min.map" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\third-party\video-js\font\vjs.eot" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\third-party\video-js\font\vjs.ttf" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\ueditor\1.4.3\third-party\video-js\font\vjs.woff" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\webuploader\0.1.5\images\icons.psd" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\webuploader\0.1.5\images\progress.psd" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\webuploader\0.1.5\README.md" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\webuploader\0.1.5\server\fileupload.php" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\webuploader\0.1.5\server\fileupload2.php" />
-    <Content Include="obj\Release\Package\PackageTmp\lib\webuploader\0.1.5\server\preview.php" />
-    <Content Include="obj\Release\Package\PackageTmp\packages.config" />
-    <Content Include="obj\Release\Package\PackageTmp\Resource\IPScaner\QQWry.Dat" />
-    <Content Include="obj\Release\Package\PackageTmp\Scripts\jquery-1.10.2.min.map" />
-    <Content Include="obj\Release\Package\PackageTmp\temp\Thumbs.db" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\ForgotPassword.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\Login.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\Register.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\ResetPassword.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\SendCode.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\VerifyCode.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Home\About.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Home\Contact.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Home\Index.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Login\index - 复制.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Login\index.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Login\indexbak.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Login\indexnew.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\bingtutongji.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\Cause.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\CauseAdd.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\DailyDetial.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\DailyList.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\EveryDayYujing.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\Hitchleadingin.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\HitchList.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\HitchWarning.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\MonthList.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\PredicSettingAdd.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\SettingList.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\YearList.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\yujilist.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\YujingList.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Manage\zhili.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Module\index.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\Error.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\Lockout.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\Menu.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\_Layout - 复制.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\_Layout.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\System\ModuleAdd.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\System\ModuleManage.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\System\OperateAdd.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\System\OperateList.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\System\OperateManage.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\System\RoleAdd.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\System\RoleManage.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\System\RoleModuleOperate.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\System\RoleUserAdd.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\System\UserAdd.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\System\UserManage.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\Web.config" />
-    <Content Include="obj\Release\Package\PackageTmp\Views\_ViewStart.cshtml" />
-    <Content Include="obj\Release\Package\PackageTmp\Web.config" />
-    <Content Include="obj\Release\TransformWebConfig\assist\Web.config" />
-    <Content Include="obj\Release\TransformWebConfig\original\Web.config" />
-    <Content Include="obj\Release\TransformWebConfig\transformed\Web.config" />
     <Content Include="OperationManager.csproj.bak" />
     <Content Include="Areas\admin\Views\SaleActivity\Hitchleadingin.cshtml" />
     <Content Include="Content\saletemplet.xls" />
@@ -2907,6 +2793,8 @@
     <Content Include="Views\Index\AverageOrderCost.cshtml" />
     <Content Include="Views\Club\Index.cshtml" />
     <Content Include="Views\ClubInfo\Index.cshtml" />
+    <Content Include="Views\ClubInfo\ClubAverageCost.cshtml" />
+    <Content Include="Views\Index\PublishWayStatistics.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\admin\Content\Styles\" />

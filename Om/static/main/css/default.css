@@ -159,27 +159,27 @@ nav {
     background: url(/static/main/images/icon1.png) no-repeat;
 }
 
-.nav-list li:nth-child(2) .nav-title:before {
+.nav-list li:nth-child(2) .nav-title:before, .nav-list li:nth-child(2) .nav-title.active:before {
     background: url(/static/main/images/icon2.png) no-repeat;
     transition: all .3s;
     -webkit-transition: all .3s;
 }
 
-.nav-list li:nth-child(3) .nav-title:before {
+.nav-list li:nth-child(3) .nav-title:before, .nav-list li:nth-child(3) .nav-title.active:before {
     background: url(/static/main/images/icon3.png) no-repeat;
 }
 
-.nav-list li .nav-title:hover:before {
+.nav-list li .nav-title:hover:before, .nav-list li .nav-title.active:before {
     background: url(/static/main/images/icon1-hover.png) no-repeat;
 }
 
-.nav-list li:nth-child(2) .nav-title:hover:before {
+.nav-list li:nth-child(2) .nav-title:hover:before, .nav-list li:nth-child(2) .nav-title.active:before {
     background: url(/static/main/images/icon2-hover.png) no-repeat;
     transition: all .3s;
     -webkit-transition: all .3s;
 }
 
-.nav-list li:nth-child(3) .nav-title:hover:before {
+.nav-list li:nth-child(3) .nav-title:hover:before, .nav-list li:nth-child(3) .nav-title.active:before {
     background: url(/static/main/images/icon3-hover.png) no-repeat;
 }
 
@@ -210,12 +210,12 @@ nav {
     opacity: 0;
 }
 
-.nav-list .nav-link a:hover:before {
+.nav-list .nav-link a:hover:before, .nav-list .nav-link .active a:before {
     opacity: 1;
     right: -22px;
 }
 
-.nav-list li a:hover {
+.nav-list li a:hover, .nav-list li a.active, .nav-list li .nav-link .active a {
     color: #b45f1a;
 }
 
@@ -270,6 +270,18 @@ footer p span {
     .header-title span {
         font-size: 16px;
     }
+    nav {
+        width: 300px;
+    }
+    .nav-list {
+        padding: 0 20px 0 55px;
+    }
+    header .header-logo {
+        width: 300px;
+    }
+    header .header-right {
+        width: calc(100% - 300px);
+    }
 }
 
 @media screen and (max-width: 1366px) {
@@ -278,5 +290,8 @@ footer p span {
     }
     .header-right .header-login {
         width: 30%;
+    }
+    header {
+        height: 100px;
     }
 }

@@ -1,0 +1,22 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="title">
+        <h1>活动后续宣传发布统计</h1>
+        <div class="summary-box">
+            <span class="summary-total">√为当月已完成发布</span>
+        </div>
+    </div>
+    <div class="chart-cont publish-cont" id="main">
+        <table></table>
+    </div>
+</section>
+
+@section Scripts{
+    <script>
+        selectBox();
+        publishWayStatistics();
+    </script>
+}

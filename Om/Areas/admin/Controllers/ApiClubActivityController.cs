@@ -1,6 +1,7 @@
 ﻿using AppLibrary.WriteExcel;
 using BLL;
 using LeaRun.Utilities;
+using log4net;
 using MallWCF.DBHelper;
 using Model;
 using Model.ModelView;
@@ -21,6 +22,7 @@ namespace Om.Areas.admin.Controllers
     [Route("{action}")]
     public class ApiClubActivityController : ApiController
     {
+        ILog log = log4net.LogManager.GetLogger(typeof(ApiClubActivityController));
         [HttpPost]
         public Dictionary<string, object> GetActivityList(JqGridParam jqgridparam)
         {
@@ -201,6 +203,7 @@ namespace Om.Areas.admin.Controllers
             string url = HttpContext.Current.Request.Form["url"].ToString();
             string filename = HttpContext.Current.Request.Form["filename"].ToString();
             DataSet ds = ExportFile.ExcelSqlConnection(HttpContext.Current.Server.MapPath(url), "Info");           //调用自定义方法
+            log.Debug(ds.Tables[0].Rows.Count);
             DataRow[] dr = ds.Tables[0].Select();
             int successcount = 0;
             int failcount = 0;
