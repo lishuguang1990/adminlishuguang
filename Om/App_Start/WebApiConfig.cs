@@ -15,8 +15,8 @@ namespace Om
 
             // Web API 路由
             config.MapHttpAttributeRoutes();
-
-         //   config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            config.EnableCors();
+            //   config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             //config.Routes.MapHttpRoute(
             //    name: "DefaultApi",
             //    routeTemplate: "api/{controller}/{action}/{id}",

@@ -1,0 +1,282 @@
+﻿body { color:#666; font-size:12px; font-family: Arial, "Microsoft YaHei"; position: relative;}
+form,div,body,img,p,img,dl,dt,dd,h2,h1,h3,h4,h5,h6{ margin:0px; padding:0px; border:0; }
+a {transition: all .3s; -webkit-transition: all .3s;}
+a:link{ color:#666; text-decoration:none;}
+a:visited{ color:#666; text-decoration:none;}
+a:hover{ color:#666; text-decoration:none;}
+a:focus { -moz-outline-style: none; }
+a:active{ outline:none; text-decoration:none;}
+em,i{ font-style:normal; }
+ul,li{ list-style:none; margin:0; padding:0;}
+input,textarea,select{ color:#666; margin:0; padding:0; font-size:12px; font-family:Arial; vertical-align:middle; -webkit-appearance:none; appearance:none; -moz-appearance:none; resize:none; -ms-appearance:none;}
+select::-ms-expand { display: none; }   
+input:focus,textarea:focus{ outline:none;}
+select:focus {outline:none;}
+input[type="submit"], input[type="button"] {border:0; cursor:pointer; font-family:"Microsoft YaHei";}
+/*删除火狐下按钮默认样式*/
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner{
+	border:none; padding:0;
+}
+/*浮动*/
+.clearboth:after{ display:block; clear:both; content:""; overflow:hidden; height:0; }
+.clearboth{ *zoom:1;}
+.FL{ float:left;}
+.FR{ float:right;}
+
+
+/*百度分享*/
+.sr-bdimgshare {display:none !important;}
+
+/*header*/
+header {
+    position:fixed;
+    width: 100%;
+    height: 120px;
+    top: 0;
+    left: 0;
+    background: #000;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    z-index: 999;
+}
+
+header .header-logo {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    width: 350px;
+    justify-content: center;
+    position: relative;
+}
+
+header .header-logo:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 46px;
+    background: #242424;
+    top: 50%;
+    right: 0;
+    margin-top: -23px;
+}
+
+header .header-right {
+    display: -webkit-flex;
+    display: flex;
+    width: calc(100% - 350px);
+    padding: 0 50px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    align-items: center;
+    position: relative;
+}
+
+.header-right .header-title {
+    display: -webkit-flex;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    width: 80%;
+}
+
+.header-title span {
+    padding-left: 15px;
+    color: #333;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.header-right .header-login {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 50px;
+    color: #fff;
+    font-size: 16px;
+    width: 20%;
+    justify-content: flex-end;
+}
+
+.header-login .header-username {
+    padding-right: 12px;
+}
+
+.header-login .header-login-btn:hover {
+    color: #fff;
+}
+
+/*nav*/
+nav {
+    position: fixed;
+    width: 350px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: url(/static/main/images/aside.jpg) no-repeat center;
+    background-size: cover;
+    padding: 120px 0 50px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    z-index: 998;
+}
+
+.nav-list {
+    padding: 0 45px 0 68px;
+}
+
+.nav-list li {
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,.1); 
+}
+
+.nav-list .nav-title {
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 0;
+    position: relative;
+}
+
+.nav-list .nav-title:before {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    margin-top: -11.5px;
+    background: url(/static/main/images/icon1.png) no-repeat;
+}
+
+.nav-list li:nth-child(2) .nav-title:before {
+    background: url(/static/main/images/icon2.png) no-repeat;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.nav-list li:nth-child(3) .nav-title:before {
+    background: url(/static/main/images/icon3.png) no-repeat;
+}
+
+.nav-list li .nav-title:hover:before {
+    background: url(/static/main/images/icon1-hover.png) no-repeat;
+}
+
+.nav-list li:nth-child(2) .nav-title:hover:before {
+    background: url(/static/main/images/icon2-hover.png) no-repeat;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+}
+
+.nav-list li:nth-child(3) .nav-title:hover:before {
+    background: url(/static/main/images/icon3-hover.png) no-repeat;
+}
+
+.nav-list .nav-link span {
+    display: block;
+    padding: 10px 0;
+}
+
+.nav-list .nav-link a {
+    display: inline-block;
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+}
+
+.nav-list .nav-link a:before {
+    content: "";
+    display: block;
+    width: 8px;
+    height: 13px;
+    background: url(/static/main/images/arrow.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    right: -18px;
+    margin-top: -6.5px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    opacity: 0;
+}
+
+.nav-list .nav-link a:hover:before {
+    opacity: 1;
+    right: -22px;
+}
+
+.nav-list li a:hover {
+    color: #b45f1a;
+}
+
+/*footer*/
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding-left: 400px;
+    color: #999;
+}
+
+footer p {
+    padding-bottom: 25px;
+}
+
+footer p span {
+    padding-left: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1600px) {
+    header .header-right {
+        padding: 0 20px;
+    }
+    .header-right .header-login {
+        right: 20px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    footer p {
+        padding-bottom: 20px;
+    }
+    .header-title span {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .header-right .header-title {
+        width: 70%;
+    }
+    .header-right .header-login {
+        width: 30%;
+    }
+}

@@ -29,6 +29,10 @@ namespace Om
             //          "~/Content/site.css"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/static/h-ui/css/H-ui.min.css", "~/static/h-ui.admin/css/H-ui.admin.css", "~/lib/Hui-iconfont/1.0.8/iconfont.css", "~/static/h-ui.admin/css/style.css"));
+
+            //前端页面引用的js和css
+            bundles.Add(new ScriptBundle("~/assets/js/common").Include("~/static/main/js/jquery-1.10.2.min.js", "~/static/main/js/jquery-ui.min.js", "~/static/main/js/jquery.nicescroll.js", "~/static/main/js/echarts.min.js", "~/static/main/js/layout.js"));
+            bundles.Add(new StyleBundle("~/assets/css/common").Include("~/static/main/css/default.css", "~/static/main/css/jquery-ui.min.css", "~/static/main/css/layout.css"));
         }
     }
 }

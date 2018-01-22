@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="title">
+        <h1>每月不同类型活动场次及成本统计</h1>
+        <div class="summary-box">
+            <span class="summary-total">总场次：<em>0</em>场</span>
+            <span class="summary-hobby">爱好类：<em class="pink">0</em>场</span>
+            <span class="summary-party">派对类：<em class="blue">0</em>场</span>
+            <span class="summary-job">职业类：<em class="orange">0</em>场</span>
+            <span class="summary-average">平均成本：<em>0</em>CNY</span>
+        </div>
+    </div>
+    <div class="data-filter">
+        <em class="sub-title">数据筛选：</em>
+        <div class="date-picker">
+            <div class="select-box">
+                <span class="select-show"></span>
+                <div class="select-option"></div>
+            </div>
+        </div>
+    </div>
+    <div class="chart-cont" id="main"></div>
+</section>
+
+@section Scripts{
+    <script>
+        selectBox();
+        averageCost();
+    </script>
+}

@@ -118,6 +118,11 @@ namespace Om.Areas.admin.Controllers
         {
             return View();
         }
+
+        public ActionResult Hitchleadingin()
+        {
+            return  View();
+        }
     }
 
 }

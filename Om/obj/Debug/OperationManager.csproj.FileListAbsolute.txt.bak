@@ -239,7 +239,6 @@ D:\李曙光\Git\Om\Om\bin\Utilities.dll
 D:\李曙光\Git\Om\Om\bin\Utilities.pdb
 D:\李曙光\Git\Om\Om\bin\AutoMapper.dll
 D:\李曙光\Git\Om\Om\bin\AutoMapper.xml
-<<<<<<< HEAD
 D:\Git\Om\Om\bin\ApplicationInsights.config
 D:\Git\Om\Om\bin\roslyn\csc.exe
 D:\Git\Om\Om\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -362,6 +361,4 @@ D:\Git\Om\Om\bin\zh-Hans\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 D:\Git\Om\Om\obj\Debug\OperationManager.csprojResolveAssemblyReference.cache
 D:\Git\Om\Om\obj\Debug\Om.dll
 D:\Git\Om\Om\obj\Debug\Om.pdb
-=======
 D:\李曙光\Git\Om\Om\bin\SharpZipLib.dll
->>>>>>> 11f4db4ca3053884542083bcdbb23c12aea28ae8

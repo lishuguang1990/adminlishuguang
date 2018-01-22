@@ -66,8 +66,6 @@ namespace Om.Areas.admin.Controllers
         public Dictionary<string, object> Add(C_ClubInfo model)
         {
             C_ClubInfoBll bll = new C_ClubInfoBll();
-
-
             if (model.ClubInfoId > 0)
             {
                 var oldmodel = bll.GetModel(model.ClubInfoId);
@@ -91,24 +89,49 @@ namespace Om.Areas.admin.Controllers
             }
             else
             {
-              
-                model.CreateUserId = ManageProvider.Provider.Current().UserId;
-                model.CreateUserName = ManageProvider.Provider.Current().Account;
-                model.CreateTime = DateTime.Now;
-                if (bll.Add(model) > 0)
+                var modelnew =bll.GetModelByDate(model.ClubDate.ToString("yyyy-MM-dd"));
+                if (modelnew.ClubInfoId==0)
                 {
-                    return new Dictionary<string, object>
+                    model.CreateUserId = ManageProvider.Provider.Current().UserId;
+                    model.CreateUserName = ManageProvider.Provider.Current().Account;
+                    model.CreateTime = DateTime.Now;
+                    if (bll.Add(model) > 0)
+                    {
+                        return new Dictionary<string, object>
                      {
                          { "code",1}
                      };
-                }
-                else
-                {
-                    return new Dictionary<string, object>
+                    }
+                    else
+                    {
+                        return new Dictionary<string, object>
                      {
                          { "code",0}
                      };
+                    }
                 }
+                else
+                {
+                    model.ClubInfoId = modelnew.ClubInfoId;
+                    model.CreateUserId = modelnew.CreateUserId;
+                    model.CreateUserName = modelnew.CreateUserName;
+                    model.CreateTime = modelnew.CreateTime;
+                    if (bll.Update(model) > 0)
+                    {
+                        return new Dictionary<string, object>
+                     {
+                         { "code",1}
+                     };
+                    }
+                    else
+                    {
+                        return new Dictionary<string, object>
+                     {
+                         { "code",0}
+                     };
+                    }
+                }
+               
             }
         }
 

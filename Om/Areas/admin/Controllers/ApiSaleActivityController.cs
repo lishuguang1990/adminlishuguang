@@ -13,6 +13,7 @@ using System.Net.Http;
 using System.Web;
 using System.Web.Http;
 using Utilities;
+using Utilities.Base.File;
 
 namespace Om.Areas.admin.Controllers
 {
@@ -280,6 +281,64 @@ namespace Om.Areas.admin.Controllers
             doc.Send();
             HttpContext.Current.Response.Flush();
             HttpContext.Current.Response.End();
+        }
+        [HttpPost]
+        public Dictionary<string, object> IntoSalActivity()
+        {
+            T_SaleActivityBll bll = new T_SaleActivityBll();
+            string url = HttpContext.Current.Request.Form["url"].ToString();
+            string filename = HttpContext.Current.Request.Form["filename"].ToString();
+            DataSet ds = ExportFile.ExcelSqlConnection(HttpContext.Current.Server.MapPath(url), "Info");           //调用自定义方法
+            DataRow[] dr = ds.Tables[0].Select();
+            int successcount = 0;
+            int failcount = 0;
+            for (int i = 0; i < dr.Length; i++)
+            {
+                try
+                {
+                    T_SaleActivity model = new T_SaleActivity();
+                    model.AgencyId = int.Parse(dr[0][0].ToString());
+                    model.AreaId = int.Parse(dr[i][1].ToString());
+                    model.ActivityDate =DateTime.Parse(dr[i][2].ToString());
+                    model.SaleActivityTypeId = int.Parse(dr[i][3].ToString());
+                    model.PassengerFlow = int.Parse(dr[i][4].ToString());
+                    model.LatentPassengerFlow = int.Parse(dr[i][5].ToString());
+                    model.CarOwner = int.Parse(dr[i][6].ToString());
+                    model.OrderQuantity = int.Parse(dr[i][7].ToString());
+                    model.PrimeCost = int.Parse(dr[i][8].ToString());
+                    model.LaterOrderQuantity = int.Parse(dr[i][9].ToString());
+                    model.PublishWay = dr[i][10].ToString();
+                    model.CreateUserId = ManageProvider.Provider.Current().UserId;
+                    model.CreateUserName = ManageProvider.Provider.Current().Account;
+                    model.CreateTime = DateTime.Now;
+                    model.IsDelete = 0;
+                    model.IsShow = 1;
+                    if (bll.Add(model) > 0)
+                    {
+                        successcount++;
+                    }
+                    else
+                    {
+                        failcount++;
+                    }
+
+                }
+                catch (Exception)
+                {
+
+                    failcount++;
+                }
+
+            }
+            return new Dictionary<string, object>
+            {
+                { "code","1"},
+                { "successcount",successcount},
+                { "failcount",failcount},
+                { "filename",filename},
+                { "count",dr.Length}
+
+            };
         }
     }
 }

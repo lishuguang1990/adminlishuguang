@@ -1,0 +1,32 @@
+﻿@{
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<section class="wrapper">
+    <div class="title">
+        <h1>活动场均客流统计</h1>
+        <div class="summary-box">
+            <span class="summary-hobby">爱好类：<em class="pink">0</em>人次</span>
+            <span class="summary-party">派对类：<em class="blue">0</em>人次</span>
+            <span class="summary-job">职业类：<em class="orange">0</em>人次</span>
+            <span class="summary-average">场均客流：<em>0</em>人次</span>
+        </div>
+    </div>
+    <div class="data-filter">
+        <em class="sub-title">数据筛选：</em>
+        <div class="date-picker">
+            <div class="select-box">
+                <span class="select-show"></span>
+                <div class="select-option"></div>
+            </div>
+        </div>
+    </div>
+    <div class="chart-cont" id="main"></div>
+</section>
+
+@section Scripts{
+    <script>
+        selectBox();
+        averagePassengerFlow();
+    </script>
+}
