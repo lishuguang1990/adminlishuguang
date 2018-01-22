@@ -5,3 +5,4 @@ obj/
 *.ldb
 *.sln
 *.config
+*.suo
