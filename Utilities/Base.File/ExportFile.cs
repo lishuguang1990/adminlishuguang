@@ -16,7 +16,7 @@ namespace Utilities.Base.File
             OleDbConnection ExcelConn = new OleDbConnection(strCon);
             try
             {
-                string strCom = string.Format("SELECT * FROM [监控信息日频发统计$]");
+                string strCom = string.Format("SELECT * FROM [Sheet1$]");
                 ExcelConn.Open();
                 OleDbDataAdapter myCommand = new OleDbDataAdapter(strCom, ExcelConn);
                 DataSet ds = new DataSet();

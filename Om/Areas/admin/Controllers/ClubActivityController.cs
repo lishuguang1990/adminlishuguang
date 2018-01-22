@@ -52,6 +52,7 @@ namespace Om.Areas.admin.Controllers
             return View(model);
          
         }
+        [ModuleAuthorize]
         public ActionResult ClubActivityList()
         {
             return View();

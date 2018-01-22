@@ -13,6 +13,224 @@
       <publishTime>12/30/2017 13:50:30</publishTime>
     </File>
     <File Include="App_Data/selfsetting.xml">
+      <publishTime>01/10/2018 18:39:21</publishTime>
+    </File>
+    <File Include="Areas/admin/Content/bootstrap.css">
+      <publishTime>01/15/2018 17:46:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Content/bootstrap.min.css">
+      <publishTime>01/15/2018 17:46:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Content/Site.css">
+      <publishTime>01/15/2018 17:46:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/ConfirmEmail.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/ExternalLoginConfirmation.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/ExternalLoginFailure.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/ForgotPassword.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/ForgotPasswordConfirmation.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/Login.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/Register.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/ResetPassword.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/ResetPasswordConfirmation.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/SendCode.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/VerifyCode.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Account/_ExternalLoginsListPartial.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/ClubActivity/ClubActivityAdd.cshtml">
+      <publishTime>01/11/2018 14:25:17</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/ClubActivity/ClubActivityList.cshtml">
+      <publishTime>01/11/2018 15:03:16</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/ClubActivity/ClubInfoAdd.cshtml">
+      <publishTime>01/12/2018 11:07:02</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/ClubActivity/ClubInfoList.cshtml">
+      <publishTime>01/12/2018 11:43:45</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/ClubActivity/ClubTypeAdd.cshtml">
+      <publishTime>01/11/2018 11:41:17</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/ClubActivity/ClubTypeList.cshtml">
+      <publishTime>01/11/2018 14:46:12</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Home/About.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Home/Contact.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Home/Index.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Login/index - 复制.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Login/index.cshtml">
+      <publishTime>12/22/2017 11:29:38</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Login/indexbak.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Login/indexnew.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/bingtutongji.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/Cause.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/CauseAdd.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/DailyDetial.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/DailyList.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/EveryDayYujing.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/Hitchleadingin.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/HitchList.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/HitchWarning.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/MonthList.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/PredicSettingAdd.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/SettingList.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/YearList.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/yujilist.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/YujingList.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Manage/zhili.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Module/index.cshtml">
+      <publishTime>12/21/2017 17:43:57</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/SaleActivity/Add.cshtml">
+      <publishTime>01/08/2018 17:31:45</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/SaleActivity/AgencyAdd.cshtml">
+      <publishTime>01/08/2018 08:32:28</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/SaleActivity/AgencyList.cshtml">
+      <publishTime>01/08/2018 08:32:28</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/SaleActivity/AreaAdd.cshtml">
+      <publishTime>01/08/2018 15:22:53</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/SaleActivity/AreaList.cshtml">
+      <publishTime>01/08/2018 15:26:28</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/SaleActivity/List.cshtml">
+      <publishTime>01/15/2018 15:17:53</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/SaleActivity/TypeAdd.cshtml">
+      <publishTime>01/08/2018 08:32:28</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/SaleActivity/TypeList.cshtml">
+      <publishTime>01/08/2018 08:32:28</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Shared/Error.cshtml">
+      <publishTime>12/21/2017 17:43:58</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Shared/Lockout.cshtml">
+      <publishTime>12/21/2017 17:43:58</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Shared/Menu.cshtml">
+      <publishTime>12/21/2017 17:43:58</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Shared/_Layout - 复制.cshtml">
+      <publishTime>12/21/2017 17:43:58</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Shared/_Layout.cshtml">
+      <publishTime>01/08/2018 08:32:28</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/Shared/_LoginPartial.cshtml">
+      <publishTime>12/21/2017 17:43:58</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/System/ModuleAdd.cshtml">
+      <publishTime>12/21/2017 17:43:58</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/System/ModuleManage.cshtml">
+      <publishTime>01/12/2018 11:45:45</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/System/OperateAdd.cshtml">
+      <publishTime>12/21/2017 17:43:58</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/System/OperateList.cshtml">
+      <publishTime>12/22/2017 13:32:09</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/System/OperateManage.cshtml">
+      <publishTime>12/22/2017 13:31:42</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/System/RoleAdd.cshtml">
+      <publishTime>12/21/2017 17:43:58</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/System/RoleManage.cshtml">
+      <publishTime>01/12/2018 11:46:12</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/System/RoleModuleOperate.cshtml">
+      <publishTime>12/22/2017 13:35:23</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/System/RoleUserAdd.cshtml">
+      <publishTime>12/21/2017 17:43:58</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/System/UserAdd.cshtml">
+      <publishTime>12/21/2017 17:43:58</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/System/UserManage.cshtml">
+      <publishTime>01/12/2018 11:45:15</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/web.config">
+      <publishTime>12/21/2017 18:41:24</publishTime>
+    </File>
+    <File Include="Areas/admin/Views/_ViewStart.cshtml">
+      <publishTime>12/21/2017 18:42:51</publishTime>
+=======
       <publishTime>01/20/2018 14:03:58</publishTime>
     </File>
     <File Include="Areas/admin/Content/bootstrap.css">
@@ -243,6 +461,9 @@
     <File Include="bin/AppLibrary.dll">
       <publishTime>01/20/2018 14:03:58</publishTime>
     </File>
+    <File Include="bin/AppLibrary.dll">
+      <publishTime>11/21/2011 10:03:02</publishTime>
+    </File>
     <File Include="bin/ApplicationInsights.config">
       <publishTime>12/30/2017 13:50:30</publishTime>
     </File>
@@ -250,6 +471,7 @@
       <publishTime>12/30/2017 13:50:38</publishTime>
     </File>
     <File Include="bin/BLL.dll">
+      <publishTime>01/15/2018 18:20:47</publishTime>
       <publishTime>01/21/2018 20:08:01</publishTime>
     </File>
     <File Include="bin/Common.Logging.Core.dll">
@@ -261,7 +483,11 @@
     <File Include="bin/DAl.dll">
       <publishTime>01/21/2018 20:08:00</publishTime>
     </File>
+    <File Include="bin/DAl.dll">
+      <publishTime>01/15/2018 18:20:45</publishTime>
+    </File>
     <File Include="bin/DBHelper.dll">
+      <publishTime>01/15/2018 17:42:00</publishTime>
       <publishTime>01/20/2018 14:16:53</publishTime>
     </File>
     <File Include="bin/DLL.dll">
@@ -275,6 +501,9 @@
     </File>
     <File Include="bin/log4net.dll">
       <publishTime>12/30/2017 13:50:41</publishTime>
+    </File>
+    <File Include="bin/log4net.dll">
+      <publishTime>03/08/2017 19:26:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>12/30/2017 13:50:39</publishTime>
@@ -340,6 +569,16 @@
       <publishTime>12/30/2017 13:50:39</publishTime>
     </File>
     <File Include="bin/Model.dll">
+      <publishTime>01/15/2018 18:20:39</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>08/14/2017 13:50:37</publishTime>
+    </File>
+    <File Include="bin/Om.dll">
+      <publishTime>01/15/2018 18:21:18</publishTime>
+    </File>
+    <File Include="bin/Om.dll.config">
+      <publishTime>01/03/2018 11:05:50</publishTime>
       <publishTime>01/21/2018 20:08:00</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
@@ -430,6 +669,7 @@
       <publishTime>12/30/2017 13:50:39</publishTime>
     </File>
     <File Include="bin/Utilities.dll">
+      <publishTime>01/15/2018 17:42:08</publishTime>
       <publishTime>01/20/2018 14:16:53</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
@@ -563,6 +803,9 @@
     </File>
     <File Include="lib/Calendar/index.html.bak">
       <publishTime>12/30/2017 13:50:31</publishTime>
+    </File>
+    <File Include="lib/Calendar/index.html.bak">
+      <publishTime>09/25/2017 14:23:12</publishTime>
     </File>
     <File Include="lib/Calendar/javascripts/main.js">
       <publishTime>12/30/2017 13:50:31</publishTime>
@@ -789,11 +1032,17 @@
     <File Include="lib/images/pic01_20140320 - 副本.jpg">
       <publishTime>12/30/2017 13:50:31</publishTime>
     </File>
+    <File Include="lib/images/pic01_20140320 - 副本.jpg">
+      <publishTime>10/25/2017 13:29:35</publishTime>
+    </File>
     <File Include="lib/images/pic01_20140320.jpg">
       <publishTime>12/30/2017 13:50:31</publishTime>
     </File>
     <File Include="lib/images/pic01_2014032330.jpg">
       <publishTime>12/30/2017 13:50:31</publishTime>
+    </File>
+    <File Include="lib/images/pic01_2014032330.jpg">
+      <publishTime>10/25/2017 13:29:35</publishTime>
     </File>
     <File Include="lib/images/skin1/blue_btn_bg.gif">
       <publishTime>12/30/2017 13:50:31</publishTime>
@@ -1625,6 +1874,12 @@
     </File>
     <File Include="lib/ueditor/1.4.3/net/Bin/Newtonsoft.Json.dll">
       <publishTime>12/30/2017 13:50:31</publishTime>
+    </File>
+    <File Include="lib/ueditor/1.4.3/net/Bin/Newtonsoft.Json.dll">
+      <publishTime>08/14/2017 13:50:37</publishTime>
+    </File>
+    <File Include="lib/ueditor/1.4.3/net/Bin/Newtonsoft.Json.xml">
+      <publishTime>08/14/2017 13:50:37</publishTime>
     </File>
     <File Include="lib/ueditor/1.4.3/net/config.json">
       <publishTime>12/30/2017 13:50:31</publishTime>
@@ -3238,6 +3493,7 @@
       <publishTime>12/30/2017 13:50:34</publishTime>
     </File>
     <File Include="packages.config">
+      <publishTime>12/25/2017 14:32:28</publishTime>
       <publishTime>01/20/2018 14:15:28</publishTime>
     </File>
     <File Include="Resource/IPScaner/QQWry.Dat">
@@ -4083,6 +4339,63 @@
     <File Include="uploads/20171022/201710222251035324.xls">
       <publishTime>12/30/2017 13:50:38</publishTime>
     </File>
+    <File Include="uploads/20170918/2017091800552298947.xls">
+      <publishTime>10/10/2017 08:32:25</publishTime>
+    </File>
+    <File Include="uploads/20170925/2017092501273285949.xls">
+      <publishTime>10/10/2017 08:32:25</publishTime>
+    </File>
+    <File Include="uploads/20170925/2017092501323499024.xls">
+      <publishTime>10/10/2017 08:32:25</publishTime>
+    </File>
+    <File Include="uploads/20170925/2017092501332052077.xls">
+      <publishTime>10/10/2017 08:32:25</publishTime>
+    </File>
+    <File Include="uploads/20170925/2017092501345713313.xls">
+      <publishTime>10/10/2017 08:32:25</publishTime>
+    </File>
+    <File Include="uploads/20170925/2017092501350846717.xls">
+      <publishTime>10/10/2017 08:32:25</publishTime>
+    </File>
+    <File Include="uploads/20170925/2017092501361517650.xls">
+      <publishTime>10/10/2017 08:32:25</publishTime>
+    </File>
+    <File Include="uploads/20171009/2017100909521359783.xls">
+      <publishTime>10/09/2017 09:52:13</publishTime>
+    </File>
+    <File Include="uploads/20171010/2017101008463501382.xls">
+      <publishTime>10/10/2017 08:46:35</publishTime>
+    </File>
+    <File Include="uploads/20171010/2017101008464923120.xls">
+      <publishTime>10/10/2017 08:46:49</publishTime>
+    </File>
+    <File Include="uploads/20171010/2017101008465873624.xls">
+      <publishTime>10/10/2017 08:46:58</publishTime>
+    </File>
+    <File Include="uploads/20171010/2017101008470707635.xls">
+      <publishTime>10/10/2017 08:47:07</publishTime>
+    </File>
+    <File Include="uploads/20171010/2017101008471370542.xls">
+      <publishTime>10/10/2017 08:47:13</publishTime>
+    </File>
+    <File Include="uploads/20171010/2017101008472236588.xls">
+      <publishTime>10/10/2017 08:47:22</publishTime>
+    </File>
+    <File Include="uploads/20171010/2017101008473340676.xls">
+      <publishTime>10/10/2017 08:47:33</publishTime>
+    </File>
+    <File Include="uploads/20171010/2017101008473976886.xls">
+      <publishTime>10/10/2017 08:47:39</publishTime>
+    </File>
+    <File Include="uploads/20171010/2017101008475776852.xls">
+      <publishTime>10/10/2017 08:47:57</publishTime>
+    </File>
+    <File Include="uploads/20171010/2017101008480439894.xls">
+      <publishTime>10/10/2017 08:48:04</publishTime>
+    </File>
+    <File Include="uploads/20171022/201710222251035324.xls">
+      <publishTime>10/25/2017 13:29:35</publishTime>
+    </File>
     <File Include="Views/Account/ConfirmEmail.cshtml">
       <publishTime>08/14/2017 13:46:03</publishTime>
     </File>
@@ -4129,6 +4442,7 @@
       <publishTime>08/14/2017 15:13:25</publishTime>
     </File>
     <File Include="Views/Index/Index.cshtml">
+      <publishTime>12/22/2017 10:09:02</publishTime>
       <publishTime>12/30/2017 13:50:30</publishTime>
     </File>
     <File Include="Views/Login/index - 复制.cshtml">
@@ -4246,12 +4560,18 @@
       <publishTime>09/25/2017 14:23:12</publishTime>
     </File>
     <File Include="Views/Web.config">
+
+      <publishTime>12/22/2017 10:12:34</publishTime>
+
       <publishTime>12/30/2017 13:50:30</publishTime>
     </File>
     <File Include="Views/_ViewStart.cshtml">
       <publishTime>08/14/2017 14:55:42</publishTime>
     </File>
     <File Include="Web.config">
+
+      <publishTime>01/15/2018 17:43:34</publishTime>
+
       <publishTime>01/20/2018 18:10:35</publishTime>
     </File>
     <File Include="WebForm1.aspx">

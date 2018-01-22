@@ -319,7 +319,6 @@
     <Content Include="Content\Images\loginbg.jpg" />
     <Content Include="Content\Images\logo.jpg" />
     <Content Include="Content\Site.css" />
-    <Content Include="errorLog2017\201712\20171225.txt" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -2166,6 +2165,9 @@
     <Content Include="obj\Release\Package\PackageTmp\Scripts\modernizr-2.6.2.js" />
     <Content Include="obj\Release\Package\PackageTmp\Scripts\respond.js" />
     <Content Include="obj\Release\Package\PackageTmp\Scripts\respond.min.js" />
+    <Content Include="Areas\admin\Views\SaleActivity\AgencyInto.cshtml" />
+    <Content Include="Content\agencytemplet.xls" />
+    <Content Include="Areas\admin\Views\ClubActivity\Hitchleadingin.cshtml" />
     <None Include="obj\Release\Package\PackageTmp\Scripts\_references.js" />
     <Content Include="obj\Release\Package\PackageTmp\static\h-ui.admin\css\H-ui.admin.css" />
     <Content Include="obj\Release\Package\PackageTmp\static\h-ui.admin\css\H-ui.login.css" />

@@ -181,7 +181,6 @@ namespace Om.Areas.admin.Controllers
 
         public void Print()
         {
-
             //区域
             var activitareaid = HttpContext.Current.Request.QueryString["activitareaid"].ToString();
             //经销商
@@ -214,8 +213,7 @@ namespace Om.Areas.admin.Controllers
             {
                 strwhere += " and ActivityDate<='" + enddate + "'";
             }
-             data = database.FindTableBySql("select * from View_Activity where IsDelete=0 " + strwhere + "");
-           
+            data = database.FindTableBySql("select * from View_Activity where IsDelete=0 " + strwhere + "");
             var newd = data.Columns.Add("publishwaycontent", typeof(String));
             var list = new Utilities.PublishWay().ToSelectListItem();
             for (int i = 0; i < data.Rows.Count; i++)
@@ -237,9 +235,8 @@ namespace Om.Areas.admin.Controllers
                                 }
                             }
                         }
-
                     }
-                    data.Rows[i]["publishwaycontent"] = publishwaycontent.Substring(0, publishwaycontent.Length - 1);
+                   data.Rows[i]["publishwaycontent"] = publishwaycontent.Substring(0, publishwaycontent.Length - 1);
                 }
                 else
                 {
@@ -247,28 +244,43 @@ namespace Om.Areas.admin.Controllers
                 }
             }
             AppLibrary.WriteExcel.XlsDocument doc = new AppLibrary.WriteExcel.XlsDocument();
-         //   HttpContext.Current.Response.Write();
+           // HttpContext.Current.Response.Write();
             doc.FileName = DateTime.Now.ToString("yyyyMMddHHmmss") + ".xls";
             string sheetname = "SHEET";
-           Worksheet sheet = doc.Workbook.Worksheets.Add(sheetname);
+            Worksheet sheet = doc.Workbook.Worksheets.Add(sheetname);
             Cells cells = sheet.Cells;
             XF XFstyle = doc.NewXF();
             XFstyle.HorizontalAlignment = HorizontalAlignments.Centered;
-            cells.Add(1, 1, "ceshi");
-            cells.Add(1, 2, "ceshi");
-            cells.Add(1, 3, "ceshi");
-            cells.Add(1, 4, "ceshi");
+            cells.Add(1, 1, "经销商名称");
+            cells.Add(1, 2, "区域");
+            cells.Add(1, 3, "日期");
+            cells.Add(1, 4, "活动类别");
+            cells.Add(1, 5, "活动客流量");
+            cells.Add(1, 6, "活动潜客量");
+            cells.Add(1, 7, "活动车主量");
+            cells.Add(1, 8, "活动现场订单量");
+            cells.Add(1, 9, "活动成本金额");
+            cells.Add(1, 10, "活动后续订单量");
+            cells.Add(1, 11, "宣传类型");
+            int f = 1;
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                f++;
+                cells.Add(f, 1, data.Rows[i]["agencyname"]);
+                cells.Add(f, 2, data.Rows[i]["activityareaname"]);
+                cells.Add(f, 3,DateTime.Parse(data.Rows[i]["activitydate"].ToString()).ToString("yyyy-MM-dd"));
+                cells.Add(f, 4, data.Rows[i]["saleactivitytypename"]);
+                cells.Add(f, 5, data.Rows[i]["passengerflow"]);
+                cells.Add(f, 6, data.Rows[i]["latentpassengerflow"]);
+                cells.Add(f, 7, data.Rows[i]["carowner"]);
+                cells.Add(f, 8, data.Rows[i]["orderquantity"]);
+                cells.Add(f, 9, data.Rows[i]["primecost"]);
+                cells.Add(f, 10, data.Rows[i]["laterorderquantity"]);
+                cells.Add(f, 11, data.Rows[i]["publishwaycontent"]);
+            }
             doc.Send();
             HttpContext.Current.Response.Flush();
             HttpContext.Current.Response.End();
-            //return new Dictionary<string, object>
-            //{
-            //    { "code",1},
-            //    { "total",jqgridparam.total},
-            //    { "page",jqgridparam.page},
-            //    { "records",jqgridparam.records},
-            //    { "rows",data},
-            //};
         }
         [HttpPost]
         public Dictionary<string, object> IntoSalActivity()
